@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+//Ruta de logeo
+Route::post('/login', [AuthController::class, 'login']);
+//Ruta de registro
+Route::post('/register', [AuthController::class, 'register']);
+//Ruta de deslogeo
+Route::post('/logout', [AuthController::class, 'logout']);
+//Ruta de verificacion de datos de usuario logeado
+Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
+
+
