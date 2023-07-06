@@ -6,12 +6,13 @@ import password from '@/public/img/password.png';
 import facebook from '@/public/svg/facebook.svg';
 import google from '@/public/svg/google.svg';
 import Image from 'next/image';
-import logo from '../public/img/pillcare_logo.png';
+import logo from '@/public/img/pillcare_logo.png';
+import Link from 'next/link';
 
 const Login = () => {
   return (
-    <div className='flex flex-col gap-8 py-4'>
-      <div className='flex flex-col items-center justify-center font-semibold text-xl'>
+    <div className='flex flex-col gap-8 py-4 h-screen justify-evenly '>
+      <div className='flex flex-col items-center justify-center font-semibold text-xl gap-2'>
         <span>¡Bienvenido!</span>
         <span>Inicia sesión ahora</span>
       </div>
@@ -22,7 +23,7 @@ const Login = () => {
         width={65}
         height={65}
       />
-      <form className='flex flex-col gap-4'>
+      <form className='flex flex-col gap-8'>
         <Input
           src={email}
           label='Correo'
@@ -52,7 +53,9 @@ const Login = () => {
       </div>
       <div className='flex gap-2 justify-center py-4'>
         <span>¿No tienes una cuenta?</span>
+        <Link href='#'>
         <span className='text-[#0568FD] font-medium'>Unete ahora</span>
+        </Link>
       </div>
     </div>
   );
