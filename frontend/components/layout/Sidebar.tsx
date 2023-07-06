@@ -6,6 +6,13 @@ type Props = {
   setOpen: (open: boolean) => void;
 };
 
+const customUser = {
+  name: 'Cosme Fulanito',
+  nationality: 'Argentina',
+  edad: 25,
+  image: 'https://cataas.com/cat/says/hello%20world!',
+};
+
 const Sidebar = ({ open, setOpen }: Props) => {
   return (
     <div
@@ -19,7 +26,7 @@ const Sidebar = ({ open, setOpen }: Props) => {
         <button className='ml-auto' onClick={() => setOpen(false)}>
           Cerrar
         </button>
-        <ProfileCard />
+        <ProfileCard user={customUser} />
       </div>
     </div>
   );
