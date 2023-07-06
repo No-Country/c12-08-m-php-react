@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileCard from '../cards/ProfileCard';
 
 type Props = {
   open: boolean;
@@ -14,10 +15,11 @@ const Sidebar = ({ open, setOpen }: Props) => {
                   h-full w-[300px]
                   transition-transform .3s ease-in-out
                   ${open ? '' : '-translate-x-full'}`}>
-      <div className='flex'>
+      <div className='flex flex-col items-center'>
         <button className='ml-auto' onClick={() => setOpen(false)}>
           Cerrar
         </button>
+        <ProfileCard />
       </div>
     </div>
   );
