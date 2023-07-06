@@ -15,6 +15,12 @@ module.exports = {
         lg: '1200px',
         xl: '1536px',
       },
+      gridTemplateColumns: {
+        sidebar: '300px auto',
+      },
+      gridTemplateRows: {
+        header: '64px auto',
+      },
     },
     plugins: [],
   },
