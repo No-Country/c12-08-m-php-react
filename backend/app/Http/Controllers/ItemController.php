@@ -15,57 +15,51 @@ class ItemController extends Controller
         //
     }
 
-    public function verificar(Request $request){
-        //Verifica que el usuario este logeado
-        if (!$request->user()) {
-            return response()->json([
-                        'message' => 'You are not logged in',
-            ], 401);
-        }
-    }
-
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
 
-        $this->verificar($request);
+            //valida los datos del request
+            $validatedData = $request->validate([
+                'description' => 'required|string|max:255',
+                'day' => 'required|date',
+                'time' => 'required|date_format:H:i:s',
+                'category' => 'required|string|max:255',
+                'frequency' => 'required|string|max:255',
+            ]);
 
-        //valida los datos del request
-        $validatedData = $request->validate([
-                        'description' => 'required|string|max:255',
-                        'day' => 'required|date',
-                        'time' => 'required|time',
-                        'category' => 'required|string|max:255',
-                        'frequency' => 'required|integer',
-        ]);
+            //crea el item
+            $item = Item::create([
+                'description' => $validatedData['description'],
+                'day' => $validatedData['day'],
+                'time' => $validatedData['time'],
+                'category' => $validatedData['category'],
+                'frequency' => $validatedData['frequency'],
+            ]);
 
-        //crea el item con los datos del request
-        $item = Item::create([
-                    'description' => $validatedData['description'],
-                    'day' => $validatedData['day'],
-                    'time' => $validatedData['time'],
-                    'category' => $validatedData['category'],
-                    'frequency' => $validatedData['frequency'],
-        ]);
+            //guarda el item creado
+            $item->save();
 
-        $item->save();
-
-        return response()->json([
-                    'message' => 'Item created successfully',
-        ]);
-
-
-}
+            //retorna el item creado, sino error
+            if ($item) {
+                return response()->json([
+                    'message' => 'Item created',
+                    'item' => $item
+                ], 201);
+            } else {
+                return response()->json([
+                    'message' => 'Item not created',
+                ], 400);
+            }
+    }
 
     /**
      * Display the specified resource.
      */
     public function show(Request $request, $id)
     {
-
-        $this->verificar($request);
 
         //Segun el id, se busca el item
         $item = Item::find($id);
@@ -88,8 +82,6 @@ class ItemController extends Controller
     public function update(Request $request, Item $item)
     {
 
-        $this->verificar($request);
-
         //actualiza el item con los datos del request
         $item->description = $request->description;
         $item->day = $request->day;
@@ -100,9 +92,17 @@ class ItemController extends Controller
         //guarda el item
         $item->save();
 
-        return response()->json([
-                    'message' => 'Item updated successfully',
-        ]);
+        //retorna el item actualizado, sino error
+        if ($item) {
+            return response()->json([
+                        'message' => 'Item updated',
+                        'item' => $item
+            ]);
+        } else {
+            return response()->json([
+                        'message' => 'Item not found',
+            ]);
+        }
     }
 
     /**
@@ -110,7 +110,6 @@ class ItemController extends Controller
      */
     public function destroy(Request $request, $id)
     {
-        $this->verificar($request);
 
         //busca el item segun el id
         $item = Item::find($id);
