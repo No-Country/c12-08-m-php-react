@@ -8,7 +8,7 @@ interface IButton extends React.ComponentPropsWithoutRef<'button'> {
   shadow?: true | false;
 }
 
-const styles: any = {
+const styles = {
   normal: {
     green: 'bg-[#9FD179]',
     gray: 'bg-[#E6E9EF]',
@@ -28,7 +28,7 @@ const styles: any = {
   text: {
     blue: 'text-[#0568FD]',
     white: 'text-[#FFFFFF]',
-    text: 'text-[#000000]',
+    black: 'text-[#000000]',
   },
   sizes: {
     sm: 'min-w-[50px] h-[50px]',
