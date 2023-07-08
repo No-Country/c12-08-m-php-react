@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import GeneralButton from '../components/buttons/GeneralButton';
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      <GeneralButton color='black' text='white' variant='normal' size='sm'>
+        Log In
+      </GeneralButton>
       <h1 className='m-auto text-4xl font-semibold text-my-custom-color drop-shadow-[0px_0px_50px_white]'>
         Hello World
       </h1>
