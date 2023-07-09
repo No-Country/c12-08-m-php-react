@@ -1,5 +1,7 @@
 import React from 'react';
 import ProfileCard from '../cards/ProfileCard';
+import LinkItem from './LinkItem';
+import Navigation from './SideBarNav';
 
 type Props = {
   open: boolean;
@@ -22,11 +24,17 @@ const Sidebar = ({ open, setOpen }: Props) => {
                   h-full w-[300px]
                   transition-transform .3s ease-in-out
                   ${open ? '' : '-translate-x-full'}`}>
-      <div className='flex flex-col items-center'>
-        <button className='ml-auto' onClick={() => setOpen(false)}>
-          Cerrar
-        </button>
+      <div className='flex flex-col h-full my-4'>
+        <div className=' flex flex-row w-full'>
+          <img src='/svg/Logo.svg' className='px-5 mr-auto' />
+          <img
+            src='/svg/sb-back.svg'
+            className='ml-auto h-6 w-6 m-2 mx-5'
+            onClick={() => setOpen(false)}
+          />
+        </div>
         <ProfileCard user={customUser} />
+        <Navigation />
       </div>
     </div>
   );
