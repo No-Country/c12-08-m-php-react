@@ -12,6 +12,9 @@ module.exports = {
         white: '#FFFFFF',
         black: '#000000',
       },
+      fontFamily: {
+        poppins: ['var(--font-poppins)'],
+      },
       screens: {
         xs: '375px',
         sm: '600px',
