@@ -6,7 +6,7 @@ const ISearchInput = () => {
       <div className='relative w-3/4'>
         <img
           src='/svg/search.svg'
-          className='pointer-events-none w-7 h-7 absolute top-1/2 -translate-y-1/2 right-2'
+          className='pointer-events-none w-7 h-7 absolute top-1/2 -translate-y-1/2 right-3'
         />
 
         <input
