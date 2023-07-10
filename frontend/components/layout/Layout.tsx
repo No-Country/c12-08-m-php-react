@@ -1,8 +1,20 @@
-import React, { PropsWithChildren, useState } from 'react';
+import React, { PropsWithChildren, useEffect, useState } from 'react';
 import Sidebar from './Sidebar';
+import { useWindowsSize } from '../../hooks/useWindowsSize';
 
 const Layout = (props: PropsWithChildren) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const size = useWindowsSize();
+
+  useEffect(() => {
+    if (size.width > 768) {
+      setSidebarOpen(true);
+    } else {
+      setSidebarOpen(false);
+    }
+  }, [size.width]);
+
   return (
     <div className=' grid min-h-screen grid-rows-header'>
       <img
