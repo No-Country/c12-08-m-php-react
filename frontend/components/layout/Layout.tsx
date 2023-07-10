@@ -7,7 +7,7 @@ const Layout = (props: PropsWithChildren) => {
     <div className=' grid min-h-screen grid-rows-header'>
       <img
         src='/svg/sb-open.svg'
-        className=' m-2 w-10 h-10'
+        className=' m-2 w-10 h-10 md:hidden'
         onClick={() => setSidebarOpen(prev => !prev)}
       />
       <nav></nav>

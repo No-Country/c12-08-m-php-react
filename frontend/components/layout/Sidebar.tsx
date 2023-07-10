@@ -17,7 +17,7 @@ const customUser = {
 
 const Sidebar = ({ open, setOpen }: Props) => {
   return (
-    <div
+    <div 
       className={`flex flex-col justify-between
                 bg-white rounded border-white
                   fixed top-0
@@ -29,7 +29,7 @@ const Sidebar = ({ open, setOpen }: Props) => {
           <img src='/svg/Logo.svg' className='px-5 mr-auto' />
           <img
             src='/svg/sb-back.svg'
-            className='ml-auto h-6 w-6 m-2 mx-5'
+            className='ml-auto h-6 w-6 m-2 mx-5 md:hidden'
             onClick={() => setOpen(false)}
           />
         </div>
