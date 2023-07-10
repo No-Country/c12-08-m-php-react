@@ -1,6 +1,7 @@
 import React from 'react';
 import LinkItem from './LinkItem';
 import { useRouter } from 'next/router';
+import ISearchInput from '../inputs/ISearchInput';
 
 const SideBarNav = () => {
   const router = useRouter();
@@ -24,6 +25,7 @@ const SideBarNav = () => {
           image='/svg/sb-community.svg'
           title='Comunidad'
         />
+        <ISearchInput />
       </div>
       <div className=' mt-auto'>
         <LinkItem
