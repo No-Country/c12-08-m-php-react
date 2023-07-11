@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ISearchInput = () => {
   return (
     <div className=' flex justify-center'>

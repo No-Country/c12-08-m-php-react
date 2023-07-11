@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
+
+export interface WindowSize {
+  width: number;
+  height: number;
+}
 
 export const useWindowsSize = () => {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
-    height: undefined,
+  const [windowSize, setWindowSize] = useState<WindowSize>({
+    width: window.innerWidth,
+    height: window.innerHeight,
   });
 
   useEffect(() => {

@@ -1,15 +1,26 @@
-import React, { PropsWithChildren, useEffect, useState } from 'react';
-import Sidebar from './Sidebar';
-import { useWindowsSize } from '../../hooks/useWindowsSize';
+import { PropsWithChildren, useEffect, useState } from 'react';
 import Image from 'next/image';
+
+import resolveCongif from 'tailwindcss/resolveConfig';
+import tailwindConfig from '../../tailwind.config.js';
+
+import { useWindowsSize } from '../../hooks/useWindowsSize';
+import Sidebar from './Sidebar';
+
+const getEndpointInt = (endpoint: string) => {
+  const endpointInt = endpoint.replace('px', '');
+  return parseInt(endpointInt);
+};
 
 const Layout = (props: PropsWithChildren) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   const size = useWindowsSize();
 
+  const fullConfig = resolveCongif(tailwindConfig);
+  const breakpoints = fullConfig.theme.screens;
+
   useEffect(() => {
-    if (size.width > 768) {
+    if (size.width > getEndpointInt(breakpoints.md)) {
       setSidebarOpen(true);
     } else {
       setSidebarOpen(false);
