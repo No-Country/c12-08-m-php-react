@@ -1,11 +1,11 @@
 import React from 'react';
 import ProfileCard from '../cards/ProfileCard';
-import Navigation from './SideBarNav';
+import SideBarNav from './SideBarNav';
 import Image from 'next/image';
 
 type Props = {
   open: boolean;
-  setOpen: (open: boolean) => void;
+  closeSidebar: () => void;
 };
 
 const customUser = {
@@ -15,7 +15,7 @@ const customUser = {
   image: '',
 };
 
-const Sidebar = ({ open, setOpen }: Props) => {
+const Sidebar = ({ open, closeSidebar }: Props) => {
   return (
     <div
       className={`flex flex-col justify-between
@@ -36,14 +36,14 @@ const Sidebar = ({ open, setOpen }: Props) => {
           <Image
             src='/svg/sb-back.svg'
             className='ml-auto h-6 w-6 m-2 mx-5 md:hidden'
-            onClick={() => setOpen(false)}
+            onClick={closeSidebar}
             width={25}
             height={25}
             alt='Back-icon'
           />
         </div>
         <ProfileCard user={customUser} />
-        <Navigation />
+        <SideBarNav />
       </div>
     </div>
   );

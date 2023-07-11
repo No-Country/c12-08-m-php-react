@@ -1,7 +1,7 @@
 import React from 'react';
 import LinkItem from './LinkItem';
 import { useRouter } from 'next/router';
-import ISearchInput from '../inputs/ISearchInput';
+import SearchInput from '../inputs/SearchInput';
 
 const SideBarNav = () => {
   const router = useRouter();
@@ -13,33 +13,33 @@ const SideBarNav = () => {
   return (
     <div className=' flex flex-col h-full w-full'>
       <LinkItem
-        onClick={() => router.push('/dashboard/profile')}
+        handleClick={() => router.push('/dashboard/profile')}
         image='/svg/sb-profile.svg'
         title='Perfil'
       />
       <div className=' border-y-2 border-black w-full min-h-[150px] h-1/5'>
         <LinkItem
-          onClick={() => {
+          handleClick={() => {
             router.push('/dashboard/community');
           }}
           image='/svg/sb-community.svg'
           title='Comunidad'
         />
-        <ISearchInput />
+        <SearchInput />
       </div>
       <div className=' mt-auto'>
         <LinkItem
-          onClick={() => router.push('/about')}
+          handleClick={() => router.push('/about')}
           image='/svg/sb-inf.svg'
           title='Acerca de'
         />
         <LinkItem
-          onClick={() => router.push('/dashboard/settings')}
+          handleClick={() => router.push('/dashboard/settings')}
           image='/svg/sb-setting.svg'
           title='Configuracion'
         />
         <LinkItem
-          onClick={handleLogout}
+          handleClick={handleLogout}
           image='/svg/sb-logout.svg'
           title='Cerrar sesion'
         />

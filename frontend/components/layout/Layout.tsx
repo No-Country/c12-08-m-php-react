@@ -27,6 +27,10 @@ const Layout = (props: PropsWithChildren) => {
     }
   }, [size.width]);
 
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
   return (
     <div className=' grid min-h-screen'>
       <Image
@@ -38,7 +42,7 @@ const Layout = (props: PropsWithChildren) => {
         height={40}
       />
       <div className='grid'>
-        <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
+        <Sidebar open={sidebarOpen} closeSidebar={closeSidebar} />
         {props.children}
       </div>
     </div>
