@@ -21,7 +21,7 @@ const Sidebar = ({ open, setOpen }: Props) => {
       className={`flex flex-col justify-between
                 bg-white rounded border-white
                   fixed top-0
-                  h-full w-[300px]
+                  h-full w-[250px]
                   transition-transform .3s ease-in-out
                   ${open ? '' : '-translate-x-full'}`}>
       <div className='flex flex-col h-full my-4 '>

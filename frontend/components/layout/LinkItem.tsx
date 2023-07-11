@@ -9,7 +9,9 @@ type Props = {
 
 const LinkItem = ({ image, title, onClick }: Props) => {
   return (
-    <div className='flex my-5 mx-5 w-fit cursor-pointer' onClick={onClick}>
+    <div
+      className='flex items-center my-5 mx-5 w-fit cursor-pointer'
+      onClick={onClick}>
       <Image
         className=' mr-5'
         src={image}
@@ -17,7 +19,7 @@ const LinkItem = ({ image, title, onClick }: Props) => {
         width={25}
         height={25}
       />
-      <p className='text-2xl'>{title}</p>
+      <p className=' text-xl '>{title}</p>
     </div>
   );
 };
