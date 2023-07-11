@@ -76,6 +76,25 @@ class ItemController extends Controller
         }
     }
 
+    //function showall
+    public function showall(Request $request)
+    {
+
+        //busca todos los items
+        $items = Item::all();
+
+        //si consigue los items los muestra, sino muestra un error
+        if ($items) {
+            return response()->json([
+                        'items' => $items,
+            ]);
+        } else {
+            return response()->json([
+                        'message' => 'Items not found',
+            ]);
+        }
+    }
+
     /**
      * Update the specified resource in storage.
      */

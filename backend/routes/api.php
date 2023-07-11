@@ -30,6 +30,7 @@ Route::middleware('auth:sanctum')->group(function () {
         //Rutas de notas
         Route::post('/notes', 'App\Http\Controllers\NoteController@store');
         Route::get('/notes/{id}', 'App\Http\Controllers\NoteController@show');
+        Route::get('/notes', 'App\Http\Controllers\NoteController@showall');
         Route::put('/notes/{id}', 'App\Http\Controllers\NoteController@update');
         Route::delete('/notes/{id}', 'App\Http\Controllers\NoteController@destroy');
 

@@ -75,6 +75,30 @@ class NoteController extends Controller
 
     }
 
+    //showall
+
+    public function showall(Request $request)
+    {
+
+        //muestra todas las notas
+
+        $notes = Note::all();
+
+        //si no hay notas, error, sino retorna las notas
+
+        if (!$notes) {
+            return response()->json([
+                'message' => 'Notes not found',
+            ], 404);
+        } else {
+            return response()->json([
+                'message' => 'Notes found',
+                'notes' => $notes
+            ], 200);
+        }
+
+    }
+
     /**
      * Update the specified resource in storage.
      */

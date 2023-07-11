@@ -14,4 +14,8 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         //
     ];
+
+    //Verifica si el token es valido
+
+
 }
