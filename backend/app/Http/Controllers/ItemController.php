@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Item;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class ItemController extends Controller
 {
@@ -22,25 +23,37 @@ class ItemController extends Controller
     {
 
             //valida los datos del request
-            $validatedData = $request->validate([
-                'description' => 'required|string|max:255',
-                'day' => 'required|date',
-                'time' => 'required|date_format:H:i:s',
-                'category' => 'required|string|max:255',
-                'frequency' => 'required|string|max:255',
-            ]);
 
-            //crea el item
-            $item = Item::create([
-                'description' => $validatedData['description'],
-                'day' => $validatedData['day'],
-                'time' => $validatedData['time'],
-                'category' => $validatedData['category'],
-                'frequency' => $validatedData['frequency'],
-            ]);
+            try {
+                $validatedData = $request->validate([
+                    'description' => 'required|string|max:255',
+                    'day' => 'required|date',
+                    'time' => 'required|date_format:H:i:s',
+                    'category' => 'required|string|max:255',
+                    'frequency' => 'required|integer|min:1|max:168'
+                ]);
 
-            //guarda el item creado
-            $item->save();
+
+                //crea el item
+                $item = Item::create([
+                    'description' => $validatedData['description'],
+                    'day' => $validatedData['day'],
+                    'time' => $validatedData['time'],
+                    'category' => $validatedData['category'],
+                    'frequency' => $validatedData['frequency'],
+                ]);
+
+                //guarda el item creado
+                $item->save();
+
+            } catch (ValidationException $e) {
+                return response()->json([
+                    'error' => 'Invalid data',
+                    'message' => $e->getMessage(),
+                    'errors' => $e->errors()
+                ], 400);
+            }
+
 
             //retorna el item creado, sino error
             if ($item) {
@@ -101,15 +114,33 @@ class ItemController extends Controller
     public function update(Request $request, Item $item)
     {
 
-        //actualiza el item con los datos del request
-        $item->description = $request->description;
-        $item->day = $request->day;
-        $item->time = $request->time;
-        $item->category = $request->category;
-        $item->frequency = $request->frequency;
+        //valida los datos del request
+        try {
+            $validatedData = $request->validate([
+                'description' => 'required|string|max:255',
+                'day' => 'required|date',
+                'time' => 'required|date_format:H:i:s',
+                'category' => 'required|string|max:255',
+                'frequency' => 'required|integer|min:1|max:168'
+            ]);
 
-        //guarda el item
-        $item->save();
+            //actualiza el item
+            $item->description = $validatedData['description'];
+            $item->day = $validatedData['day'];
+            $item->time = $validatedData['time'];
+            $item->category = $validatedData['category'];
+            $item->frequency = $validatedData['frequency'];
+
+            //guarda el item actualizado
+            $item->save();
+
+        } catch (ValidationException $e) {
+            return response()->json([
+                'error' => 'Invalid data',
+                'message' => $e->getMessage(),
+                'errors' => $e->errors()
+            ], 400);
+        }
 
         //retorna el item actualizado, sino error
         if ($item) {
@@ -119,7 +150,7 @@ class ItemController extends Controller
             ]);
         } else {
             return response()->json([
-                        'message' => 'Item not found',
+                        'message' => 'Item not updated',
             ]);
         }
     }

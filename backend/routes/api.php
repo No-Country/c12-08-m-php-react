@@ -28,17 +28,18 @@ Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
 Route::middleware('auth:sanctum')->group(function () {
 
         //Rutas de notas
-        Route::post('/notes', 'App\Http\Controllers\NoteController@store');
-        Route::get('/notes/{id}', 'App\Http\Controllers\NoteController@show');
-        Route::get('/notes', 'App\Http\Controllers\NoteController@showall');
-        Route::put('/notes/{id}', 'App\Http\Controllers\NoteController@update');
-        Route::delete('/notes/{id}', 'App\Http\Controllers\NoteController@destroy');
+        Route::post('/notes/create', 'App\Http\Controllers\NoteController@store');
+        Route::get('/notes/show/{id}', 'App\Http\Controllers\NoteController@show');
+        Route::get('/notes/showall', 'App\Http\Controllers\NoteController@showall');
+        Route::put('/notes/update/{id}', 'App\Http\Controllers\NoteController@update');
+        Route::delete('/notes/delete/{id}', 'App\Http\Controllers\NoteController@destroy');
 
         //Ruta de items
-        Route::post('/items', 'App\Http\Controllers\ItemController@store');
-        Route::get('/items/{id}', 'App\Http\Controllers\ItemController@show');
-        Route::put('/items/{id}', 'App\Http\Controllers\ItemController@update');
-        Route::delete('/items/{id}', 'App\Http\Controllers\ItemController@destroy');
+        Route::post('/items/create', 'App\Http\Controllers\ItemController@store');
+        Route::get('/items//show/{id}', 'App\Http\Controllers\ItemController@show');
+        Route::get('/items/showall', 'App\Http\Controllers\ItemController@showall');
+        Route::put('/items/update/{id}', 'App\Http\Controllers\ItemController@update');
+        Route::delete('/items/delete/{id}', 'App\Http\Controllers\ItemController@destroy');
 
     });
 

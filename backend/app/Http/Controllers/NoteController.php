@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Note;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class NoteController extends Controller
 {
@@ -21,23 +22,38 @@ class NoteController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'description' => 'required|string|max:255',
-            'date' => 'required|date',
-            'user_id' => 'required|exists:users,id',
-        ]);
 
-        //crea la nota
+        try{
+            //valida los datos del request
+            $validatedData = $request->validate([
+                'title' => 'required|string|max:255',
+                'description' => 'required|string|max:255',
+                'day' => 'required|date',
+                'time' => 'required|date_format:H:i:s',
+                'category' => 'required|string|max:255',
+                'frequency' => 'required|integer|min:1|max:168'
+            ]);
 
-        $note = Note::create([
-            'description' => $validatedData['description'],
-            'date' => $validatedData['date'],
-            'user_id' => $request->user()->id,
-        ]);
+            //crea la nota
+            $note = Note::create([
+                'title' => $validatedData['title'],
+                'description' => $validatedData['description'],
+                'day' => $validatedData['day'],
+                'time' => $validatedData['time'],
+                'category' => $validatedData['category'],
+                'frequency' => $validatedData['frequency'],
+            ]);
 
-        //guarda la nota creada
+            //guarda la nota creada
+            $note->save();
 
-        $note->save();
+        } catch (ValidationException $e) {
+            return response()->json([
+                'error' => 'Invalid data',
+                'message' => $e->getMessage(),
+                'errors' => $e->errors()
+            ], 400);
+        }
 
         //retorna nota creada, sino error
 
@@ -117,20 +133,44 @@ class NoteController extends Controller
                 ], 404);
             } else {
 
-                $validatedData = $request->validate([
-                    'description' => 'required|string|max:255',
-                    'date' => 'required|date',
-                ]);
+                try {
+                    //valida los datos del request
+                    $validatedData = $request->validate([
+                        'title' => 'required|string|max:255',
+                        'description' => 'required|string|max:255',
+                        'day' => 'required|date',
+                        'time' => 'required|date_format:H:i:s',
+                        'category' => 'required|string|max:255',
+                        'frequency' => 'required|integer|min:1|max:168'
+                    ]);
 
-                $note->description = $validatedData['description'];
-                $note->date = $validatedData['date'];
+                    //actualiza la nota
+                    $note->title = $validatedData['title'];
+                    $note->description = $validatedData['description'];
+                    $note->day = $validatedData['day'];
+                    $note->time = $validatedData['time'];
+                    $note->category = $validatedData['category'];
+                    $note->frequency = $validatedData['frequency'];
 
-                $note->save();
+                    //guarda la nota actualizada
+                    $note->save();
+
+                } catch (ValidationException $e) {
+                    return response()->json([
+                        'error' => 'Invalid data',
+                        'message' => $e->getMessage(),
+                        'errors' => $e->errors()
+                    ], 400);
+                }
+
+                //retorna la nota actualizada, sino error
 
                 return response()->json([
                     'message' => 'Note updated',
                     'note' => $note
-                ], 200);
+                ], 200) ?: response()->json([
+                    'message' => 'Note not updated',
+                ], 400);
             }
     }
 
