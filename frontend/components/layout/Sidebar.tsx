@@ -1,7 +1,7 @@
 import React from 'react';
 import ProfileCard from '../cards/ProfileCard';
-import LinkItem from './LinkItem';
 import Navigation from './SideBarNav';
+import Image from 'next/image';
 
 type Props = {
   open: boolean;
@@ -12,7 +12,7 @@ const customUser = {
   name: 'Cosme Fulanito',
   nationality: 'Argentina',
   edad: 25,
-  image: 'https://cataas.com/cat/says/hello%20world!',
+  image: '',
 };
 
 const Sidebar = ({ open, setOpen }: Props) => {
@@ -26,14 +26,22 @@ const Sidebar = ({ open, setOpen }: Props) => {
                   ${open ? '' : '-translate-x-full'}`}>
       <div className='flex flex-col h-full my-4 '>
         <div className=' flex w-full md:justify-center'>
-          <img
-            src='/svg/Logo.svg'
-            className='px-5 mr-auto md:h-24 '
-          />
-          <img
+          <div>
+            <Image
+              className='mx-5 mr-auto md:mx-auto md:h-20 md:w-20 '
+              src='/svg/Logo.svg'
+              alt='Logo'
+              width={50}
+              height={50}
+            />
+          </div>
+          <Image
             src='/svg/sb-back.svg'
             className='ml-auto h-6 w-6 m-2 mx-5 md:hidden'
             onClick={() => setOpen(false)}
+            width={25}
+            height={25}
+            alt='Back-icon'
           />
         </div>
         <ProfileCard user={customUser} />
