@@ -17,7 +17,7 @@ const SideBarNav = () => {
         image='/svg/sb-profile.svg'
         title='Perfil'
       />
-      <div className=' border-y-2 border-black w-full h-1/5'>
+      <div className=' border-y-2 border-black w-full min-h-[150px] h-1/5'>
         <LinkItem
           onClick={() => {
             router.push('/dashboard/community');

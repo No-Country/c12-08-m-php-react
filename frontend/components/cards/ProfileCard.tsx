@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProfileCard = ({ user }: any) => {
   return (
-    <div className='flex m-5 mt-10 gap-2 '>
+    <div className='flex m-5 mt-10 gap-2 md:hidden'>
       <div className='self-center'>
         <img
           className='w-20 h-20 rounded-full mx-auto'

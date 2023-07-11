@@ -17,16 +17,19 @@ const customUser = {
 
 const Sidebar = ({ open, setOpen }: Props) => {
   return (
-    <div 
+    <div
       className={`flex flex-col justify-between
                 bg-white rounded border-white
                   fixed top-0
                   h-full w-[300px]
                   transition-transform .3s ease-in-out
                   ${open ? '' : '-translate-x-full'}`}>
-      <div className='flex flex-col h-full my-4'>
-        <div className=' flex flex-row w-full'>
-          <img src='/svg/Logo.svg' className='px-5 mr-auto' />
+      <div className='flex flex-col h-full my-4 '>
+        <div className=' flex w-full md:justify-center'>
+          <img
+            src='/svg/Logo.svg'
+            className='px-5 mr-auto md:h-24 '
+          />
           <img
             src='/svg/sb-back.svg'
             className='ml-auto h-6 w-6 m-2 mx-5 md:hidden'
