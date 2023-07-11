@@ -15,7 +15,7 @@ const Input = ({ src, label, type, pattern = '' }: InputProps) => {
   useEffect(() => {
     document
       .querySelector(`[data-select=${label}]`)
-      ?.classList.toggle('peer-focus:text-gray-700');
+      ?.classList.toggle('peer-focus:text-black');
   }, [written]);
 
   const handlerWritten = (e: ChangeEvent<HTMLInputElement>) => {
@@ -24,15 +24,19 @@ const Input = ({ src, label, type, pattern = '' }: InputProps) => {
   };
 
   const toggleInputClass = written
-    ? 'text-xs text-[#C1F19C] -top-[0.5rem] peer-focus:text-[#C1F19C] '
+    ? 'text-xs text-lightGreen -top-[0.5rem] peer-focus:text-lightGreen md:text-white md:peer-focus:text-white'
     : '';
-  const toggleBorderClass = written ? 'border-[#C1F19C]' : 'border-gray-700';
+  const toggleBorderClass = written ? 'border-lightGreen' : 'border-black';
+
+  const labelToggleClass = written
+    ? 'md:invert-[.91] md:sepia-[.15] md:saturate-[5.49] md:hue-rotate-[46deg] md:brightness-[1.04] md:contrast-[.89]'
+    : '';
 
   return (
-    <div className='flex justify-center items-center gap-4'>
-      <label className='cursor-pointer' htmlFor={label}>
+    <div className='flex justify-center items-center gap-2 '>
+      <label className={`cursor-pointer ${labelToggleClass}`} htmlFor={label}>
         <Image
-          className=' w-6 h-5'
+          className='w-6 h-5'
           src={src}
           alt={label}
           width={24}
@@ -45,7 +49,7 @@ const Input = ({ src, label, type, pattern = '' }: InputProps) => {
           toggleBorderClass
         }>
         <input
-          className='peer h-8 outline-none'
+          className='peer h-8 outline-none bg-transparent'
           data-select={'input-' + type}
           type={type}
           name={label}
@@ -58,14 +62,14 @@ const Input = ({ src, label, type, pattern = '' }: InputProps) => {
 
         <label
           className={
-            'cursor-texts absolute peer-focus:text-xs peer-focus:text-gray-700 peer-focus:-top-[0.5rem] ' +
+            'cursor-texts absolute top-0 peer-focus:text-xs peer-focus:text-black peer-focus:-top-[0.7rem] transition-[top] ease-out duration-300 ' +
             toggleInputClass
           }
           data-select={label}
           htmlFor={label}>
           {label}
         </label>
-        <ShowPassword type={type} />
+        <ShowPassword type={type} written={written} />
       </div>
     </div>
   );
