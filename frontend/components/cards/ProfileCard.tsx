@@ -14,7 +14,7 @@ const ProfileCard = ({ user }: any) => {
         />
       </div>
       <div className='self-center text-center'>
-        <div className='font-bold text-blue-600 text'>{user.name}</div>
+        <div className='font-bold text-blue'>{user.name}</div>
         <div className='font-bold'>{user.edad + ' años'} </div>
         <div className='font-bold'>{user.nationality}</div>
       </div>

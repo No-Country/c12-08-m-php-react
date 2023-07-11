@@ -13,8 +13,8 @@ const ISearchInput = () => {
           type='text'
           placeholder='Invitar'
           className='form-input w-full px-4 py-2
-          bg-green-500 rounded-full placeholder-gray-600 placeholder:font-bold
-          focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-600 '
+          bg-green rounded-full placeholder-gray-600 placeholder:font-bold
+          focus:bg-white focus:outline-none focus:ring-2 focus:ring-green'
         />
       </div>
     </div>
