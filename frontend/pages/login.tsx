@@ -1,5 +1,6 @@
 import Button from '@/components/Button/Button';
 import ConectSocial from '@/components/ConectSocial/ConectSocial';
+import FormLayoutAuth from '@/components/FormLayoutAuth/FormLayoutAuth';
 import HeaderAuth from '@/components/HeaderAuth/HeaderAuth';
 import Input from '@/components/Input/Input';
 import QuestionAlternative from '@/components/QuestionAlternative/QuestionAlternative';
@@ -8,7 +9,7 @@ import password from '@/public/img/password.png';
 
 const Login = () => {
   return (
-    <div className='flex flex-col gap-8 py-4 h-screen justify-evenly md:items-center md:mx-auto md:w-[30rem] md:h-[28rem] md:gap-4 md:border md:bg-green md:rounded-[20px]'>
+    <FormLayoutAuth>
       <HeaderAuth />
       <Formlogin />
       <QuestionAlternative
@@ -16,7 +17,7 @@ const Login = () => {
         callAction={'Unete ahora'}
       />
       <ConectSocial />
-    </div>
+    </FormLayoutAuth>
   );
 };
 
@@ -27,13 +28,13 @@ const Formlogin = () => {
     <form className='flex flex-col gap-8 md:gap-4'>
       <Input
         src={email}
-        label='Correo'
+        label='email'
         type='email'
         pattern='[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
       />
       <Input
         src={password}
-        label='Contraseña'
+        label='password'
         type='password'
         pattern='^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
       />
