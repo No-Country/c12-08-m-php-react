@@ -6,6 +6,7 @@ import tailwindConfig from '../../tailwind.config.js';
 
 import { useWindowsSize } from '../../hooks/useWindowsSize';
 import Sidebar from './Sidebar';
+import NavBar from './NavBar';
 
 const getEndpointInt = (endpoint: string) => {
   const endpointInt = endpoint.replace('px', '');
@@ -45,6 +46,7 @@ const Layout = (props: PropsWithChildren) => {
         <Sidebar open={sidebarOpen} closeSidebar={closeSidebar} />
         {props.children}
       </div>
+      <NavBar />
     </div>
   );
 };
