@@ -10,11 +10,15 @@ import password from '@/public/img/password.png';
 const Login = () => {
   return (
     <FormLayoutAuth>
-      <HeaderAuth />
+      <HeaderAuth>
+        <span>¡Bienvenido!</span>
+        <span>Inicia sesión ahora</span>
+      </HeaderAuth>
       <Formlogin />
       <QuestionAlternative
         question={'¿No tienes una cuenta?'}
         callAction={'Unete ahora'}
+        link='/register'
       />
       <ConectSocial />
     </FormLayoutAuth>
