@@ -7,9 +7,16 @@ interface InputProps {
   label: string;
   type: string;
   pattern?: string;
+  size?: 'sm' | 'md' | 'lg';
 }
 
-const Input = ({ src, label, type, pattern = '' }: InputProps) => {
+const sizes = {
+  sm: 'md:w-28 w-72',
+  md: 'w-44',
+  lg: 'w-72',
+};
+
+const Input = ({ src, label, type, pattern = '', size = 'lg' }: InputProps) => {
   const [written, setWritten] = useState(false);
 
   const handlerWritten = (e: ChangeEvent<HTMLInputElement>) => {
@@ -22,18 +29,10 @@ const Input = ({ src, label, type, pattern = '' }: InputProps) => {
   return (
     <div className='flex justify-center items-center gap-2 '>
       <label className={`cursor-pointer`} htmlFor={label}>
-        <Image
-          className='w-6 h-5'
-          src={src}
-          alt={label}
-          width={24}
-          height={20}
-        />
+        <Image className='w-6 h-5' src={src} alt={label} width={24} height={20} />
       </label>
       <div
-        className={
-          'relative flex flex-col justify-center w-60  border-b-2 border-black'
-        }>
+        className={`relative flex flex-col justify-center ${sizes[size]}  border-b-2 border-black`}>
         <input
           className='peer h-8 outline-none bg-transparent'
           data-select={'input-' + type}
