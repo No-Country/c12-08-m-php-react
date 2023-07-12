@@ -1,15 +1,6 @@
 import Head from 'next/head';
-import { format } from "date-fns";
-import { useState } from "react";
-import Calendar from '../components/calendar/Calendar';
 
 export default function Home() {
-  const today = new Date();
-  const [currentDate, setCurrentDate] = useState(today);
-
-  const handleGoToToday = () => {
-    setCurrentDate(today);
-  };
 
   return (
     <div className='w-full min-h-screen flex items-center justify-center'>
@@ -19,16 +10,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className="mt-16 flex flex-col items-center gap-8 bg-green">
-        <Calendar value={currentDate} onChange={setCurrentDate} />
-        <div className="flex flex-col items-center gap-4">
-          <p className="font-poppins text-blue font-semibold cursor-pointer"
-            onClick={handleGoToToday} >
-            <span>Hoy, </span>{format(today, "dd LLL")}
-          </p>
-        </div>
-      </div>
-
     </div>
+
   );
 }
