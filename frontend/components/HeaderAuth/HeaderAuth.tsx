@@ -1,12 +1,15 @@
 import logo from '@/public/img/pillcare_logo.png';
 import Image from 'next/image';
 
-const HeaderAuth = () => {
+interface HeaderAuthProps {
+  children: React.ReactNode;
+}
+
+const HeaderAuth = ({ children }: HeaderAuthProps) => {
   return (
     <>
       <div className='flex flex-col items-center justify-center font-semibold text-xl gap-2 md:text-base'>
-        <span>¡Bienvenido!</span>
-        <span>Inicia sesión ahora</span>
+        {children}
       </div>
       <Image
         className='mx-auto md:hidden'
