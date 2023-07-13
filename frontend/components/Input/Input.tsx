@@ -6,6 +6,7 @@ interface InputProps {
   src: StaticImageData;
   label: string;
   type: string;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   pattern?: string;
   size?: 'sm' | 'md' | 'lg';
 }
@@ -16,12 +17,21 @@ const sizes = {
   lg: 'w-72',
 };
 
-const Input = ({ src, label, type, pattern = '', size = 'lg' }: InputProps) => {
+const Input = ({
+  src,
+  label,
+  type,
+  handleChange,
+  pattern = '',
+  size = 'lg',
+}: InputProps) => {
   const [written, setWritten] = useState(false);
 
   const handlerWritten = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.value) setWritten(true);
     else setWritten(false);
+
+    handleChange(e);
   };
 
   const toggleInputClass = written ? 'text-xs -translate-y-3' : '';
@@ -40,7 +50,7 @@ const Input = ({ src, label, type, pattern = '', size = 'lg' }: InputProps) => {
           name={label}
           id={label}
           placeholder=''
-          pattern={pattern}
+          // pattern={pattern}
           onChange={handlerWritten}
           required
         />
