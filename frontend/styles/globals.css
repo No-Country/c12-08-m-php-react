@@ -20,8 +20,6 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   color: rgb(0, 0, 0);
 }
-<<<<<<< Updated upstream
-=======
 
 /* more info about this in https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */
 @layer components {
@@ -44,4 +42,3 @@ select:-webkit-autofill:focus {
     @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
   }
 }
->>>>>>> Stashed changes
