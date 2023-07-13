@@ -1,7 +1,7 @@
 import Button from 'components/Button/Button';
 import Image from 'next/image';
 import Link from 'next/link';
-import landingImage from '/public/img/LandingImage.jpg';
+import landingImage from '@/public/img/LandingImage.jpg';
 
 const LandingHeader = () => {
   return (
