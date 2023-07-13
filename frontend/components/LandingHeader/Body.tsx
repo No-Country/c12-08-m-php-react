@@ -8,7 +8,7 @@ const Body: React.FC = () => {
     return (
         <div className="flex items-center justify-end">
             <div className="max-w flex flex-col">
-                <h1 className="font-poppins font-semibold text-6xl text-center">
+                <h1 className="font-poppins font-semibold lg:text-6xl md:text-4xl sm:text-xl text-center">
                     Un recordatorio para ti y la gente que quieres...
                 </h1>
                 <p className="font-poppins font-regular text-xl text-center mt-3">
