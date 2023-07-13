@@ -1,4 +1,3 @@
-import React from 'react';
 import NavBarItem from './NavBarItem';
 
 const items = [

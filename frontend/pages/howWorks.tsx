@@ -1,9 +1,5 @@
-import React from 'react'
-
 const howWorks = () => {
-    return (
-        <h1>Esta es la seccion de como funciona Pilcare</h1>
-    )
-}
+  return <h1>Esta es la seccion de como funciona Pilcare</h1>;
+};
 
-export default howWorks
+export default howWorks;

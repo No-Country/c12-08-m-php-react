@@ -1,9 +1,5 @@
-import React from 'react'
-
 const contact = () => {
-    return (
-        <h1>Esta es la seccion de contacto</h1>
-    )
-}
+  return <h1>Esta es la seccion de contacto</h1>;
+};
 
-export default contact
+export default contact;

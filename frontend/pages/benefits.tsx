@@ -1,9 +1,5 @@
-import React from 'react'
-
 const benefits = () => {
-    return (
-        <h1>Estos son los beneficios de Pilcare</h1>
-    )
-}
+  return <h1>Estos son los beneficios de Pilcare</h1>;
+};
 
-export default benefits
+export default benefits;
