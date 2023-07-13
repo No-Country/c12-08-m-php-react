@@ -1,4 +1,3 @@
-import React from 'react';
 import LinkItem from './LinkItem';
 import { useRouter } from 'next/router';
 import SearchInput from '../inputs/SearchInput';
