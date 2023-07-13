@@ -32,11 +32,10 @@ export default Login;
 const Formlogin = () => {
   const handleS = async (values: any) => {
     try {
-      const { data } = await axios.post('', JSON.stringify(values), {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+      const { data } = await axios.post(
+        'https://c12-08-m-php-react-production.up.railway.app/api/login',
+        values
+      );
       console.log(data);
     } catch (error) {
       console.error('Error:', error);
