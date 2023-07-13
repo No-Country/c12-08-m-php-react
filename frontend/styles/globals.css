@@ -20,3 +20,28 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
   color: rgb(0, 0, 0);
 }
+<<<<<<< Updated upstream
+=======
+
+/* more info about this in https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */
+@layer components {
+  .btn {
+    @apply flex justify-center items-center rounded-full duration-300 hover:scale-105 mx-auto text-center min-w-[9rem] h-10
+  }
+  .btn-primary {
+    @apply btn text-white bg-green;
+  }
+  .btn-secondary {
+    @apply btn text-white bg-blue;
+  }
+  .btn-primary-outline {
+    @apply btn text-green border-2 border-green bg-lightGreen;
+  }
+  .btn-secondary-outline {
+    @apply btn text-blue border-2 border-blue bg-lightBlue;
+  }
+  .shadow {
+    @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
+  }
+}
+>>>>>>> Stashed changes
