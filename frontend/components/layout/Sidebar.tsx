@@ -1,4 +1,3 @@
-import React from 'react';
 import ProfileCard from '../cards/ProfileCard';
 import SideBarNav from './SideBarNav';
 import Image from 'next/image';
