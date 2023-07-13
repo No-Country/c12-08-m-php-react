@@ -35,7 +35,7 @@ const Formlogin = () => {
   const handleS = async (values: any) => {
     try {
       const { data } = await login(values);
-      if (data) router.push('/dashboard');
+      router.push('/dashboard');
       console.log(data);
     } catch (error) {
       console.log(error);
