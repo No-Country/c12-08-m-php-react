@@ -6,6 +6,7 @@ import Input from '@/components/Input/Input';
 import QuestionAlternative from '@/components/QuestionAlternative/QuestionAlternative';
 import email from '@/public/img/email.png';
 import password from '@/public/img/password.png';
+import { login } from '@/services/auth/auth';
 import axios from 'axios';
 import { useFormik } from 'formik';
 
@@ -32,13 +33,12 @@ export default Login;
 const Formlogin = () => {
   const handleS = async (values: any) => {
     try {
-      const { data } = await axios.post(
-        'https://c12-08-m-php-react-production.up.railway.app/api/login',
-        values
-      );
+      const { data } = await login(values);
+      
       console.log(data);
+
     } catch (error) {
-      console.error('Error:', error);
+      console.log(error);
     }
   };
 
