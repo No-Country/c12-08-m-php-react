@@ -7,7 +7,6 @@ import QuestionAlternative from '@/components/QuestionAlternative/QuestionAltern
 import email from '@/public/img/email.png';
 import password from '@/public/img/password.png';
 import { login } from '@/services/auth/auth';
-import axios from 'axios';
 import { useFormik } from 'formik';
 
 const Login = () => {
@@ -34,9 +33,8 @@ const Formlogin = () => {
   const handleS = async (values: any) => {
     try {
       const { data } = await login(values);
-      
-      console.log(data);
 
+      console.log(data);
     } catch (error) {
       console.log(error);
     }
