@@ -18,6 +18,7 @@ const Layout = (props: PropsWithChildren) => {
   const size = useWindowsSize();
 
   const fullConfig = resolveCongif(tailwindConfig);
+  // @ts-ignore: Unreachable code error
   const breakpoints = fullConfig.theme.screens;
 
   useEffect(() => {
