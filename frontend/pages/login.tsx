@@ -8,6 +8,7 @@ import email from '@/public/img/email.png';
 import password from '@/public/img/password.png';
 import { login } from '@/services/auth/auth';
 import { useFormik } from 'formik';
+import { useRouter } from 'next/router';
 
 const Login = () => {
   return (
@@ -26,14 +27,15 @@ const Login = () => {
     </FormLayoutAuth>
   );
 };
-
 export default Login;
 
 const Formlogin = () => {
+  const router = useRouter();
+
   const handleS = async (values: any) => {
     try {
       const { data } = await login(values);
-
+      if (data) router.push('/dashboard');
       console.log(data);
       localStorage.setItem('token', data.access_token);
     } catch (error) {}
