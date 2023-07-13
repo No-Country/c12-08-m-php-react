@@ -35,9 +35,8 @@ const Formlogin = () => {
       const { data } = await login(values);
 
       console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
+      localStorage.setItem('token', data.access_token);
+    } catch (error) {}
   };
 
   const { handleSubmit, handleChange } = useFormik({
