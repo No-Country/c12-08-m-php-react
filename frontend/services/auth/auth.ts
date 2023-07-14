@@ -6,10 +6,7 @@ interface LoginBody {
 }
 
 const login = async (body: LoginBody) => {
-  const response = await Post('/login', body)
-    .then(res => res.data)
-    .catch(err => err);
-  console.log(response);
+  const response = await Post('/login', body);
   return response;
 };
 

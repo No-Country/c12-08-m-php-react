@@ -37,9 +37,8 @@ const Formlogin = () => {
       const { data } = await login(values);
       if (data) router.push('/dashboard');
       console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
+      localStorage.setItem('token', data.access_token);
+    } catch (error) {}
   };
 
   const { handleSubmit, handleChange } = useFormik({
