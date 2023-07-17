@@ -6,7 +6,7 @@ type Props = {
   handleClick: () => void;
 };
 
-const LinkItem = ({ image, title, handleClick }: Props) => {
+const NavbarItem = ({ image, title, handleClick }: Props) => {
   return (
     <div
       className='flex items-center my-5 mx-5 w-fit cursor-pointer'
@@ -17,4 +17,4 @@ const LinkItem = ({ image, title, handleClick }: Props) => {
   );
 };
 
-export default LinkItem;
+export default NavbarItem;

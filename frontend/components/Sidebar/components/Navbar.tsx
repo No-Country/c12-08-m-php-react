@@ -1,6 +1,6 @@
-import LinkItem from './LinkItem';
-import { useRouter } from 'next/router';
-import SearchInput from '../inputs/SearchInput';
+import { useRouter } from 'next/navigation';
+import NavbarItem from './NavbarItem';
+import SearchInput from './SearchInput';
 
 const SideBarNav = () => {
   const router = useRouter();
@@ -11,13 +11,13 @@ const SideBarNav = () => {
 
   return (
     <div className=' flex flex-col h-full w-full'>
-      <LinkItem
+      <NavbarItem
         handleClick={() => router.push('/dashboard/profile')}
         image='/svg/sb-profile.svg'
         title='Perfil'
       />
       <div className=' border-y-2 border-black w-full min-h-[150px] h-1/5'>
-        <LinkItem
+        <NavbarItem
           handleClick={() => {
             router.push('/dashboard/community');
           }}
@@ -27,17 +27,17 @@ const SideBarNav = () => {
         <SearchInput />
       </div>
       <div className=' mt-auto'>
-        <LinkItem
+        <NavbarItem
           handleClick={() => router.push('/about')}
           image='/svg/sb-inf.svg'
           title='Acerca de'
         />
-        <LinkItem
+        <NavbarItem
           handleClick={() => router.push('/dashboard/settings')}
           image='/svg/sb-setting.svg'
           title='Configuracion'
         />
-        <LinkItem
+        <NavbarItem
           handleClick={handleLogout}
           image='/svg/sb-logout.svg'
           title='Cerrar sesion'

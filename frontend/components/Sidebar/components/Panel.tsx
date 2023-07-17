@@ -1,6 +1,6 @@
-import ProfileCard from '../cards/ProfileCard';
-import SideBarNav from './SideBarNav';
 import Image from 'next/image';
+import Navbar from './Navbar';
+import ProfileInfo from './ProfileInfo';
 
 type Props = {
   open: boolean;
@@ -14,7 +14,7 @@ const customUser = {
   image: '',
 };
 
-const Sidebar = ({ open, closeSidebar }: Props) => {
+const Panel = ({ open, closeSidebar }: Props) => {
   return (
     <div
       className={`flex flex-col justify-between
@@ -41,11 +41,11 @@ const Sidebar = ({ open, closeSidebar }: Props) => {
             alt='Back-icon'
           />
         </div>
-        <ProfileCard user={customUser} />
-        <SideBarNav />
+        <ProfileInfo user={customUser} />
+        <Navbar />
       </div>
     </div>
   );
 };
 
-export default Sidebar;
+export default Panel;

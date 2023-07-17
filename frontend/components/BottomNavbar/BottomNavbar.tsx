@@ -1,4 +1,4 @@
-import NavBarItem from './NavBarItem';
+import BottomNavbarItem from './components/BottomNavbarItem';
 
 const items = [
   {
@@ -23,16 +23,16 @@ const items = [
   },
 ];
 
-const NavBar = () => {
+const BottomNavbar = () => {
   return (
-    <div className='fixed bottom-0 left-0 z-30 w-full h-20 bg-white border-t-2 border-lightGreen  md:hidden'>
+    <footer className='fixed bottom-0 left-0 z-30 w-full h-20 bg-white border-t-2 border-lightGreen  md:hidden'>
       <div className='grid h-full max-w-lg grid-cols-4 mx-auto font-medium'>
         {items.map(item => (
-          <NavBarItem key={item.title} item={item} />
+          <BottomNavbarItem key={item.title} item={item} />
         ))}
       </div>
-    </div>
+    </footer>
   );
 };
 
-export default NavBar;
+export default BottomNavbar;

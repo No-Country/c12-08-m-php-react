@@ -1,5 +1,6 @@
 import Image from 'next/image';
-const ProfileCard = ({ user }: any) => {
+
+const ProfileInfo = ({ user }: any) => {
   return (
     <div className='flex m-5 mt-10 gap-2 md:hidden'>
       <div className='self-center'>
@@ -20,4 +21,4 @@ const ProfileCard = ({ user }: any) => {
   );
 };
 
-export default ProfileCard;
+export default ProfileInfo;

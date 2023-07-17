@@ -9,7 +9,7 @@ interface Props {
   };
 }
 
-const NavBarItem = ({ item }: Props) => {
+const BottomNavbarItem = ({ item }: Props) => {
   return (
     <Link
       href={item.to}
@@ -20,4 +20,4 @@ const NavBarItem = ({ item }: Props) => {
   );
 };
 
-export default NavBarItem;
+export default BottomNavbarItem;
