@@ -1,6 +1,6 @@
 'use client';
 
-import Input from '@/components/Input/Input';
+import { Input } from '@/components';
 import email from '@/public/img/email.png';
 import password from '@/public/img/password.png';
 import phone from '@/public/svg/phone.svg';

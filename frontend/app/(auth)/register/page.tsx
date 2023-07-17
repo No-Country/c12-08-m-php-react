@@ -1,5 +1,4 @@
-import AuthHeader from '@/components/AuthHeader/AuthHeader';
-import QuestionAlternative from '@/components/QuestionAlternative/QuestionAlternative';
+import { AuthHeader, QuestionAlternative } from '@/components';
 
 import FormRegister from './form';
 

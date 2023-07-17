@@ -1,5 +1,4 @@
-import BottomNavbar from '@/components/BottomNavbar/BottomNavbar';
-import Sidebar from '@/components/Sidebar/Sidebar';
+import { BottomNavbar, Sidebar } from '@/components';
 import Grid from './grid';
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {

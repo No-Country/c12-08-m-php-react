@@ -1,5 +1,4 @@
-import Dashboard from '@/components/Dashboard/Dashboard';
-import Userbar from '@/components/Userbar/Userbar';
+import { Dashboard, Userbar } from '@/components';
 
 const Home = () => {
   return (

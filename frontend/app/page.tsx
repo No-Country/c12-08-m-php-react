@@ -1,5 +1,4 @@
-import LandingNavbar from '@/components/LandingNavbar/LandingNavbar';
-import LandingShowcase from '@/components/LandingShowcase/LandingShowcase';
+import { LandingNavbar, LandingShowcase } from '@/components';
 
 export default function Landing() {
   return (

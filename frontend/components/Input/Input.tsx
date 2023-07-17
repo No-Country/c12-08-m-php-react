@@ -1,8 +1,8 @@
 'use client';
 
-import VisibilityToggler from '@/components/Input/components/VisibilityToggler';
 import Image, { StaticImageData } from 'next/image';
 import { ChangeEvent, useState } from 'react';
+import VisibilityToggler from './components/VisibilityToggler';
 
 interface InputProps {
   src: StaticImageData;
