@@ -1,35 +1,13 @@
-import Button from '@/components/Button/Button';
-import ConectSocial from '@/components/ConectSocial/ConectSocial';
-import FormLayoutAuth from '@/components/FormLayoutAuth/FormLayoutAuth';
-import HeaderAuth from '@/components/HeaderAuth/HeaderAuth';
+'use client';
+
 import Input from '@/components/Input/Input';
-import QuestionAlternative from '@/components/QuestionAlternative/QuestionAlternative';
 import email from '@/public/img/email.png';
 import password from '@/public/img/password.png';
 import { login } from '@/services/auth/auth';
 import { useFormik } from 'formik';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
-const Login = () => {
-  return (
-    <FormLayoutAuth>
-      <HeaderAuth>
-        <span>¡Bienvenido!</span>
-        <span>Inicia sesión ahora</span>
-      </HeaderAuth>
-      <Formlogin />
-      <QuestionAlternative
-        question={'¿No tienes una cuenta?'}
-        callAction={'Unete ahora'}
-        link='/register'
-      />
-      <ConectSocial />
-    </FormLayoutAuth>
-  );
-};
-export default Login;
-
-const Formlogin = () => {
+const FormLogin = () => {
   const router = useRouter();
 
   const handleS = async (values: any) => {
@@ -55,7 +33,7 @@ const Formlogin = () => {
         src={email}
         label='email'
         type='email'
-        pattern='^[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+        // pattern='^[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
         handleChange={handleChange}
       />
       <Input
@@ -65,9 +43,9 @@ const Formlogin = () => {
         // pattern='^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
         handleChange={handleChange}
       />
-      <Button bgColor='blue' color='white' shadow>
-        iniciar sesión
-      </Button>
+      <button className='btn-secondary shadow'>Iniciar sesión</button>
     </form>
   );
 };
+
+export default FormLogin;

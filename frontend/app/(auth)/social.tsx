@@ -1,7 +1,5 @@
-import facebook from '@/public/svg/facebook.svg';
 import google from '@/public/svg/google.svg';
 import Image from 'next/image';
-import ButtonLoginSocial from '../ButtonLoginSocial/ButtonLoginSocial';
 
 const ConectSocial = () => {
   return (
@@ -11,12 +9,10 @@ const ConectSocial = () => {
           o
         </span>
         <div className='flex flex-col items-center gap-7'>
-          <ButtonLoginSocial src={google} alt='google logo' social='Google' />
-          <ButtonLoginSocial
-            src={facebook}
-            alt='facebook logo'
-            social='Facebook'
-          />
+          <button className=' w-80 flex gap-4 items-center border py-2 px-6 rounded-[20px] border-gray-700 text-gray-700 hover:bg-slate-200'>
+            <Image src={google} alt='google logo' width={24} height={24} />
+            <span>Continuar con Google</span>
+          </button>
         </div>
       </div>
       <div className=' flex-col items-center gap-2 hidden md:flex'>
@@ -24,9 +20,6 @@ const ConectSocial = () => {
         <div className='flex gap-4'>
           <button>
             <Image src={google} alt='google logo' width={30} height={30} />
-          </button>
-          <button>
-            <Image src={facebook} alt='facebook logo' width={30} height={30} />
           </button>
         </div>
       </div>

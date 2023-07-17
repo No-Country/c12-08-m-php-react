@@ -9,21 +9,8 @@ interface EyeProps {
   togglePasswordVisibility: () => void;
 }
 
-const Eye = ({ src, alt, togglePasswordVisibility }: EyeProps) => {
-  return (
-    <Image
-      className={`absolute right-0 w-6 h-5 cursor-pointer`}
-      src={src}
-      alt={alt}
-      width={24}
-      height={20}
-      onClick={togglePasswordVisibility}
-    />
-  );
-};
-
 const VisibilityToggler = () => {
-  const [isShowPassword, setIsShowPassword] = useState(false);
+  const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
     document
@@ -52,3 +39,16 @@ const VisibilityToggler = () => {
 };
 
 export default VisibilityToggler;
+
+const Eye = ({ src, alt, togglePasswordVisibility }: EyeProps) => {
+  return (
+    <Image
+      className={`absolute right-0 w-6 h-5 cursor-pointer`}
+      src={src}
+      alt={alt}
+      width={24}
+      height={20}
+      onClick={togglePasswordVisibility}
+    />
+  );
+};
