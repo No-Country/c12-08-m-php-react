@@ -1,8 +1,8 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import Logo from '/public/svg/Logo.svg';
 
-const LandingNavbar: React.FC = () => {
+const LandingNavbar = () => {
   return (
     <nav className='bg-white w-full font-poppins font-semibold'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -18,7 +18,6 @@ const LandingNavbar: React.FC = () => {
                 <Link href='/'>Inicio</Link>
                 <Link href='/howWorks'>Cómo funciona</Link>
                 <Link href='/benefits'>Beneficios</Link>
-                <Link href='/testimonials'>Testimonios</Link>
                 <Link href='/contact'>Contacto</Link>
               </div>
               <Link href='/login' className='btn-primary'>
