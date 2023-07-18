@@ -16,14 +16,16 @@ use App\Http\Controllers\AuthController;
 */
 
 
-//Ruta de logeo
-Route::post('/login', [AuthController::class, 'login']);
-//Ruta de registro
 Route::post('/register', [AuthController::class, 'register']);
-//Ruta de deslogeo
-Route::post('/logout', [AuthController::class, 'logout']);
-//Ruta de verificacion de datos de usuario logeado
-Route::get('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
+
+Route::group(['middleware' => 'api'], function ($router) {
+
+    Route::post('login', 'App\Http\Controllers\AuthController@login');
+    Route::post('logout', 'App\Http\Controllers\AuthController@logout');
+    Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
+    Route::post('me', 'App\Http\Controllers\AuthController@me');
+
+});
 
 Route::middleware('auth:sanctum')->group(function () {
 

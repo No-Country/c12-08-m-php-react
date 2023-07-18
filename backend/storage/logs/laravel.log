@@ -87,7 +87,7 @@
 #41 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #42 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #43 {main}
-"} 
+"}
 [2023-07-06 22:01:07] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -123,7 +123,7 @@
 #30 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #31 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #32 {main}
-"} 
+"}
 [2023-07-06 22:02:35] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -159,7 +159,7 @@
 #30 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #31 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #32 {main}
-"} 
+"}
 [2023-07-06 22:07:28] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -195,7 +195,7 @@
 #30 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #31 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #32 {main}
-"} 
+"}
 [2023-07-06 22:20:08] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «surname» de la relación «users» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@example.com, 2023-07-06 22:20:08, $2y$10$/fFidQR78tCqPv00Ogb57.JnaemF3gP7KEUrn0SdHFLg5JUEk7l7G, Sjt4pu9R3j, 2023-07-06 22:20:08, 2023-07-06 22:20:08). (Connection: pgsql, SQL: insert into "users" ("name", "email", "email_verified_at", "password", "remember_token", "updated_at", "created_at") values (Admin, admin@example.com, 2023-07-06 22:20:08, $2y$10$/fFidQR78tCqPv00Ogb57.JnaemF3gP7KEUrn0SdHFLg5JUEk7l7G, Sjt4pu9R3j, 2023-07-06 22:20:08, 2023-07-06 22:20:08) returning "id") {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «surname» de la relación «users» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@example.com, 2023-07-06 22:20:08, $2y$10$/fFidQR78tCqPv00Ogb57.JnaemF3gP7KEUrn0SdHFLg5JUEk7l7G, Sjt4pu9R3j, 2023-07-06 22:20:08, 2023-07-06 22:20:08). (Connection: pgsql, SQL: insert into \"users\" (\"name\", \"email\", \"email_verified_at\", \"password\", \"remember_token\", \"updated_at\", \"created_at\") values (Admin, admin@example.com, 2023-07-06 22:20:08, $2y$10$/fFidQR78tCqPv00Ogb57.JnaemF3gP7KEUrn0SdHFLg5JUEk7l7G, Sjt4pu9R3j, 2023-07-06 22:20:08, 2023-07-06 22:20:08) returning \"id\") at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
@@ -308,7 +308,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #50 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #51 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #52 {main}
-"} 
+"}
 [2023-07-06 22:24:03] local.ERROR: Auth guard [web] is not defined. {"exception":"[object] (InvalidArgumentException(code: 0): Auth guard [web] is not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php:86)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\AuthManager.php(70): Illuminate\\Auth\\AuthManager->resolve('web')
@@ -353,11 +353,11 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #39 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #40 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #41 {main}
-"} 
+"}
 [2023-07-06 22:39:07] local.ERROR: Cannot declare class App\Http\Controllers\Api\AuthController, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Http\\Controllers\\Api\\AuthController, because the name is already in use at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\AuthController.php:12)
 [stacktrace]
 #0 {main}
-"} 
+"}
 [2023-07-06 22:39:34] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -398,7 +398,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #35 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #37 {main}
-"} 
+"}
 [2023-07-06 22:43:48] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -439,7 +439,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #35 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #37 {main}
-"} 
+"}
 [2023-07-06 23:04:03] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -480,7 +480,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #35 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #37 {main}
-"} 
+"}
 [2023-07-06 23:05:26] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -521,7 +521,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #35 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #37 {main}
-"} 
+"}
 [2023-07-06 23:06:04] local.ERROR: Class "AuthController" does not exist {"exception":"[object] (ReflectionException(code: -1): Class \"AuthController\" does not exist at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\RouteListCommand.php:223)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\RouteListCommand.php(223): ReflectionClass->__construct('AuthController')
@@ -546,7 +546,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #19 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(200): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #20 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
 #21 {main}
-"} 
+"}
 [2023-07-06 23:08:41] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -587,7 +587,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #35 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #37 {main}
-"} 
+"}
 [2023-07-06 23:14:16] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route('login', Array, true)
@@ -628,7 +628,7 @@ DETAIL:  La fila que falla contiene (1, Admin, null, null, null, null, admin@exa
 #35 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #36 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #37 {main}
-"} 
+"}
 [2023-07-06 23:33:47] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «surname» de la relación «users» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (2, Osdalys, null, null, null, null, osdalys.gomez99@gmail.com, null, $2y$10$E9CwBBQKdyKRvCH5Whv1dOba.OFgUEo1NFprKlBRBPwmxJeza7zR., null, 2023-07-06 23:33:47, 2023-07-06 23:33:47). (Connection: pgsql, SQL: insert into "users" ("name", "email", "password", "updated_at", "created_at") values (Osdalys, osdalys.gomez99@gmail.com, $2y$10$E9CwBBQKdyKRvCH5Whv1dOba.OFgUEo1NFprKlBRBPwmxJeza7zR., 2023-07-06 23:33:47, 2023-07-06 23:33:47) returning "id") {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «surname» de la relación «users» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (2, Osdalys, null, null, null, null, osdalys.gomez99@gmail.com, null, $2y$10$E9CwBBQKdyKRvCH5Whv1dOba.OFgUEo1NFprKlBRBPwmxJeza7zR., null, 2023-07-06 23:33:47, 2023-07-06 23:33:47). (Connection: pgsql, SQL: insert into \"users\" (\"name\", \"email\", \"password\", \"updated_at\", \"created_at\") values (Osdalys, osdalys.gomez99@gmail.com, $2y$10$E9CwBBQKdyKRvCH5Whv1dOba.OFgUEo1NFprKlBRBPwmxJeza7zR., 2023-07-06 23:33:47, 2023-07-06 23:33:47) returning \"id\") at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
@@ -759,7 +759,7 @@ DETAIL:  La fila que falla contiene (2, Osdalys, null, null, null, null, osdalys
 #59 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #60 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #61 {main}
-"} 
+"}
 [2023-07-06 23:34:31] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «surname» de la relación «users» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys.gomez99@gmail.com, null, $2y$10$50i.HbhhBEbXQOMV1jhH1Oho70eWMGxCWvH8.4ID.4j/3bIIb0goO, null, 2023-07-06 23:34:31, 2023-07-06 23:34:31). (Connection: pgsql, SQL: insert into "users" ("name", "email", "password", "updated_at", "created_at") values (Osdalys, osdalys.gomez99@gmail.com, $2y$10$50i.HbhhBEbXQOMV1jhH1Oho70eWMGxCWvH8.4ID.4j/3bIIb0goO, 2023-07-06 23:34:31, 2023-07-06 23:34:31) returning "id") {"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «surname» de la relación «users» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys.gomez99@gmail.com, null, $2y$10$50i.HbhhBEbXQOMV1jhH1Oho70eWMGxCWvH8.4ID.4j/3bIIb0goO, null, 2023-07-06 23:34:31, 2023-07-06 23:34:31). (Connection: pgsql, SQL: insert into \"users\" (\"name\", \"email\", \"password\", \"updated_at\", \"created_at\") values (Osdalys, osdalys.gomez99@gmail.com, $2y$10$50i.HbhhBEbXQOMV1jhH1Oho70eWMGxCWvH8.4ID.4j/3bIIb0goO, 2023-07-06 23:34:31, 2023-07-06 23:34:31) returning \"id\") at C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
@@ -890,7 +890,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #59 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
 #60 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #61 {main}
-"} 
+"}
 [2023-07-07 02:18:15] local.ERROR: Target class [ItemController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -995,7 +995,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 02:20:25] local.ERROR: Target class [ItemController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -1100,7 +1100,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 02:20:56] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -1156,7 +1156,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:22:12] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -1212,7 +1212,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:23:42] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -1268,7 +1268,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:24:32] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -1324,7 +1324,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:25:31] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -1380,7 +1380,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:51:35] local.ERROR: Target class [ItemController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -1485,7 +1485,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 02:53:42] local.ERROR: Target class [ItemController] does not exist. {"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -1586,7 +1586,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #47 {main}
-"} 
+"}
 [2023-07-07 02:53:52] local.ERROR: Target class [ItemController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -1691,7 +1691,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 02:54:07] local.ERROR: Target class [ItemController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -1796,7 +1796,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 02:54:46] local.ERROR: Target class [ItemController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -1901,7 +1901,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 02:55:40] local.ERROR: Target class [ItemController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [ItemController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -2006,7 +2006,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 02:56:29] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -2062,7 +2062,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:57:24] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -2118,7 +2118,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:57:32] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -2174,7 +2174,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 02:58:58] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -2230,7 +2230,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 03:01:12] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -2286,7 +2286,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-07 03:19:54] local.ERROR: Target class [App\Http\Controllers\NotaController] does not exist. {"userId":1,"exception":"[object] (Illuminate\\Contracts\\Container\\BindingResolutionException(code: 0): Target class [App\\Http\\Controllers\\NotaController] does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:914)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(795): Illuminate\\Container\\Container->build()
@@ -2391,7 +2391,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #49 {main}
-"} 
+"}
 [2023-07-07 03:23:38] local.ERROR: Undefined array key 1 {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined array key 1 at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Concerns\\ValidatesAttributes.php:1064)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -2451,7 +2451,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #56 {main}
-"} 
+"}
 [2023-07-07 03:23:54] local.ERROR: Undefined array key 1 {"userId":1,"exception":"[object] (ErrorException(code: 0): Undefined array key 1 at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Concerns\\ValidatesAttributes.php:1064)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\HandleExceptions.php(254): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError()
@@ -2511,7 +2511,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #56 {main}
-"} 
+"}
 [2023-07-08 01:23:06] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route()
@@ -2552,7 +2552,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #37 {main}
-"} 
+"}
 [2023-07-08 01:23:18] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route()
@@ -2593,7 +2593,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #37 {main}
-"} 
+"}
 [2023-07-08 01:29:42] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route()
@@ -2634,7 +2634,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #37 {main}
-"} 
+"}
 [2023-07-08 01:59:44] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -2690,7 +2690,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-08 02:12:14] local.ERROR: Method Illuminate\Validation\Validator::validateTime does not exist. {"userId":1,"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Validation\\Validator::validateTime does not exist. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php:1575)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Validation\\Validator.php(624): Illuminate\\Validation\\Validator->__call()
@@ -2746,7 +2746,7 @@ DETAIL:  La fila que falla contiene (3, Osdalys, null, null, null, null, osdalys
 #50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #52 {main}
-"} 
+"}
 [2023-07-08 02:50:28] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «day» de la relación «items» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023-07-08 02:50:28, 2023-07-08 02:50:28). (Connection: pgsql, SQL: insert into "items" ("description", "day", "time", "category", "frequency", "updated_at", "created_at") values (asd, ?, 22:10:10, inyeccion, 48, 2023-07-08 02:50:28, 2023-07-08 02:50:28) returning "id") {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «day» de la relación «items» viola la restricción de no nulo
 DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023-07-08 02:50:28, 2023-07-08 02:50:28). (Connection: pgsql, SQL: insert into \"items\" (\"description\", \"day\", \"time\", \"category\", \"frequency\", \"updated_at\", \"created_at\") values (asd, ?, 22:10:10, inyeccion, 48, 2023-07-08 02:50:28, 2023-07-08 02:50:28) returning \"id\") at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
@@ -2869,7 +2869,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #57 {main}
-"} 
+"}
 [2023-07-11 18:06:45] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route()
@@ -2910,7 +2910,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #37 {main}
-"} 
+"}
 [2023-07-11 18:07:50] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route()
@@ -2951,7 +2951,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #37 {main}
-"} 
+"}
 [2023-07-17 22:30:30] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3003,7 +3003,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:34:42] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3055,7 +3055,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:35:17] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3107,7 +3107,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:36:29] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3159,7 +3159,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:36:51] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3211,7 +3211,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:37:07] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3263,7 +3263,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:37:13] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3315,7 +3315,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:38:20] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3367,7 +3367,7 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
+"}
 [2023-07-17 22:38:59] local.ERROR: The HTTP status code "0" is not valid. {"exception":"[object] (InvalidArgumentException(code: 0): The HTTP status code \"0\" is not valid. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php:497)
 [stacktrace]
 #0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\symfony\\http-foundation\\Response.php(228): Symfony\\Component\\HttpFoundation\\Response->setStatusCode()
@@ -3419,585 +3419,4 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
 #47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
 #48 {main}
-"} 
-[2023-07-18 01:33:58] local.ERROR: Route [login] not defined. {"exception":"[object] (Symfony\\Component\\Routing\\Exception\\RouteNotFoundException(code: 0): Route [login] not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\UrlGenerator.php:467)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(808): Illuminate\\Routing\\UrlGenerator->route()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Middleware\\Authenticate.php(15): route()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(96): App\\Http\\Middleware\\Authenticate->redirectTo()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(81): Illuminate\\Auth\\Middleware\\Authenticate->unauthenticated()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(55): Illuminate\\Auth\\Middleware\\Authenticate->authenticate()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#37 {main}
-"} 
-[2023-07-18 01:34:50] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (1, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:34:50, 2023-07-18 01:34:50). (Connection: pgsql, SQL: insert into "treatment_plans" ("state", "init_date", "due_date", "lifetime", "updated_at", "created_at") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:34:50, 2023-07-18 01:34:50) returning "id") {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (1, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:34:50, 2023-07-18 01:34:50). (Connection: pgsql, SQL: insert into \"treatment_plans\" (\"state\", \"init_date\", \"due_date\", \"lifetime\", \"updated_at\", \"created_at\") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:34:50, 2023-07-18 01:34:50) returning \"id\") at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#61 {main}
-
-[previous exception] [object] (PDOException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (1, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:34:50, 2023-07-18 01:34:50). at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:421)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(421): PDOStatement->execute()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(788): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#61 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#62 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#63 {main}
-"} 
-[2023-07-18 01:35:20] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (2, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:35:20, 2023-07-18 01:35:20). (Connection: pgsql, SQL: insert into "treatment_plans" ("state", "init_date", "due_date", "lifetime", "updated_at", "created_at") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:35:20, 2023-07-18 01:35:20) returning "id") {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (2, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:35:20, 2023-07-18 01:35:20). (Connection: pgsql, SQL: insert into \"treatment_plans\" (\"state\", \"init_date\", \"due_date\", \"lifetime\", \"updated_at\", \"created_at\") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:35:20, 2023-07-18 01:35:20) returning \"id\") at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#61 {main}
-
-[previous exception] [object] (PDOException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (2, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:35:20, 2023-07-18 01:35:20). at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:421)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(421): PDOStatement->execute()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(788): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#61 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#62 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#63 {main}
-"} 
-[2023-07-18 01:36:20] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (3, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:36:20, 2023-07-18 01:36:20). (Connection: pgsql, SQL: insert into "treatment_plans" ("state", "init_date", "due_date", "lifetime", "updated_at", "created_at") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:36:20, 2023-07-18 01:36:20) returning "id") {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (3, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:36:20, 2023-07-18 01:36:20). (Connection: pgsql, SQL: insert into \"treatment_plans\" (\"state\", \"init_date\", \"due_date\", \"lifetime\", \"updated_at\", \"created_at\") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:36:20, 2023-07-18 01:36:20) returning \"id\") at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#61 {main}
-
-[previous exception] [object] (PDOException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (3, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:36:20, 2023-07-18 01:36:20). at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:421)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(421): PDOStatement->execute()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(788): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#61 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#62 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#63 {main}
-"} 
-[2023-07-18 01:36:55] local.ERROR: SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (4, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:36:55, 2023-07-18 01:36:55). (Connection: pgsql, SQL: insert into "treatment_plans" ("state", "init_date", "due_date", "lifetime", "updated_at", "created_at") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:36:55, 2023-07-18 01:36:55) returning "id") {"userId":1,"exception":"[object] (Illuminate\\Database\\QueryException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (4, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:36:55, 2023-07-18 01:36:55). (Connection: pgsql, SQL: insert into \"treatment_plans\" (\"state\", \"init_date\", \"due_date\", \"lifetime\", \"updated_at\", \"created_at\") values (asdasd, 2022-06-06, 2022-06-12, 0, 2023-07-18 01:36:55, 2023-07-18 01:36:55) returning \"id\") at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:795)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#61 {main}
-
-[previous exception] [object] (PDOException(code: 23502): SQLSTATE[23502]: Not null violation: 7 ERROR:  el valor nulo en la columna «name» de la relación «treatment_plans» viola la restricción de no nulo
-DETAIL:  La fila que falla contiene (4, null, asdasd, 2022-06-06, 2022-06-12, f, 2023-07-18 01:36:55, 2023-07-18 01:36:55). at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:421)
-[stacktrace]
-#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(421): PDOStatement->execute()
-#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(788): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}()
-#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(755): Illuminate\\Database\\Connection->runQueryCallback()
-#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(407): Illuminate\\Database\\Connection->run()
-#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(394): Illuminate\\Database\\Connection->select()
-#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Processors\\PostgresProcessor.php(24): Illuminate\\Database\\Connection->selectFromWriteConnection()
-#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3371): Illuminate\\Database\\Query\\Processors\\PostgresProcessor->processInsertGetId()
-#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1922): Illuminate\\Database\\Query\\Builder->insertGetId()
-#8 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1335): Illuminate\\Database\\Eloquent\\Builder->__call()
-#9 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1300): Illuminate\\Database\\Eloquent\\Model->insertAndSetId()
-#10 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(1139): Illuminate\\Database\\Eloquent\\Model->performInsert()
-#11 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1003): Illuminate\\Database\\Eloquent\\Model->save()
-#12 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\helpers.php(307): Illuminate\\Database\\Eloquent\\Builder->Illuminate\\Database\\Eloquent\\{closure}()
-#13 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php(1002): tap()
-#14 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(23): Illuminate\\Database\\Eloquent\\Builder->create()
-#15 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2335): Illuminate\\Database\\Eloquent\\Model->forwardCallTo()
-#16 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2347): Illuminate\\Database\\Eloquent\\Model->__call()
-#17 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\app\\Http\\Controllers\\TreatmentPlanController.php(39): Illuminate\\Database\\Eloquent\\Model::__callStatic()
-#18 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\TreatmentPlanController->store()
-#19 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(43): Illuminate\\Routing\\Controller->callAction()
-#20 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(259): Illuminate\\Routing\\ControllerDispatcher->dispatch()
-#21 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(205): Illuminate\\Routing\\Route->runController()
-#22 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(799): Illuminate\\Routing\\Route->run()
-#23 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}()
-#24 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(50): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#25 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle()
-#26 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(159): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#27 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(125): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequest()
-#28 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(87): Illuminate\\Routing\\Middleware\\ThrottleRequests->handleRequestUsingNamedLimiter()
-#29 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle()
-#30 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Auth\\Middleware\\Authenticate.php(57): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#31 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Auth\\Middleware\\Authenticate->handle()
-#32 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(25): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#33 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->Laravel\\Sanctum\\Http\\Middleware\\{closure}()
-#34 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#35 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\sanctum\\src\\Http\\Middleware\\EnsureFrontendRequestsAreStateful.php(24): Illuminate\\Pipeline\\Pipeline->then()
-#36 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Laravel\\Sanctum\\Http\\Middleware\\EnsureFrontendRequestsAreStateful->handle()
-#37 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#38 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(798): Illuminate\\Pipeline\\Pipeline->then()
-#39 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(777): Illuminate\\Routing\\Router->runRouteWithinStack()
-#40 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(741): Illuminate\\Routing\\Router->runRoute()
-#41 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(730): Illuminate\\Routing\\Router->dispatchToRoute()
-#42 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(200): Illuminate\\Routing\\Router->dispatch()
-#43 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(141): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}()
-#44 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#45 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull.php(31): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#46 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ConvertEmptyStringsToNull->handle()
-#47 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(21): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#48 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TrimStrings.php(40): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle()
-#49 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\TrimStrings->handle()
-#50 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#51 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle()
-#52 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php(86): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#53 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance->handle()
-#54 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\HandleCors.php(62): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#55 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\HandleCors->handle()
-#56 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Http\\Middleware\\TrustProxies.php(39): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#57 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(180): Illuminate\\Http\\Middleware\\TrustProxies->handle()
-#58 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(116): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}()
-#59 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(175): Illuminate\\Pipeline\\Pipeline->then()
-#60 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
-#61 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\public\\index.php(51): Illuminate\\Foundation\\Http\\Kernel->handle()
-#62 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('...')
-#63 {main}
-"} 
+"}
