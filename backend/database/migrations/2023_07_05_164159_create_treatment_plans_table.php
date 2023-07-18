@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('treatment_plans', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('state');
             $table->date('init_date');
             $table->date('due_date');

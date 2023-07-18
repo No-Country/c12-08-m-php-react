@@ -41,6 +41,13 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::put('/items/update/{id}', 'App\Http\Controllers\ItemController@update');
         Route::delete('/items/delete/{id}', 'App\Http\Controllers\ItemController@destroy');
 
+        //Ruta de planes de tratamiento
+        Route::post('/plans/create', 'App\Http\Controllers\TreatmentPlanController@store');
+        Route::get('/plans/show/{id}', 'App\Http\Controllers\TreatmentPlanController@show');
+        Route::get('/plans/showall', 'App\Http\Controllers\TreatmentPlanController@showall');
+        Route::put('/plans/update/{id}', 'App\Http\Controllers\TreatmentPlanController@update');
+        Route::delete('/plans/delete/{id}', 'App\Http\Controllers\TreatmentPlanController@destroy');
+
     });
 
 
