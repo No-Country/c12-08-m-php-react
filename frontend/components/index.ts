@@ -2,7 +2,6 @@ export { default as AuthHeader } from './AuthHeader/AuthHeader';
 export { default as BottomNavbar } from './BottomNavbar/BottomNavbar';
 export { default as CalendarLayout } from './CalendarLayout/CalendarLayout';
 export { default as Dashboard } from './Dashboard/Dashboard';
-export { default as DashboardModule } from './DashboardModule/DashboardModule';
 export { default as Input } from './Input/Input';
 export { default as LandingNavbar } from './LandingNavbar/LandingNavbar';
 export { default as LandingShowcase } from './LandingShowcase/LandingShowcase';
