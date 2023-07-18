@@ -14,4 +14,9 @@ const Post = async (url: string, data: any) => {
   return response;
 };
 
+export const Get = async (url: string) => {
+  const response = await instance.get(url);
+  return response;
+};
+
 export default Post;
