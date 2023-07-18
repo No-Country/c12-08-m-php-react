@@ -27,36 +27,44 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+        try{
+            $validateData = $request->validate([
+                'name' => 'required|string|max:255',
+                'surname' => 'required|string|max:255',
+                'birth' => 'required|date',
+                'phone' => 'required|numeric|min:10',
+                'username' => 'required|string|max:255|unique:users',
+                'email' => 'required|string|email|max:255|unique:users',
+                'password' => 'required|string|min:8',
+            ]);
 
-        $validator = Validator::make(request()->all(), [
-            'name' => 'required|string|max:255',
-            'surname' => 'required|string|max:255',
-            'birth' => 'required|date',
-            'phone' => 'required|numeric|min:10',
-            'username' => 'required|string|max:255|unique:users',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json($validator->errors()->toJson(), 400);
+            $user = User::create([
+                'name' => $validateData['name'],
+                'surname' => $validateData['surname'],
+                'birth' => $validateData['birth'],
+                'phone' => $validateData['phone'],
+                'username' => $validateData['username'],
+                'email' => $validateData['email'],
+                'password' => bcrypt($validateData['surname']),
+            ]);
+        } catch (ValidationException $e) {
+            return response()->json([
+                'error' => 'Invalid data',
+                'message' => $e->getMessage(),
+                'errors' => $e->errors()
+            ], 400);
         }
 
-        $user = User::create(array_merge (
-            $validator->validate(),
-            ['name' => $request->name],
-            ['surname' => $request->name],
-            ['birth' => $request->birth],
-            ['phone' => $request->phone],
-            ['username' => $request->name],
-            ['email' => $request->email],
-            ['password' => bcrypt($request->password)],
-        ));
-
-        return response()->json([
-            'message' => 'User created successfully',
-            'data' => $user
-        ]);
+        if ($user) {
+            return response()->json([
+                'message' => 'User created',
+                'item' => $user
+            ], 201);
+        } else {
+            return response()->json([
+                'message' => 'User not created',
+            ], 400);
+        }
 
     }
 
@@ -70,7 +78,7 @@ class AuthController extends Controller
         $credentials = request(['email', 'password']);
 
         if (! $token = auth()->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+            return response()->json(['error' => 'Invalid data'], 400);
         }
 
         return $this->respondWithToken($token);

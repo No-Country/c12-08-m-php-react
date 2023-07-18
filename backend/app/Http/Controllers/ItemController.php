@@ -43,9 +43,6 @@ class ItemController extends Controller
                     'frequency' => $validatedData['frequency'],
                 ]);
 
-                //guarda el item creado
-                $item->save();
-
             } catch (ValidationException $e) {
                 return response()->json([
                     'error' => 'Invalid data',
