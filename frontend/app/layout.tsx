@@ -12,7 +12,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='es'>
       <head />
-      <body className={`${poppins.className} ${poppins.variable}`}>{children}</body>
+      <body className={`${poppins.className} ${poppins.variable} h-screen`}>
+        {children}
+      </body>
     </html>
   );
 }
