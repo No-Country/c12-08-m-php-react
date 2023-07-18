@@ -25,7 +25,7 @@ const items = [
 
 const BottomNavbar = () => {
   return (
-    <footer className='fixed bottom-0 left-0 z-30 w-full h-20 bg-white border-t-2 border-lightGreen  md:hidden'>
+    <footer className='z-30 w-full h-20 bg-white border-t-2 border-lightGreen  md:hidden'>
       <div className='grid h-full max-w-lg grid-cols-4 mx-auto font-medium'>
         {items.map(item => (
           <BottomNavbarItem key={item.title} item={item} />
