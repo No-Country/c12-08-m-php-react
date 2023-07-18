@@ -44,8 +44,10 @@ class TreatmentPlanController extends Controller
                 'lifetime' => $validatedData['lifetime'],
             ]);
 
-            //guarda el plan de tratamiento creado
-            $plan->save();
+            return response()->json([
+                'plan' => $plan
+            ], 201);
+
         } catch (ValidationException $e) {
             return response()->json([
                 'error' => 'Invalid data',
