@@ -1,13 +1,14 @@
-import VisibilityToggler from '@/components/VisibilityToggler/VisibilityToggler';
+'use client';
+
 import Image, { StaticImageData } from 'next/image';
 import { ChangeEvent, useState } from 'react';
+import VisibilityToggler from './components/VisibilityToggler';
 
 interface InputProps {
   src: StaticImageData;
   label: string;
   type: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  pattern?: string;
   size?: 'sm' | 'md' | 'lg';
 }
 
@@ -17,15 +18,8 @@ const sizes = {
   lg: 'w-72',
 };
 
-const Input = ({
-  src,
-  label,
-  type,
-  handleChange,
-  pattern = '',
-  size = 'lg',
-}: InputProps) => {
-  const [written, setWritten] = useState(false);
+const Input = ({ src, label, type, handleChange, size = 'lg' }: InputProps) => {
+  const [written, setWritten] = useState<boolean>(false);
 
   const handlerWritten = (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.value) setWritten(true);
@@ -50,7 +44,6 @@ const Input = ({
           name={label}
           id={label}
           placeholder=''
-          // pattern={pattern}
           onChange={handlerWritten}
           required
         />
