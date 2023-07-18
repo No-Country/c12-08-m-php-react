@@ -3,10 +3,12 @@ import { Dashboard, Userbar } from '@/components';
 const Home = () => {
   return (
     <>
-      <header>
+      <header className='max-md:hidden'>
         <Userbar />
       </header>
-      <Dashboard />
+      <section className='flex-grow'>
+        <Dashboard />
+      </section>
     </>
   );
 };
