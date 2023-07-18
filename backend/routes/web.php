@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +18,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/google-auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/google-auth/callback', function () {
+    $google_user = Socialite::driver('google')->user();
+
+    $user = User::updateOrCreate([
+        'google_id' => $google_user->google_id,
+    ], [
+        'name' => $google_user->name,
+        'email' => $google_user->email,
+    ]);
+
+    Auth::login($user);
+    return redirect('/dashboard');
 });
