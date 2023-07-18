@@ -4,7 +4,7 @@ import useDate from '@/hooks/useDate';
 import Calendar from './components/Calendar';
 import DateDisplay from './components/DateDisplay';
 
-const CalendarLayout = () => {
+const CalendarModule = () => {
   const { today, selectedDate, pickCurrentDate, selectDate } = useDate();
 
   return (
@@ -17,4 +17,4 @@ const CalendarLayout = () => {
   );
 };
 
-export default CalendarLayout;
+export default CalendarModule;

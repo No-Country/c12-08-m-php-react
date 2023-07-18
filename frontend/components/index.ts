@@ -1,6 +1,6 @@
 export { default as AuthHeader } from './AuthHeader/AuthHeader';
 export { default as BottomNavbar } from './BottomNavbar/BottomNavbar';
-export { default as CalendarLayout } from './CalendarLayout/CalendarLayout';
+export { default as CalendarModule } from './CalendarModule/CalendarModule';
 export { default as Dashboard } from './Dashboard/Dashboard';
 export { default as Input } from './Input/Input';
 export { default as LandingNavbar } from './LandingNavbar/LandingNavbar';
@@ -9,3 +9,4 @@ export { default as LandingSlider } from './LandingSlider/LandingSlider';
 export { default as QuestionAlternative } from './QuestionAlternative/QuestionAlternative';
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Userbar } from './Userbar/Userbar';
+export { default as MedicineList } from './MedicineList/MedicineList';
