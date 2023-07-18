@@ -13,7 +13,7 @@ const FormLogin = () => {
   const handleS = async (values: any) => {
     try {
       const { data } = await login(values);
-      if (data) router.push('/dashboard');
+      if (data) router.push('/home');
       console.log(data);
       localStorage.setItem('token', data.access_token);
     } catch (error) {}

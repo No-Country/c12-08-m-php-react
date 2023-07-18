@@ -32,7 +32,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className='inline-block'>
+    <div className='md:border md:rounded-2xl md:shadow-md'>
       <Image
         src='/svg/sb-open.svg'
         className='m-5  md:hidden'

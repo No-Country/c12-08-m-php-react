@@ -6,7 +6,9 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Grid>
         <Sidebar />
-        <main className='w-full'>{children}</main>
+        <main className='w-full flex-grow flex flex-col justify-between gap-8'>
+          {children}
+        </main>
         <BottomNavbar />
       </Grid>
     </>
