@@ -9,3 +9,4 @@ export { default as LandingSlider } from './LandingSlider/LandingSlider';
 export { default as QuestionAlternative } from './QuestionAlternative/QuestionAlternative';
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Userbar } from './Userbar/Userbar';
+export { default as DetailedList } from './DetailedList/DetailedList';
