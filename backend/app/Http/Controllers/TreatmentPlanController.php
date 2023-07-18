@@ -115,8 +115,12 @@ class TreatmentPlanController extends Controller
                 $plan->due_date = $validatedData['due_date'];
                 $plan->lifetime = $validatedData['lifetime'];
 
-                //guarda el plan de tratamiento actualizado
                 $plan->save();
+
+                return response()->json([
+                    'updated plan' => $plan
+                ], 200);
+
             } catch (ValidationException $e) {
                 return response()->json([
                     'error' => 'Invalid data',

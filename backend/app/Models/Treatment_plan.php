@@ -11,6 +11,7 @@ class Treatment_plan extends Model
 
     protected $fillable = [
         'id',
+        'name',
         'state',
         'init_date',
         'due_date',
