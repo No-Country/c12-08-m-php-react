@@ -17,11 +17,7 @@ const customUser = {
 const Panel = ({ open, closeSidebar }: Props) => {
   return (
     <div
-      className={`flex flex-col justify-between
-                bg-white rounded border-white
-                  fixed top-0 z-40
-                  h-full w-80 md:w-64
-                  transition-transform .3s ease-in-out
+      className={`flex flex-col justify-between z-40 h-full w-80 rounded bg-white border-white md:w-64 max-md:transition-transform max-md:.3s max-md:ease-in-out max-md:fixed max-md:top-0
                   ${open ? '' : '-translate-x-full'}`}>
       <div className='flex flex-col h-full my-4 '>
         <div className=' flex w-full md:justify-center'>
