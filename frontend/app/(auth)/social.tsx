@@ -1,7 +1,11 @@
 import google from '@/public/svg/google.svg';
 import Image from 'next/image';
 
-const ConectSocial = () => {
+interface Props {
+  handleClick: () => void;
+}
+
+const ConectSocial = ({ handleClick }: Props) => {
   return (
     <>
       <div className='relative border-y border-gray-700 flex flex-col justify-center items-center md:hidden py-4'>
@@ -18,7 +22,7 @@ const ConectSocial = () => {
       <div className=' flex-col items-center gap-2 hidden md:flex'>
         <span>Ingresar con</span>
         <div className='flex gap-4'>
-          <button>
+          <button onClick={handleClick}>
             <Image src={google} alt='google logo' width={30} height={30} />
           </button>
         </div>
