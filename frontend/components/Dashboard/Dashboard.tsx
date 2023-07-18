@@ -1,24 +1,18 @@
 // import { CalendarLayout } from '@/components';
 
-import DashboardModule from '../DashboardModule/DashboardModule';
-
 // Every module displayed within the Dashboard must be wrapped by DashboardModule component
 
 const Dashboard = () => {
   return (
     <div className='grid grid-cols-8 grid-rows-5 h-full gap-8'>
-      <DashboardModule cols={8} rows={3}>
-        CALENDARIO
-      </DashboardModule>
-      <DashboardModule cols={3} rows={2} hidden>
+      <div className='border border-black col-span-8 row-span-3'>CALENDARIO</div>
+      <div className='border border-black col-span-3 row-span-2 max-md:hidden'>
         PLANES
-      </DashboardModule>
-      <DashboardModule cols={3} rows={2} hidden>
+      </div>
+      <div className='border border-black col-span-3 row-span-2 max-md:hidden'>
         SUSCRIPCIONES
-      </DashboardModule>
-      <DashboardModule cols={2} rows={2} hidden>
-        NOTAS
-      </DashboardModule>
+      </div>
+      <div className='border border-black col-span-2 row-span-2 max-md:hidden'>NOTAS</div>
     </div>
   );
 };
