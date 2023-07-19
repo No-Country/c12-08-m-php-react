@@ -3,23 +3,26 @@ import { ChangeEvent } from 'react';
 import GridHeader from './GridHeader';
 import NewCalendarHeader from './NewCalendarHeader';
 import NewCell from './NewCell';
-import { getMonth } from 'date-fns';
+import { getMonth, getYear } from 'date-fns';
 
 interface Props {
-  selectedDate: Date;
-  selectDate: (d: Date) => void;
+  initValue?: Date;
+  onDateSelect: (calendarSelectedDate: Date) => void;
 }
 
-const NewCalendar = ({ selectedDate, selectDate }: Props) => {
+const NewCalendar = ({ onDateSelect = () => undefined, initValue }: Props) => {
   const {
+    selectedDate,
     selectedMonth,
     daysInSelectedMonth,
     daysOffset,
     selectedYear,
+    setSelectedDate,
     selectMonth,
     nextMonth,
     prevMonth,
-  } = useCalendar(selectedDate);
+    selectYear,
+  } = useCalendar(initValue);
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     selectMonth(parseInt(e.target.value) as Month);
@@ -27,7 +30,16 @@ const NewCalendar = ({ selectedDate, selectDate }: Props) => {
 
   const handleClick = (n: number) => {
     const newSelectedDate = new Date(selectedYear, selectedMonth, n);
-    selectDate(newSelectedDate);
+    setSelectedDate(newSelectedDate);
+    onDateSelect(newSelectedDate);
+  };
+
+  const todayHandler = () => {
+    const today = new Date();
+    setSelectedDate(today);
+    onDateSelect(today);
+    selectMonth(getMonth(today) as Month);
+    selectYear(getYear(today));
   };
 
   return (
@@ -37,6 +49,7 @@ const NewCalendar = ({ selectedDate, selectDate }: Props) => {
         selectedMonth={selectedMonth}
         selectedYear={selectedYear}
         handleChange={handleChange}
+        todayHandler={todayHandler}
         nextMonth={nextMonth}
         prevMonth={prevMonth}
       />
@@ -50,8 +63,9 @@ const NewCalendar = ({ selectedDate, selectDate }: Props) => {
             key={index}
             handleClick={handleClick}
             isActive={
+              selectedDate.getDate() === index + 1 &&
               getMonth(selectedDate) === selectedMonth &&
-              selectedDate.getDate() === index + 1
+              getYear(selectedDate) === selectedYear
             }>
             {index + 1}
           </NewCell>

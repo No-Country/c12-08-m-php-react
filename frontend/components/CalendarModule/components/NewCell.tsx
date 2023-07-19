@@ -6,7 +6,11 @@ interface Props {
   handleClick?: (n: number) => void;
 }
 
-const NewCell = ({ children, isActive = false, handleClick = () => {} }: Props) => {
+const NewCell = ({
+  children,
+  isActive = false,
+  handleClick = () => undefined,
+}: Props) => {
   const isNumber = typeof children === 'number';
   return (
     <div className='flex items-center justify-center'>

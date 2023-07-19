@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import { ChangeEvent } from 'react';
+import esLocale from 'date-fns/locale/es';
 
 interface Props {
   selectedDate: Date;
@@ -8,6 +9,7 @@ interface Props {
   prevMonth: () => void;
   nextMonth: () => void;
   handleChange: (e: ChangeEvent<HTMLSelectElement>) => void;
+  todayHandler: () => void;
 }
 
 const months = [
@@ -32,13 +34,18 @@ const NewCalendarHeader = ({
   prevMonth,
   nextMonth,
   handleChange,
+  todayHandler,
 }: Props) => {
-  // TODO: fix format for day
   return (
     <header className='flex flex-col items-stretch content-start mb-3'>
-      <div className='border-b border-slate-400 text-2xl'>
-        {format(selectedDate, 'iii')}, {format(selectedDate, 'd')}{' '}
-        {format(selectedDate, 'LLL')}
+      <div className='flex justify-between border-b border-slate-400 text-2xl'>
+        <p>
+          {format(selectedDate, 'iii', { locale: esLocale })}, {format(selectedDate, 'd')}{' '}
+          {format(selectedDate, 'LLL', { locale: esLocale })}.
+        </p>
+        <button className='btn-sm btn-tertiary-outline text-sm' onClick={todayHandler}>
+          Hoy
+        </button>
       </div>
       <div className='flex justify-between text-gray-700'>
         <select
