@@ -7,9 +7,11 @@ import VisibilityToggler from './components/VisibilityToggler';
 interface InputProps {
   src: StaticImageData;
   label: string;
+  name: string;
   type: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   size?: 'sm' | 'md' | 'lg';
+  value?: string;
 }
 
 const sizes = {
@@ -18,7 +20,7 @@ const sizes = {
   lg: 'w-72',
 };
 
-const Input = ({ src, label, type, handleChange, size = 'lg' }: InputProps) => {
+const Input = ({ src, label, name, type, handleChange, size = 'lg' }: InputProps) => {
   const [written, setWritten] = useState<boolean>(false);
 
   const handlerWritten = (e: ChangeEvent<HTMLInputElement>) => {
@@ -38,23 +40,23 @@ const Input = ({ src, label, type, handleChange, size = 'lg' }: InputProps) => {
       <div
         className={`relative flex flex-col justify-center ${sizes[size]}  border-b-2 border-black`}>
         <input
+          data-select={`input-${name}`}
           className='peer h-8 outline-none bg-transparent'
-          data-select={'input-' + type}
           type={type}
-          name={label}
+          name={name}
           id={label}
           placeholder=''
           onChange={handlerWritten}
           required
+          autoComplete='off'
         />
 
         <label
           className={`cursor-texts absolute top-0 peer-focus:text-xs peer-focus:text-black peer-focus:-translate-y-3 transition-transform ease-out duration-300 ${toggleInputClass}`}
-          data-select={label}
           htmlFor={label}>
           {label}
         </label>
-        {type === 'password' ? <VisibilityToggler /> : null}
+        {type === 'password' ? <VisibilityToggler name={name} /> : null}
       </div>
     </div>
   );

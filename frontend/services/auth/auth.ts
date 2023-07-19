@@ -10,4 +10,28 @@ const login = async (body: LoginBody) => {
   return response;
 };
 
-export { login };
+interface RegisterBody {
+  name: string;
+  surname: string;
+  username: string;
+  birth: Date | null;
+  phone: string;
+  email: string;
+  password: string;
+  confirm_password: string;
+}
+  
+
+const register = async (body: RegisterBody) => {
+
+  const {confirm_password, ...data} = body
+  
+  const response = await Post('/register', data)
+  
+  return response;
+
+};
+
+export { login, register };
+export type { LoginBody, RegisterBody };
+
