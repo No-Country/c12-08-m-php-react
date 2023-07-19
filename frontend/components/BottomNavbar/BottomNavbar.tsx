@@ -1,24 +1,28 @@
 import BottomNavbarItem from './components/BottomNavbarItem';
+import notesIcon from '@/public/svg/nb-notes.svg';
+import plansIcon from '@/public/svg/nb-plans.svg';
+import homeIcon from '@/public/svg/nb-home.svg';
+import subsIcon from '@/public/svg/nb-subs.svg';
 
 const items = [
   {
-    to: '/',
-    iconSrc: 'svg/nb-home.svg',
+    to: '/home',
+    iconSrc: homeIcon,
     title: 'Inicio',
   },
   {
     to: '/subs',
-    iconSrc: 'svg/nb-subs.svg',
+    iconSrc: subsIcon,
     title: 'Subscripciones',
   },
   {
     to: '/notes',
-    iconSrc: 'svg/nb-notes.svg',
+    iconSrc: notesIcon,
     title: 'Notas',
   },
   {
-    to: '/planes',
-    iconSrc: 'svg/nb-plans.svg',
+    to: '/home/plans',
+    iconSrc: plansIcon,
     title: 'Planes',
   },
 ];
