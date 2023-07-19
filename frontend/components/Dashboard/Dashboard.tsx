@@ -1,9 +1,20 @@
-import { CalendarLayout } from '@/components';
+// import { CalendarLayout } from '@/components';
 
 // Every module displayed within the Dashboard must be wrapped by DashboardModule component
 
 const Dashboard = () => {
-  return <CalendarLayout />;
+  return (
+    <div className='grid grid-cols-8 grid-rows-5 h-full gap-8'>
+      <div className='border border-black col-span-8 row-span-3'>CALENDARIO</div>
+      <div className='border border-black col-span-3 row-span-2 max-md:hidden'>
+        PLANES
+      </div>
+      <div className='border border-black col-span-3 row-span-2 max-md:hidden'>
+        SUSCRIPCIONES
+      </div>
+      <div className='border border-black col-span-2 row-span-2 max-md:hidden'>NOTAS</div>
+    </div>
+  );
 };
 
 export default Dashboard;

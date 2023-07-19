@@ -1,4 +1,4 @@
-import { BottomNavbar, Sidebar } from '@/components';
+import { BottomNavbar, Sidebar, Userbar } from '@/components';
 import Grid from './grid';
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
@@ -6,7 +6,12 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Grid>
         <Sidebar />
-        <main className='w-full'>{children}</main>
+        <main className='w-full flex-grow flex flex-col justify-between gap-8'>
+          <header className='max-md:hidden'>
+            <Userbar />
+          </header>
+          {children}
+        </main>
         <BottomNavbar />
       </Grid>
     </>

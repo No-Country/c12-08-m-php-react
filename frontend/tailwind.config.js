@@ -25,6 +25,11 @@ module.exports = {
         md: '900px',
         lg: '1200px',
         xl: '1536px',
+        'max-xs': { max: '375px' },
+        'max-sm': { max: '600px' },
+        'max-md': { max: '900px' },
+        'max-lg': { max: '1200px' },
+        'max-xl': { max: '1536px' },
       },
       gridTemplateColumns: {
         sidebar: '300px auto',

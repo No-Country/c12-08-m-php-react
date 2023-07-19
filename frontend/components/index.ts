@@ -11,3 +11,5 @@ export { default as QuestionAlternative } from './QuestionAlternative/QuestionAl
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Userbar } from './Userbar/Userbar';
 
+export { default as Plans } from './Plans/Plans';
+export { default as CardItem } from './CardItem/CardItem';
