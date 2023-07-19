@@ -6,6 +6,7 @@ export type Month = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 type Params = Date | undefined;
 
 const useCalendar = (date: Params = new Date()) => {
+  const [selectedDate, setSelectedDate] = useState<Date>(date);
   const [selectedMonth, setSelectedMonth] = useState<number>(getMonth(date));
   const [selectedYear, setSelectedYear] = useState<number>(getYear(date));
   const [daysOffset, setDaysOffset] = useState<number>(startOfMonth(date).getDay());
@@ -30,8 +31,12 @@ const useCalendar = (date: Params = new Date()) => {
     }
   };
 
-  const selectMonth = (n: Month) => {
-    setSelectedMonth(n);
+  const selectMonth = (m: Month) => {
+    setSelectedMonth(m);
+  };
+
+  const selectYear = (n: number) => {
+    setSelectedYear(n);
   };
 
   useEffect(() => {
@@ -41,11 +46,14 @@ const useCalendar = (date: Params = new Date()) => {
   }, [selectedMonth]);
 
   return {
+    selectedDate,
+    setSelectedDate,
     selectedMonth,
     daysInSelectedMonth,
     daysOffset,
     selectedYear,
     selectMonth,
+    selectYear,
     prevMonth,
     nextMonth,
   };
