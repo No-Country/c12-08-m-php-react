@@ -1,18 +1,27 @@
 'use client';
 
-import useDate from '@/hooks/useDate';
-import Calendar from './components/Calendar';
-import DateDisplay from './components/DateDisplay';
+import useDatePicker from '@/hooks/useDatePicker';
+import MedicineList from '../MedicineList/MedicineList';
+// import Calendar from './components/Calendar';
+// import DateDisplay from './components/DateDisplay';
+import NewCalendar from './components/NewCalendar';
 
 const CalendarModule = () => {
-  const { today, selectedDate, pickCurrentDate, selectDate } = useDate();
+  // const { today, selectedDate, pickCurrentDate, selectDate } = useDate();
+  const { selectedDate, selectDate } = useDatePicker();
 
   return (
-    <div className='flex flex-col items-center gap-8 bg-green'>
-      <Calendar value={selectedDate} selectDate={selectDate} />
-      <button onClick={pickCurrentDate}>
-        <DateDisplay date={today} />
-      </button>
+    <div className='flex flex-row h-full'>
+      {/* <div className='bg-green md:flex-[2] md:rounded-2xl max-md:flex max-md:flex-col max-md:items-center max-md:gap-8'> */}
+      <div className='rounded-2xl flex-[2] bg-green'>
+        <NewCalendar selectedDate={selectedDate} selectDate={selectDate} />
+        {/* <button onClick={pickCurrentDate}>
+          <DateDisplay date={today} />
+        </button> */}
+      </div>
+      <div className='md:flex-[3]'>
+        <MedicineList />
+      </div>
     </div>
   );
 };
