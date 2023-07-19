@@ -5,8 +5,9 @@ export default function Landing() {
   return (
     <>
       <header>
-        <LandingNavbar />
-        <LandingShowcase />
+        <Notes />
+        {/* <LandingNavbar />
+        <LandingShowcase /> */}
       </header>
     </>
   );
