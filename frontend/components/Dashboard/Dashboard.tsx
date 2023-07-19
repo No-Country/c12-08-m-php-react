@@ -1,5 +1,7 @@
 // import { CalendarLayout } from '@/components';
 
+import Notes from '../Notes/Notes';
+
 // Every module displayed within the Dashboard must be wrapped by DashboardModule component
 
 const Dashboard = () => {
@@ -12,7 +14,9 @@ const Dashboard = () => {
       <div className='border border-black col-span-3 row-span-2 max-md:hidden'>
         SUSCRIPCIONES
       </div>
-      <div className='border border-black col-span-2 row-span-2 max-md:hidden'>NOTAS</div>
+      <div className='border border-black col-span-2 row-span-2 max-md:hidden'>
+        <Notes />
+      </div>
     </div>
   );
 };
