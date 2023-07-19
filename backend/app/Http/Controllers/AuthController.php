@@ -45,7 +45,7 @@ class AuthController extends Controller
                 'phone' => $validateData['phone'],
                 'username' => $validateData['username'],
                 'email' => $validateData['email'],
-                'password' => bcrypt($validateData['surname']),
+                'password' => bcrypt($validateData['password']),
             ]);
         } catch (ValidationException $e) {
             return response()->json([

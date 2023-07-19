@@ -3550,3 +3550,47 @@ DETAIL:  La fila que falla contiene (1, asd, null, 22:10:10, inyeccion, 48, 2023
 #60 C:\\Users\\SalazarGomez\\Desktop\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('C:\\\\Users\\\\Salaza...')
 #61 {main}
 "} 
+[2023-07-19 21:58:30] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:212)
+[stacktrace]
+#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(137): Illuminate\\Log\\LogManager->resolve()
+#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(124): Illuminate\\Log\\LogManager->get()
+#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(667): Illuminate\\Log\\LogManager->driver()
+#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(287): Illuminate\\Log\\LogManager->error()
+#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(250): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(509): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(202): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2023-07-19 21:58:30] laravel.ERROR: Class "Tymon\JWTAuth\Providers\JWT\Provider" not found {"exception":"[object] (Error(code: 0): Class \"Tymon\\JWTAuth\\Providers\\JWT\\Provider\" not found at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\config\\jwt.php:134)
+[stacktrace]
+#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(70): require()
+#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(261): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(434): Illuminate\\Foundation\\Application->bootstrapWith()
+#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
+[2023-07-19 22:00:12] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php:212)
+[stacktrace]
+#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(137): Illuminate\\Log\\LogManager->resolve()
+#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(124): Illuminate\\Log\\LogManager->get()
+#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Log\\LogManager.php(667): Illuminate\\Log\\LogManager->driver()
+#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(287): Illuminate\\Log\\LogManager->error()
+#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php(250): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(509): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(202): Illuminate\\Foundation\\Console\\Kernel->reportException()
+#7 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
+[2023-07-19 22:00:12] laravel.ERROR: Class "Tymon\JWTAuth\Providers\JWT\Provider" not found {"exception":"[object] (Error(code: 0): Class \"Tymon\\JWTAuth\\Providers\\JWT\\Provider\" not found at C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\config\\jwt.php:134)
+[stacktrace]
+#0 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(70): require()
+#1 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#2 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(261): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#3 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(434): Illuminate\\Foundation\\Application->bootstrapWith()
+#4 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(198): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#5 C:\\Users\\Jesus\\Desktop\\Proyectos\\c12-08-m-php-react\\backend\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#6 {main}
+"} 
