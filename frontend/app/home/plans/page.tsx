@@ -1,10 +1,11 @@
-import { DetailedList } from "@/components";
-
+import { DetailedList, GenericContainer } from '@/components';
 
 const PlansList = () => {
   return (
     <section className='flex-grow'>
-      <DetailedList />
+      <GenericContainer title='Mis Planes' color='green'>
+        <DetailedList />
+      </GenericContainer>
     </section>
   );
 };
