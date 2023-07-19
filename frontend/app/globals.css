@@ -24,7 +24,7 @@ select:-webkit-autofill:focus {
 /* more info about this in https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */
 @layer components {
   .btn {
-    @apply flex justify-center items-center rounded-full duration-300 hover:scale-105 mx-auto text-center min-w-[9rem] h-10
+    @apply flex justify-center items-center rounded-full duration-300 hover:scale-105 mx-auto text-center min-w-[9rem] h-10;
   }
   .btn-primary {
     @apply btn text-white bg-green;
@@ -39,6 +39,27 @@ select:-webkit-autofill:focus {
     @apply btn text-blue border-2 border-blue bg-lightBlue;
   }
   .shadow {
-    @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
+    @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)];
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

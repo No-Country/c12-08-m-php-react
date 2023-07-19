@@ -1,15 +1,10 @@
-import { Dashboard, Userbar } from '@/components';
+import { Dashboard } from '@/components';
 
 const Home = () => {
   return (
-    <>
-      <header className='max-md:hidden'>
-        <Userbar />
-      </header>
-      <section className='flex-grow'>
-        <Dashboard />
-      </section>
-    </>
+    <section className='flex-grow'>
+      <Dashboard />
+    </section>
   );
 };
 
