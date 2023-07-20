@@ -47,6 +47,7 @@ Route::middleware('api')->group(function () {
         Route::post('/plans/create', 'App\Http\Controllers\TreatmentPlanController@store');
         Route::get('/plans/show/{id}', 'App\Http\Controllers\TreatmentPlanController@show');
         Route::get('/plans/showall', 'App\Http\Controllers\TreatmentPlanController@showall');
+        Route::get('/plans/showItems/{id}', 'App\Http\Controllers\TreatmentPlanController@showItems');
         Route::put('/plans/update/{id}', 'App\Http\Controllers\TreatmentPlanController@update');
         Route::delete('/plans/delete/{id}', 'App\Http\Controllers\TreatmentPlanController@destroy');
 

@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('category');
             $table->integer('frequency');
             $table->timestamps();
+
+            $table->foreignId('treatment_id')->references('id')->on('treatment_plans');
+
         });
     }
 

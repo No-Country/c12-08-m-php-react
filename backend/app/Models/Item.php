@@ -15,6 +15,7 @@ class Item extends Model
         'day',
         'time',
         'category',
-        'frequency'
+        'frequency',
+        'treatment_id'
     ];
 }

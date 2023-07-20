@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Treatment_plan;
+use App\Models\Item;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -149,6 +150,20 @@ class TreatmentPlanController extends Controller
         } else {
             return response()->json([
                 'error' => 'Plan not found'
+            ], 404);
+        }
+    }
+
+    public function showItems($id)
+    {
+        $items = Item::where('treatment_id', $id)->get();
+        if ($items) {
+            return response()->json([
+                'Plan items' => $items
+            ], 200);
+        } else {
+            return response()->json([
+                'error' => 'The plan has no items'
             ], 404);
         }
     }

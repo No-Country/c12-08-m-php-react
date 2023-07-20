@@ -30,7 +30,8 @@ class ItemController extends Controller
                     'day' => 'required|date',
                     'time' => 'required|date_format:H:i:s',
                     'category' => 'required|string|max:255',
-                    'frequency' => 'required|integer|min:1|max:168'
+                    'frequency' => 'required|integer|min:1|max:168',
+                    'treatment_id' => 'required|exists:treatment_plans,id|integer'
                 ]);
 
 
@@ -41,6 +42,7 @@ class ItemController extends Controller
                     'time' => $validatedData['time'],
                     'category' => $validatedData['category'],
                     'frequency' => $validatedData['frequency'],
+                    'treatment_id' => $validatedData['treatment_id']
                 ]);
 
             } catch (ValidationException $e) {
@@ -118,7 +120,8 @@ class ItemController extends Controller
                 'day' => 'required|date',
                 'time' => 'required|date_format:H:i:s',
                 'category' => 'required|string|max:255',
-                'frequency' => 'required|integer|min:1|max:168'
+                'frequency' => 'required|integer|min:1|max:168',
+                'treatment_id' => 'required|exists:treatment_plans,id|integer'
             ]);
 
             //actualiza el item
@@ -127,6 +130,7 @@ class ItemController extends Controller
             $item->time = $validatedData['time'];
             $item->category = $validatedData['category'];
             $item->frequency = $validatedData['frequency'];
+            $item->treatment_id = $validatedData['treatment_id'];
 
             //guarda el item actualizado
             $item->save();
