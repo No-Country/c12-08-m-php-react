@@ -1,4 +1,4 @@
-import Post from '../publicServices';
+import { Post } from '../publicServices';
 
 interface LoginBody {
   email: string;
@@ -7,7 +7,8 @@ interface LoginBody {
 
 const login = async (body: LoginBody) => {
   const response = await Post('/login', body);
-  return response;
+
+  return response
 };
 
 interface RegisterBody {
