@@ -25,11 +25,7 @@ Route::group(['middleware' => 'api'], function ($router) {
     Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
     Route::post('me', 'App\Http\Controllers\AuthController@me');
 
-});
-
-Route::middleware('api')->group(function () {
-
-        //Rutas de notas
+//Rutas de notas
         Route::post('/notes/create', 'App\Http\Controllers\NoteController@store');
         Route::get('/notes/show/{id}', 'App\Http\Controllers\NoteController@show');
         Route::get('/notes/showall', 'App\Http\Controllers\NoteController@showall');
@@ -51,7 +47,7 @@ Route::middleware('api')->group(function () {
         Route::put('/plans/update/{id}', 'App\Http\Controllers\TreatmentPlanController@update');
         Route::delete('/plans/delete/{id}', 'App\Http\Controllers\TreatmentPlanController@destroy');
 
-    });
+});
 
 
 
