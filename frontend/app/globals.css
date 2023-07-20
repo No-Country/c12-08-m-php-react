@@ -61,7 +61,7 @@ select:-webkit-autofill:focus {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 2px;
 }
 
 /* Track */

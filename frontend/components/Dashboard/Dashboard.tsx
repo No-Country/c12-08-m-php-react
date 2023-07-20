@@ -1,5 +1,7 @@
 import { CalendarModule } from '@/components';
 
+import Notes from '../Notes/Notes';
+
 // Every module displayed within the Dashboard must be wrapped by DashboardModule component
 
 const Dashboard = () => {
@@ -14,8 +16,8 @@ const Dashboard = () => {
       <section className='border border-black col-span-3 row-span-2 max-md:hidden'>
         SUSCRIPCIONES
       </section>
-      <section className='border border-black col-span-2 row-span-2 max-md:hidden'>
-        NOTAS
+      <section className='col-span-2 row-span-2 max-md:hidden'>
+        <Notes small />
       </section>
     </div>
   );
