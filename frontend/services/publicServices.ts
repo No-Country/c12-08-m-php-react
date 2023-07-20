@@ -4,6 +4,7 @@ const config = {
   baseURL: process.env.NEXT_PUBLIC_URL_API,
   Headers: {
     'Content-Type': 'application/json',
+    Accept: "application/json",
   },
 };
 
@@ -14,4 +15,17 @@ const Post = async (url: string, data: any) => {
   return response;
 };
 
-export default Post;
+const GetWithAuthorization = async (url: string, token: string) => {
+console.log(token)
+  const response = await instance.get(url, { headers: {  Authorization: `Bearer ${token}` } });
+  return response;
+};
+
+const PostWithAuthorization = async (url: string, data: any, token: string) => {
+  console.log()
+  const response = await instance.post(url, data, { headers: {  Authorization: `Bearer ${token}` } });
+  return response;
+};
+
+export { GetWithAuthorization, Post, PostWithAuthorization };
+
