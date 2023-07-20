@@ -10,8 +10,12 @@ interface Props {
 const NItem = ({ id, description, small }: Props) => {
   return (
     <div
-      className='flex flex-col justify-center bg-yellow w-full min-h-[150px] rounded-2xl p-5  text-center shadow-md drop-shadow-lg
-                   md:border md:border-slate-500 text-sm '>
+      className={`flex flex-col justify-center bg-yellow w-full rounded-2xl text-center shadow-md drop-shadow-lg
+                  md:border md:border-slate-500 text-sm ${
+                    small
+                      ? '  h-full text-sm p-2 py-4 overflow-hidden flex-nowrap text-ellipsis'
+                      : ' p-5 min-h-[150px]'
+                  }`}>
       <Image
         src='/svg/plan-edit.svg'
         width={20}

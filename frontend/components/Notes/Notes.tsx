@@ -50,7 +50,7 @@ const Notes = ({ small }: Props) => {
       <p className=' text-3xl text-center py-2 font-bold'>Notas</p>
 
       {small ? (
-        <div className=' flex '>
+        <div className=' w-full '>
           <NItem
             key={lastNote.id}
             id={lastNote.id}
@@ -68,12 +68,12 @@ const Notes = ({ small }: Props) => {
       )}
       <Image
         src='/svg/btn-add.svg'
-        width={50}
-        height={50}
+        width={35}
+        height={35}
         alt='Add Note'
-        className={`absolute md:bottom-1 md:right-1 bottom-5 right-5 cursor-pointer ${
-          small && 'static self-end'
-        }  `}
+        className={` md:bottom-1 md:right-1 bottom-5 right-5 cursor-pointer ${
+          small ? 'static self-end py-2 mt-auto' : 'absolute'
+        }`}
       />
     </div>
   );

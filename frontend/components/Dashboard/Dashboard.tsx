@@ -16,7 +16,7 @@ const Dashboard = () => {
       <section className='border border-black col-span-3 row-span-2 max-md:hidden'>
         SUSCRIPCIONES
       </section>
-      <section className='border border-black col-span-2 row-span-2 max-md:hidden'>
+      <section className='col-span-2 row-span-2 max-md:hidden'>
         <Notes small />
       </section>
     </div>
