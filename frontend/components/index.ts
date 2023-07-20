@@ -10,3 +10,4 @@ export { default as QuestionAlternative } from './QuestionAlternative/QuestionAl
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Userbar } from './Userbar/Userbar';
 export { default as MedicineList } from './MedicineList/MedicineList';
+export { default as PlusButton } from './PlusButton/PlusButton';
