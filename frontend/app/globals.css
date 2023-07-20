@@ -24,16 +24,16 @@ select:-webkit-autofill:focus {
 /* more info about this in https://tailwindcss.com/docs/reusing-styles#extracting-classes-with-apply */
 @layer components {
   .btn {
-    @apply flex justify-center items-center rounded-full duration-300 hover:scale-105 text-center h-10
+    @apply flex justify-center items-center rounded-full duration-300 hover:scale-105 text-center h-10;
   }
   .btn-sm {
-    @apply min-w-[3rem] max-h-7
+    @apply min-w-[3rem] max-h-7;
   }
   .btn-md {
-    @apply min-w-[6rem]
+    @apply min-w-[6rem];
   }
   .btn-xl {
-    @apply min-w-[9rem]
+    @apply min-w-[9rem];
   }
   .btn-primary {
     @apply btn text-white bg-green;
