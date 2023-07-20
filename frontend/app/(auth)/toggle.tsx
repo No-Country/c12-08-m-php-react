@@ -9,7 +9,7 @@ const ToggleButton = () => {
   return (
     <Link
       href={pathname === '/login' ? '/register' : '/login'}
-      className='btn-secondary-outline'>
+      className='btn-xl btn-secondary-outline'>
       {pathname === '/login' ? 'Registrate' : 'Inicia sesión'}
     </Link>
   );

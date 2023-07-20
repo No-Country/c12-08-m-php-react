@@ -20,7 +20,7 @@ const LandingNavbar = () => {
                 <Link href='/benefits'>Beneficios</Link>
                 <Link href='/contact'>Contacto</Link>
               </div>
-              <Link href='/login' className='btn-primary'>
+              <Link href='/login' className='btn-xl btn-primary'>
                 Log in
               </Link>
             </div>
