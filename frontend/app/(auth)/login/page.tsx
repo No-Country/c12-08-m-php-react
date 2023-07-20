@@ -1,4 +1,6 @@
+'use client';
 import { AuthHeader, QuestionAlternative } from '@/components';
+
 import FormLogin from './form';
 
 const Login = () => {

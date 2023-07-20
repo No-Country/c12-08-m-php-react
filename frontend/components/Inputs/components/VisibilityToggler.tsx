@@ -9,12 +9,16 @@ interface EyeProps {
   togglePasswordVisibility: () => void;
 }
 
-const VisibilityToggler = () => {
+interface VisibilityTogglerProps {
+  name: string;
+}
+
+const VisibilityToggler = ({ name }: VisibilityTogglerProps) => {
   const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
 
   const togglePasswordVisibility = () => {
     document
-      .querySelector('[data-select="input-password"]')
+      .querySelector(`[data-select="input-${name}"]`)
       ?.setAttribute('type', !isShowPassword ? 'text' : 'password');
     setIsShowPassword(!isShowPassword);
   };
