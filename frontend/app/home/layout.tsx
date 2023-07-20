@@ -8,7 +8,7 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
         <Sidebar />
         <main className='w-full max-h-full flex-grow flex flex-col justify-between'>
           <header className='max-md:hidden h-1/6'>
-            <Userbar />
+            <Userbar name='María López' age='25' nationality='Argentina' />
           </header>
           <section className='max-h-full flex-grow h-4/5'>{children}</section>
         </main>
