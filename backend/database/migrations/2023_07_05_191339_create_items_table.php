@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('description');
             $table->date('day');
             $table->time('time');
             $table->string('category');
+            $table->integer('dose');
             $table->integer('frequency');
             $table->unsignedBigInteger('treatment_id');
             $table->timestamps();

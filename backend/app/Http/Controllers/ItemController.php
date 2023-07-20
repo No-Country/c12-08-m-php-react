@@ -26,10 +26,12 @@ class ItemController extends Controller
 
             try {
                 $validatedData = $request->validate([
+                    'name' => 'required|string|max:255',
                     'description' => 'required|string|max:255',
                     'day' => 'required|date',
                     'time' => 'required|date_format:H:i:s',
                     'category' => 'required|string|max:255',
+                    'dose' => 'required|integer|min:1|max:1000',
                     'frequency' => 'required|integer|min:1|max:168',
                     'treatment_id' => 'required|exists:treatment_plans,id|integer'
                 ]);
@@ -37,10 +39,12 @@ class ItemController extends Controller
 
                 //crea el item
                 $item = Item::create([
+                    'name' => $validatedData['name'],
                     'description' => $validatedData['description'],
                     'day' => $validatedData['day'],
                     'time' => $validatedData['time'],
                     'category' => $validatedData['category'],
+                    'dose' => $validatedData['dose'],
                     'frequency' => $validatedData['frequency'],
                     'treatment_id' => $validatedData['treatment_id']
                 ]);
@@ -116,19 +120,23 @@ class ItemController extends Controller
         //valida los datos del request
         try {
             $validatedData = $request->validate([
+                'name' => 'required|string|max:255',
                 'description' => 'required|string|max:255',
                 'day' => 'required|date',
                 'time' => 'required|date_format:H:i:s',
                 'category' => 'required|string|max:255',
+                'dose' => 'required|integer|min:1|max:1000',
                 'frequency' => 'required|integer|min:1|max:168',
                 'treatment_id' => 'required|exists:treatment_plans,id|integer'
             ]);
 
             //actualiza el item
+            $item->name = $validatedData['name'];
             $item->description = $validatedData['description'];
             $item->day = $validatedData['day'];
             $item->time = $validatedData['time'];
             $item->category = $validatedData['category'];
+            $item->dose = $validatedData['dose'];
             $item->frequency = $validatedData['frequency'];
             $item->treatment_id = $validatedData['treatment_id'];
 

@@ -11,10 +11,12 @@ class Item extends Model
 
     protected $fillable = [
         'id',
+        'name',
         'description',
         'day',
         'time',
         'category',
+        'dose',
         'frequency',
         'treatment_id'
     ];
