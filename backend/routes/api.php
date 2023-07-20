@@ -27,7 +27,7 @@ Route::group(['middleware' => 'api'], function ($router) {
 
 });
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware('api')->group(function () {
 
         //Rutas de notas
         Route::post('/notes/create', 'App\Http\Controllers\NoteController@store');
