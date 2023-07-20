@@ -6,11 +6,11 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Grid>
         <Sidebar />
-        <main className='w-full flex-grow flex flex-col justify-between gap-8'>
-          <header className='max-md:hidden'>
+        <main className='w-full max-h-full flex-grow flex flex-col justify-between'>
+          <header className='max-md:hidden h-1/6'>
             <Userbar />
           </header>
-          {children}
+          <section className='flex-grow h-4/5'>{children}</section>
         </main>
         <BottomNavbar />
       </Grid>
