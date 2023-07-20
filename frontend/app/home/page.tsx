@@ -1,11 +1,7 @@
 import { Dashboard } from '@/components';
 
 const Home = () => {
-  return (
-    <section className='flex-grow'>
-      <Dashboard />
-    </section>
-  );
+  return <Dashboard />;
 };
 
 export default Home;
