@@ -1,6 +1,6 @@
 import calendarIcon from '@/public/img/calendar.png';
-import { ThemeProvider, createTheme } from '@material-ui/core';
-import { DatePicker } from '@material-ui/pickers';
+import { ThemeProvider, createTheme } from '@mui/material';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import Image from 'next/image';
 
 const theme = createTheme({
@@ -9,44 +9,51 @@ const theme = createTheme({
       main: '#A5D481',
     },
   },
-  overrides: {
+  components: {
     MuiFormControl: {
-      root: {
-        width: '18rem',
+      styleOverrides: {
+        root: {
+          width: '18rem',
+        },
       },
     },
     MuiFormLabel: {
-      root: {
-        '&.Mui-focused': {
-          // Estilos para la clase .MuiFormLabel-root.Mui-focused
-          color: '#000', // Ejemplo de estilo: color de texto rojo cuando está enfocado
+      styleOverrides: {
+        root: {
+          '&.Mui-focused': {
+            color: '#000',
+          },
         },
       },
     },
     MuiInput: {
-      underline: {
-        borderBottom: 'none',
+      styleOverrides: {
+        underline: {
+          borderBottom: 'none',
 
-        '&:before': {
-          borderBottom: 'solid 2px #000',
+          '&:before': {
+            borderBottom: 'solid 2px #000',
+          },
+          '&:hover': {
+            border: 'none',
+          },
+          '&:after': {
+            borderBottom: 'solid 2px #000',
+          },
+          '&:hover:not(.Mui-disabled):before': {
+            borderBottom: 'solid 2px #000',
+          },
         },
-        '&:hover': {
-          border: 'none',
+        input: {
+          cursor: 'pointer',
         },
-        '&:after': {
-          borderBottom: 'solid 2px #000',
-        },
-        '&:hover:not(.Mui-disabled):before': {
-          borderBottom: 'solid 2px #000',
-        },
-      },
-      input: {
-        cursor: 'pointer',
       },
     },
     MuiInputLabel: {
-      root: {
-        color: '#000',
+      styleOverrides: {
+        root: {
+          color: '#000',
+        },
       },
     },
   },
@@ -71,8 +78,6 @@ const DatePickerCustom = ({ value, setValue }: DatePickerCustomProps) => {
           openTo='year'
           format='dd/MM/yyyy'
           label='Date of birth'
-          views={['year', 'month', 'date']}
-          id='Date of birth'
         />
       </div>
     </ThemeProvider>
