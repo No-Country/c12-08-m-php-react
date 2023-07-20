@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 import { useEffect, useState } from 'react';
 
-const useDate = () => {
+const useDatePicker = () => {
   const formatDate = (date: Date): string => {
     const formatedDate = format(date, 'dd LLL');
     return formatedDate;
@@ -28,4 +28,4 @@ const useDate = () => {
   return { today, selectedDate, pickCurrentDate, selectDate };
 };
 
-export default useDate;
+export default useDatePicker;
