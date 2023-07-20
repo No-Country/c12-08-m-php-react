@@ -18,9 +18,10 @@ return new class extends Migration
             $table->time('time');
             $table->string('category');
             $table->integer('frequency');
+            $table->unsignedBigInteger('treatment_id');
             $table->timestamps();
 
-            $table->foreignId('treatment_id')->references('id')->on('treatment_plans');
+            $table->foreign('treatment_id')->references('id')->on('treatment_plans');
 
         });
     }
