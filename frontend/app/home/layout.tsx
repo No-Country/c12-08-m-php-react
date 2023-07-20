@@ -7,10 +7,10 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
       <Grid>
         <Sidebar />
         <main className='w-full flex-grow flex flex-col justify-between gap-8'>
-          <header className='max-md:hidden'>
-            <Userbar />
+          <header className='max-md:hidden h-1/6'>
+            <Userbar name='María López' age='25' nationality='Argentina' />
           </header>
-          {children}
+          <section className='max-h-full flex-grow h-4/5'>{children}</section>
         </main>
         <BottomNavbar />
       </Grid>
