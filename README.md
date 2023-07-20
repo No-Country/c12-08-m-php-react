@@ -227,7 +227,7 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
       </p>
       <p align='center'>
         <a href='https://www.behance.net/ireneporro16' target='_blank'>
-          <img src='[https://github.com/YosstinCode/images_readme/blob/main/Button%20Github.svg](https://github.com/YosstinCode/images_readme/blob/main/Button%20Github%20(1).svg)' height=30/>
+          <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Github%20(1).svg' height=30/>
         </a>
         <a href='https://www.linkedin.com/in/ireneporro16/' target='_blank'>
           <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Linkedin.svg' height=30/>
