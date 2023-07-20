@@ -15,7 +15,7 @@ const Dashboard = () => {
         SUSCRIPCIONES
       </div>
       <div className='border border-black col-span-2 row-span-2 max-md:hidden'>
-        <Notes />
+        <Notes small />
       </div>
     </div>
   );
