@@ -4,7 +4,7 @@ export { default as CalendarModule } from './CalendarModule/CalendarModule';
 export { default as Dashboard } from './Dashboard/Dashboard';
 export { default as DetailedList } from './DetailedList/DetailedList';
 export { default as GenericContainer } from './GenericContainer/GenericContainer';
-export { default as Input } from './Input/Input';
+export { default as Input } from './Inputs/Input';
 export { default as LandingNavbar } from './LandingNavbar/LandingNavbar';
 export { default as LandingShowcase } from './LandingShowcase/LandingShowcase';
 export { default as LandingSlider } from './LandingSlider/LandingSlider';
