@@ -134,6 +134,9 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
 <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/829f9da1-7795-4491-9451-820cd2606c70' />
 </p>
 
+[![Despliegue Backend](https://img.shields.io/badge/Despliegue_Frontend-click_for_view-purple
+)](https://c12-08-m-php-react-a5v3tztu2-c12-08-mphp-react.vercel.app/?vercelToolbarCode=Gmnd25EpXaFgo6o)
+
 --------
 <h3 align='center'>
   Backend
@@ -142,7 +145,7 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
   <tr>
   <td>
      <p align='center'>
-       <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/44c60eb9-c29a-4dfd-b78a-b874bfa92a4e' width=150 height=150 />
+       <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/aacbc9de-2698-4f05-bccf-093ea27a4db5' width=150 height=150 />
      </p>
       <p align='center'>
         <span >
@@ -159,14 +162,14 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
         <a href='https://www.linkedin.com/in/osdalys-gomez/' target='_blank'>
           <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Linkedin.svg' height=30/>
         </a>
-        <a href='' target='_blank'>
+        <a href='https://fastupload.io/r5aXGLCUnFEg8Z3/preview' target='_blank'>
           <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20CV.svg' height=30/>
         </a>
       </p>
     </td>
   <td>
      <p align='center'>
-       <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/390338a3-8b12-436b-9996-42569d0f70f7' width=150 height=150 />
+       <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/58479c55-0331-415f-bec8-37f30cf3109f' width=150 height=150 />
      </p>
       <p align='center'>
         <span >
@@ -183,7 +186,7 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
         <a href='https://www.linkedin.com/in/jsalazar005/' target='_blank'>
           <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Linkedin.svg' height=30/>
         </a>
-        <a href='' target='_blank'>
+        <a href='https://fastupload.io/8Bq8wutXnlRnchX/preview' target='_blank'>
           <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20CV.svg' height=30/>
         </a>
       </p>
@@ -200,6 +203,9 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
   <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/ca26c359-3f5d-484b-beba-0f76774b5522' />
   <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/69fb1a6d-1b25-44a9-bd2d-b278ba734c63' />
 </p>
+
+[![Despliegue Backend](https://img.shields.io/badge/Despliegue_Backend-click_for_view-blue
+)](https://c12-08-m-php-react-production.up.railway.app/api)
 
 -----
 <h3 align='center'>
@@ -220,13 +226,37 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
         </p> 
       </p>
       <p align='center'>
-        <a href='' target='_blank'>
-          <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Github.svg' height=30/>
+        <a href='https://www.behance.net/ireneporro16' target='_blank'>
+          <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Github%20(1).svg' height=30/>
         </a>
         <a href='https://www.linkedin.com/in/ireneporro16/' target='_blank'>
           <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Linkedin.svg' height=30/>
         </a>
-        <a href='' target='_blank'>
+        <a href='https://fastupload.io/Lh2lKbmB7rByPB8/preview' target='_blank'>
+          <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20CV.svg' height=30/>
+        </a>
+      </p>
+    </td>
+   <td>
+     <p align='center'>
+       <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/4c6346b6-924a-44d3-ac3d-ddfacf267178' width=150 height=150 />
+     </p>
+      <p align='center'>
+        <span >
+          <b>Litt Ivan</b>
+        </span>
+        <p align='center' color='gray'>
+           UX/UI Designer
+        </p> 
+      </p>
+      <p align='center'>
+        <a href='https://github.com/ivanlitt8' target='_blank'>
+          <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Github.svg' height=30/>
+        </a>
+        <a href='https://www.linkedin.com/in/ivan-litt/' target='_blank'>
+          <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20Linkedin.svg' height=30/>
+        </a>
+        <a href='https://dub.sh/IvanCv' target='_blank'>
           <img src='https://github.com/YosstinCode/images_readme/blob/main/Button%20CV.svg' height=30/>
         </a>
       </p>
@@ -239,18 +269,10 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
 </h3>
 <p align='center'>
 <img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/e3d25147-0d68-4031-8c8f-fe2a930e1034' />
+<img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/348f1502-99d3-411d-97fc-7742705dfcce' />
+<img src='https://github.com/No-Country/c12-08-m-php-react/assets/76113738/802b64d6-c01c-49fc-b46f-c85c93ce456a' />
 </p>
 
 -----
-
-## Despliegues
-
-[![Despliegue Backend](https://img.shields.io/badge/Despliegue_Backend-click_for_view-blue
-)](https://c12-08-m-php-react-production.up.railway.app/api)
-[![Despliegue Backend](https://img.shields.io/badge/Despliegue_Frontend-click_for_view-purple
-)](https://c12-08-m-php-react-a5v3tztu2-c12-08-mphp-react.vercel.app/?vercelToolbarCode=Gmnd25EpXaFgo6o)
-
-
-
 
 
