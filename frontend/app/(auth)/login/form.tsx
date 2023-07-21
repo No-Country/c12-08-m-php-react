@@ -14,8 +14,7 @@ const FormLogin = () => {
     const { data } = await login(values);
     console.log(data);
     setCookie('token', data.access_token, { path: '/', days: 7 });
-
-    router.push('/dashboard');
+    router.push('/home');
   };
 
   const { handleSubmit, handleChange } = useFormik({
