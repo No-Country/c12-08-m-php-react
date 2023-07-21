@@ -1,5 +1,5 @@
 'use client';
-import { AuthHeader, QuestionAlternative } from '@/components';
+import { AuthHeader, ConectSocial, QuestionAlternative } from '@/components';
 
 import FormLogin from './form';
 
@@ -13,6 +13,7 @@ const Login = () => {
         callAction='Unete ahora'
         link='/register'
       />
+      <ConectSocial />
     </>
   );
 };
