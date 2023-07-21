@@ -49,6 +49,4 @@ Route::group(['middleware' => 'api'], function ($router) {
 
 });
 
-
-
-
+Route::post('/mail',' App\Http\Mail\NotificacionItem@build');

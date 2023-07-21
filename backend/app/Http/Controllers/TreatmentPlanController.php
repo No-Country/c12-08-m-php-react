@@ -9,9 +9,9 @@ use Illuminate\Validation\ValidationException;
 
 class TreatmentPlanController extends Controller
 {
-    public function __construct() 
-     { 
-         $this->middleware('auth:api'); 
+    public function __construct()
+     {
+         $this->middleware('auth:api');
      }
 
     /**
@@ -171,5 +171,11 @@ class TreatmentPlanController extends Controller
                 'error' => 'The plan has no items'
             ], 404);
         }
+    }
+
+    public function editTime($id)
+    {
+        $plan = Plan::find($id);
+        $plan->
     }
 }
