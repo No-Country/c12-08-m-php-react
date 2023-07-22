@@ -1,8 +1,8 @@
-import BottomNavbarItem from './components/BottomNavbarItem';
+import homeIcon from '@/public/svg/nb-home.svg';
 import notesIcon from '@/public/svg/nb-notes.svg';
 import plansIcon from '@/public/svg/nb-plans.svg';
-import homeIcon from '@/public/svg/nb-home.svg';
 import subsIcon from '@/public/svg/nb-subs.svg';
+import BottomNavbarItem from './components/BottomNavbarItem';
 
 const items = [
   {
@@ -29,7 +29,7 @@ const items = [
 
 const BottomNavbar = () => {
   return (
-    <footer className='z-30 w-full h-20 bg-white border-t-2 border-lightGreen  md:hidden'>
+    <footer className='z-30 w-full max-md:h-[8%] bg-white border-t-2 border-lightGreen  md:hidden'>
       <div className='grid h-full max-w-lg grid-cols-4 mx-auto font-medium'>
         {items.map(item => (
           <BottomNavbarItem key={item.title} item={item} />
