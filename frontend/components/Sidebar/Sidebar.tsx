@@ -35,7 +35,7 @@ const Sidebar = () => {
     <div className='md:border md:rounded-2xl md:shadow-md max-md:h-[8%]'>
       <Image
         src='/svg/sb-open.svg'
-        className='m-2  md:hidden'
+        className='m-2 md:hidden'
         onClick={() => setSidebarOpen(prev => !prev)}
         alt='sidebar-open'
         width={40}
