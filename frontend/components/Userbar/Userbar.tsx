@@ -13,7 +13,7 @@ const Userbar = ({ name, age, nationality }: Props) => {
   return (
     <div className='border rounded-2xl relative shadow-md h-24 flex items-center'>
       <div className='m-2 flex flex-grow'>
-        <Link href='/'>
+        <Link href='/#'>
           <Image src={user} alt='userImageSrc' width={80} height={80} />
         </Link>
         <div className='ml-2 flex flex-col font-poppins'>
