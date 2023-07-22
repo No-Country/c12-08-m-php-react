@@ -1,8 +1,8 @@
-import BottomNavbarItem from './components/BottomNavbarItem';
+import homeIcon from '@/public/svg/nb-home.svg';
 import notesIcon from '@/public/svg/nb-notes.svg';
 import plansIcon from '@/public/svg/nb-plans.svg';
-import homeIcon from '@/public/svg/nb-home.svg';
 import subsIcon from '@/public/svg/nb-subs.svg';
+import BottomNavbarItem from './components/BottomNavbarItem';
 
 const items = [
   {
