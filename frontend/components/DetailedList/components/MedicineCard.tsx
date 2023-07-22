@@ -31,7 +31,7 @@ const PlanCard = ({
           </span>
           <div className='flex flex-col border-l-2 pl-4 border-black'>
             <strong>{medicineName}</strong>
-            <span className='sm:text-base text-sm	'>{indication}</span>
+            <span className='sm:text-base text-sm'>{indication}</span>
           </div>
           <div className='ml-auto hidden sm:block'>
             <Image src={imageSrc} alt='Logo' width={50} height={50} />
