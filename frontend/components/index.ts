@@ -1,5 +1,5 @@
 export { default as AboutUs } from './AboutUs/AboutUs';
-export { default as AuthHeader } from './AuthHeader/AuthHeader';
+export { default as AuthFormHeader } from './AuthFormHeader/AuthFormHeader';
 export { default as BottomNavbar } from './BottomNavbar/BottomNavbar';
 export { default as CalendarModule } from './CalendarModule/CalendarModule';
 export { default as CardItem } from './CardItem/CardItem';

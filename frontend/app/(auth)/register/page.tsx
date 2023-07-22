@@ -1,11 +1,11 @@
-import { AuthHeader, ConectSocial, QuestionAlternative } from '@/components';
+import { AuthFormHeader, ConectSocial, QuestionAlternative } from '@/components';
 
 import FormRegister from './form';
 
 const Register = () => {
   return (
     <>
-      <AuthHeader
+      <AuthFormHeader
         title='Crea una cuenta'
         subtitle='Comienza a tener el control de tu salud'
       />

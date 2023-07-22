@@ -1,9 +1,9 @@
-import { AuthHeader } from '@/components';
+import { AuthFormHeader } from '@/components';
 
 const RegisterLoader = () => {
   return (
     <>
-      <AuthHeader
+      <AuthFormHeader
         title='Crea una cuenta'
         subtitle='Comienza a tener el control de tu salud'
       />
