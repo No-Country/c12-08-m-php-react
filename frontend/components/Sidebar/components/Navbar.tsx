@@ -28,7 +28,7 @@ const SideBarNav = () => {
       </div>
       <div className=' mt-auto'>
         <NavbarItem
-          handleClick={() => router.push('/about')}
+          handleClick={() => router.push('/home/about')}
           image='/svg/sb-inf.svg'
           title='Acerca de'
         />
