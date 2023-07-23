@@ -1,13 +1,14 @@
+import LandingThanks from '@/components/LandingThanks';
+import LandingTitle from '@/components/LandingTitle/LandingTitle';
 import aboutImage from '@/public/img/aboutImage.jpg';
 import Image from 'next/image';
-import Thanks from './Thanks';
-import { AboutItem, AboutItemsContainer, Title } from './index';
+import { AboutItem, AboutItemsContainer } from './index';
 
 const About = () => {
   return (
     <>
       <AboutItemsContainer>
-        <Title>Acerca de PillCare</Title>
+        <LandingTitle text='Acerca de PillCare' />
         <AboutItem
           question='¿Qué es PillCare y cuál es su propósito principal?'
           answer='Es una plataforma diseñada para facilitar el seguimiento y recordatorio de medicamentos de manera eficiente y conveniente. En PillCare, nuestro objetivo es ayudar a las personas a mantener un control adecuado de su tratamiento médico y mejorar su calidad de vida.'
@@ -25,7 +26,10 @@ const About = () => {
           question='¿Cuál es el beneficio principal de unirse a la comunidad de PillCare?'
           answer='Al unirte a nuestra comunidad, descubrirás cómo PillCare puede ayudarte a mantener un seguimiento efectivo de tus medicamentos, evitando olvidos y mejorando tu bienestar general. Nos encantaría tenerte a bordo para que experimentes una gestión más eficiente y conveniente de tu tratamiento médico.'
         />
-        <Thanks />
+        <LandingThanks
+          text='¡Gracias por elegir PillCare para gestionar tus medicamentos! Estamos emocionados de
+        ser parte de tu camino hacia una mejor salud y bienestar.'
+        />
       </AboutItemsContainer>
       <Image
         className='object-cover'
