@@ -9,9 +9,9 @@ use Illuminate\Validation\ValidationException;
 class ItemController extends Controller
 {
 
-    public function __construct() 
-     { 
-         $this->middleware('auth:api'); 
+    public function __construct()
+     {
+         $this->middleware('auth:api');
      }
 
     /**
@@ -33,26 +33,30 @@ class ItemController extends Controller
             try {
                 $validatedData = $request->validate([
                     'name' => 'required|string|max:255',
-                    'description' => 'required|string|max:255',
-                    'day' => 'required|date',
+                    'indications' => 'required|string|max:255',
+                    'quantity' => 'required|integer|min:1|max:1000',
+                    'is_single_dose' => 'required|boolean',
+                    'init_date' => 'required|date',
+                    'due_date' => 'required_if:is_single_dose,true|date',
                     'time' => 'required|date_format:H:i:s',
-                    'category' => 'required|string|max:255',
-                    'dose' => 'required|integer|min:1|max:1000',
-                    'frequency' => 'required|integer|min:1|max:168',
-                    'treatment_id' => 'required|exists:treatment_plans,id|integer'
+                    'frequency' => 'required_if:is_single_dose,false|integer|min:1|max:168',
+                    'category_id' => 'required|exists:categories,id|integer',
+                    'user_id' => 'required|exists:users,id|integer'
                 ]);
 
 
                 //crea el item
                 $item = Item::create([
                     'name' => $validatedData['name'],
-                    'description' => $validatedData['description'],
-                    'day' => $validatedData['day'],
+                    'indications' => $validatedData['indications'],
+                    'quantity' => $validatedData['quantity'],
+                    'is_single_dose' => $validatedData['is_single_dose'],
+                    'init_date' => $validatedData['init_date'],
+                    'due_date' => $validatedData['due_date'],
                     'time' => $validatedData['time'],
-                    'category' => $validatedData['category'],
-                    'dose' => $validatedData['dose'],
                     'frequency' => $validatedData['frequency'],
-                    'treatment_id' => $validatedData['treatment_id']
+                    'category_id' => $validatedData['category_id'],
+                    'user_id' => $validatedData['user_id'],
                 ]);
 
             } catch (ValidationException $e) {
@@ -127,24 +131,29 @@ class ItemController extends Controller
         try {
             $validatedData = $request->validate([
                 'name' => 'required|string|max:255',
-                'description' => 'required|string|max:255',
-                'day' => 'required|date',
+                'indications' => 'required|string|max:255',
+                'quantity' => 'required|integer|min:1|max:1000',
+                'is_single_dose' => 'required|boolean',
+                'init_date' => 'required|date',
+                'due_date' => 'required_if:is_single_dose,true|date',
                 'time' => 'required|date_format:H:i:s',
-                'category' => 'required|string|max:255',
-                'dose' => 'required|integer|min:1|max:1000',
-                'frequency' => 'required|integer|min:1|max:168',
-                'treatment_id' => 'required|exists:treatment_plans,id|integer'
+                'frequency' => 'required_if:is_single_dose,false|integer|min:1|max:168',
+                'category_id' => 'required|exists:categories,id|integer',
+                'user_id' => 'required|exists:users,id|integer'
             ]);
 
             //actualiza el item
             $item->name = $validatedData['name'];
-            $item->description = $validatedData['description'];
-            $item->day = $validatedData['day'];
+            $item->indications = $validatedData['indications'];
+            $item->quantity = $validatedData['quantity'];
+            $item->is_single_dose = $validatedData['is_single_dose'];
+            $item->init_date = $validatedData['init_date'];
+            $item->due_date = $validatedData['due_date'];
             $item->time = $validatedData['time'];
-            $item->category = $validatedData['category'];
-            $item->dose = $validatedData['dose'];
             $item->frequency = $validatedData['frequency'];
-            $item->treatment_id = $validatedData['treatment_id'];
+            $item->category_id = $validatedData['category_id'];
+            $item->user_id = $validatedData['user_id'];
+            
 
             //guarda el item actualizado
             $item->save();

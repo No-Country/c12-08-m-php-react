@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Cookie;
+
 
 use Illuminate\Support\Facades\DB;
 
@@ -77,11 +79,15 @@ class AuthController extends Controller
     {
         $credentials = request(['email', 'password']);
 
-        if (! $token = auth()->attempt($credentials)) {
+        if (!$token = auth()->attempt($credentials)) {
             return response()->json(['error' => 'Invalid data'], 400);
         }
 
-        return $this->respondWithToken($token);
+        // Crear la cookie con el token
+        $cookie = cookie('jwt_token', $token, 60);
+        
+        // Devolver la respuesta con la cookie configurada
+        return $this->respondWithToken($token)->withCookie($cookie);
     }
 
     /**
@@ -103,7 +109,10 @@ class AuthController extends Controller
     {
         auth()->logout();
 
-        return response()->json(['message' => 'Successfully logged out']);
+        // Invalidar la cookie
+        $cookie = Cookie::forget('jwt_token');
+
+        return response()->json(['message' => 'Successfully logged out'])->withCookie($cookie);
     }
 
     /**

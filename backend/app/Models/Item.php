@@ -12,12 +12,15 @@ class Item extends Model
     protected $fillable = [
         'id',
         'name',
-        'description',
-        'day',
+        'indications',
+        'quantity',
+        'is_single_dose',
+        'init_date',
+        'due_date',
         'time',
-        'category',
-        'dose',
         'frequency',
-        'treatment_id'
+        'category_id',
+        'user_id',
+        
     ];
 }

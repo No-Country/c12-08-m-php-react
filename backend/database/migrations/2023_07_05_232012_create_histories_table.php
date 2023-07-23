@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedSmallInteger('item_id');
             $table->boolean('complete');
-            $table->string('additional_info');
+            $table->string('additional_info')->nullable();
             $table->timestamps();
 
             $table->foreign('item_id')->references('id')->on('items');

@@ -11,10 +11,12 @@ class Note extends Model
 
     protected $fillable = [
         'id',
+        'title',
         'description',
         'date',
         'user_id',
+        
     ];
 
-    
+
 }

@@ -9,9 +9,9 @@ use Illuminate\Validation\ValidationException;
 class NoteController extends Controller
 {
 
-    public function __construct() 
-     { 
-         $this->middleware('auth:api'); 
+    public function __construct()
+     {
+         $this->middleware('auth:api');
      }
 
     /**
@@ -34,24 +34,18 @@ class NoteController extends Controller
             $validatedData = $request->validate([
                 'title' => 'required|string|max:255',
                 'description' => 'required|string|max:255',
-                'day' => 'required|date',
-                'time' => 'required|date_format:H:i:s',
-                'category' => 'required|string|max:255',
-                'frequency' => 'required|integer|min:1|max:168'
+                'date' => 'required|date',
+                'user_id' => 'required|exists:users,id|integer'
             ]);
 
             //crea la nota
             $note = Note::create([
                 'title' => $validatedData['title'],
                 'description' => $validatedData['description'],
-                'day' => $validatedData['day'],
-                'time' => $validatedData['time'],
-                'category' => $validatedData['category'],
-                'frequency' => $validatedData['frequency'],
+                'date' => $validatedData['date'],
+                'user_id' => $validatedData['user_id'],
             ]);
 
-            //guarda la nota creada
-            $note->save();
 
         } catch (ValidationException $e) {
             return response()->json([
@@ -144,19 +138,15 @@ class NoteController extends Controller
                     $validatedData = $request->validate([
                         'title' => 'required|string|max:255',
                         'description' => 'required|string|max:255',
-                        'day' => 'required|date',
-                        'time' => 'required|date_format:H:i:s',
-                        'category' => 'required|string|max:255',
-                        'frequency' => 'required|integer|min:1|max:168'
+                        'date' => 'required|date',
+                        'user_id' => 'required|exists:users,id|integer'
                     ]);
 
                     //actualiza la nota
                     $note->title = $validatedData['title'];
                     $note->description = $validatedData['description'];
-                    $note->day = $validatedData['day'];
-                    $note->time = $validatedData['time'];
-                    $note->category = $validatedData['category'];
-                    $note->frequency = $validatedData['frequency'];
+                    $note->date = $validatedData['date'];
+                    $note->user_id = $validatedData['user_id'];
 
                     //guarda la nota actualizada
                     $note->save();
