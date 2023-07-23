@@ -1,6 +1,6 @@
 import { DetailedList, GenericContainer } from '@/components';
 
-const PlansList = () => {
+const Medicines = () => {
   return (
     <GenericContainer title='Mis medicamentos' color='green' colortitle='black'>
       <DetailedList />
@@ -8,4 +8,4 @@ const PlansList = () => {
   );
 };
 
-export default PlansList;
+export default Medicines;
