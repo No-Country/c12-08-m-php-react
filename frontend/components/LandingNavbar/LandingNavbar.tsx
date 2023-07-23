@@ -16,6 +16,7 @@ const LandingNavbar = () => {
             <div className='flex items-center space-x-4'>
               <div className='flex space-x-4'>
                 <Link href='/'>Inicio</Link>
+                <Link href='/about'>Nosotros</Link>
                 <Link href='/howWorks'>Cómo funciona</Link>
                 <Link href='/benefits'>Beneficios</Link>
                 <Link href='/contact'>Contacto</Link>
