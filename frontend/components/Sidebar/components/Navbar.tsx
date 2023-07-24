@@ -33,7 +33,7 @@ const SideBarNav = () => {
           title='Acerca de'
         />
         <NavbarItem
-          handleClick={() => router.push('/dashboard/settings')}
+          handleClick={() => router.push('/home/account')}
           image='/svg/sb-setting.svg'
           title='Configuracion'
         />
