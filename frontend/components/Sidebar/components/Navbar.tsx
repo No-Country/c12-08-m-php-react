@@ -12,7 +12,7 @@ const SideBarNav = () => {
   return (
     <div className=' flex flex-col h-full w-full'>
       <NavbarItem
-        handleClick={() => router.push('/dashboard/profile')}
+        handleClick={() => router.push('/home/profile')}
         image='/svg/sb-profile.svg'
         title='Perfil'
       />
