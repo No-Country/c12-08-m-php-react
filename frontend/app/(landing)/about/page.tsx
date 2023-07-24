@@ -1,4 +1,3 @@
-import LandingThanks from '@/components/LandingThanks';
 import LandingTitle from '@/components/LandingTitle/LandingTitle';
 import aboutImage from '@/public/img/aboutImage.jpg';
 import Image from 'next/image';
@@ -26,10 +25,10 @@ const About = () => {
           question='¿Cuál es el beneficio principal de unirse a la comunidad de PillCare?'
           answer='Al unirte a nuestra comunidad, descubrirás cómo PillCare puede ayudarte a mantener un seguimiento efectivo de tus medicamentos, evitando olvidos y mejorando tu bienestar general. Nos encantaría tenerte a bordo para que experimentes una gestión más eficiente y conveniente de tu tratamiento médico.'
         />
-        <LandingThanks
-          text='¡Gracias por elegir PillCare para gestionar tus medicamentos! Estamos emocionados de
-        ser parte de tu camino hacia una mejor salud y bienestar.'
-        />
+        <h3 className='h3-landing'>
+          ¡Gracias por elegir PillCare para gestionar tus medicamentos! Estamos
+          emocionados de ser parte de tu camino hacia una mejor salud y bienestar.
+        </h3>
       </AboutItemsContainer>
       <Image
         className='object-cover'
