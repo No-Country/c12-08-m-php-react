@@ -44,11 +44,9 @@ const Notes = ({ small }: Props) => {
   const lastNote = mock[mock.length - 1];
   return (
     <div
-      className={`relative rounded-xl p-2 py-4 md:bg-yellow h-screen md:h-full object-none ${
-        small && ' flex flex-col'
+      className={`relative rounded-xl p-5 h-screen md:h-full object-none ${
+        small && ' flex flex-col bg-yellow'
       }`}>
-      <p className=' text-3xl text-center py-2 font-bold'>Notas</p>
-
       {small ? (
         <div className=' w-full '>
           <NItem
@@ -60,7 +58,7 @@ const Notes = ({ small }: Props) => {
         </div>
       ) : (
         <div
-          className={` grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-4/5 py-5 `}>
+          className={` grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-full py-5 `}>
           {mock.map(item => (
             <NItem key={item.id} id={item.id} description={item.description} />
           ))}
@@ -71,8 +69,8 @@ const Notes = ({ small }: Props) => {
         width={35}
         height={35}
         alt='Add Note'
-        className={` md:bottom-1 md:right-1 bottom-5 right-5 cursor-pointer ${
-          small ? 'static self-end py-2 mt-auto' : 'absolute'
+        className={` md:bottom-5 md:right-5 bottom-5 right-5 cursor-pointer ${
+          small ? 'static self-end py-2 mt-auto' : 'absolute  '
         }`}
       />
     </div>

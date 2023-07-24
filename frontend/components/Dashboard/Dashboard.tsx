@@ -1,6 +1,5 @@
 import { CalendarModule } from '@/components';
-
-import Notes from '../Notes/Notes';
+import Notes from '../NotesModule/Notes';
 
 // Every module displayed within the Dashboard must be wrapped by DashboardModule component
 
