@@ -12,7 +12,6 @@ const ProfileSettings = () => {
       </div>
       <UploadButton />
       <form className='mt-8 max-w-md w-full px-4'>
-        {/* The main container is now flex-col for mobile */}
         <div className='flex flex-col mb-4 sm:flex-row sm:mb-0'>
           <div className='mb-4 sm:mr-2 sm:w-1/2'>
             <label htmlFor='firstName' className='block text-black font-medium mb-1'>
@@ -39,7 +38,6 @@ const ProfileSettings = () => {
             />
           </div>
         </div>
-        {/* The main container is now flex-col for mobile */}
         <div className='flex flex-col mb-4 sm:flex-row sm:mb-0'>
           <div className='mb-4 sm:mr-2 sm:w-1/2'>
             <label htmlFor='nationality' className='block text-black font-medium mb-1'>
