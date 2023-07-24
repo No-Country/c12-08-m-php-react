@@ -5,7 +5,7 @@ import arrowBack from '/public/svg/arrowBack.svg';
 
 interface Props {
   children: React.ReactNode;
-  color: 'green' | 'yellow' | 'white';
+  color: 'green' | 'yellow' | 'white' | 'lightGreen';
   title: string;
   colortitle: 'black' | 'green' | 'blue';
 }
