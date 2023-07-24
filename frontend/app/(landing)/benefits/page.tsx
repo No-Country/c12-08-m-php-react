@@ -2,7 +2,6 @@ import LandingTitle from '@/components/LandingTitle/LandingTitle';
 import benefitsImage from '@/public/img/benefitsImage.jpg';
 import Image from 'next/image';
 
-import LandingThanks from '@/components/LandingThanks';
 import BenefitsItem from './BenefitsItem';
 import BenefitsItemsContainer from './BenefitsItemsContainer';
 import BenefitsList from './BenefitsList';
@@ -61,7 +60,11 @@ const Benefits = () => {
             />
           ))}
         </BenefitsList>
-        <LandingThanks text='Únete a PillCare y descubre cómo podemos ayudarte a llevar un seguimiento efectivo de tus medicamentos. ¡Mejora tu adherencia al tratamiento y disfruta de una vida más saludable!' />
+        <h3 className='h3-landing'>
+          Únete a PillCare y descubre cómo podemos ayudarte a llevar un seguimiento
+          efectivo de tus medicamentos. ¡Mejora tu adherencia al tratamiento y disfruta de
+          una vida más saludable!
+        </h3>
       </BenefitsItemsContainer>
       <Image
         className='object-cover'
