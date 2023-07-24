@@ -3,18 +3,17 @@ import InputPassword from '@/components/Inputs/InputPassword';
 import { login } from '@/services/auth/auth';
 import { useFormik } from 'formik';
 
-import { useRouter } from 'next/navigation';
 import { setCookie } from 'react-use-cookie';
 
 const FormLogin = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleS = async (values: any) => {
     const { data } = await login(values);
     console.log(data);
     setCookie('token', data.access_token, { path: '/', days: 7 });
 
-    router.push('/dashboard');
+    // router.push('/dashboard');
   };
 
   const { handleSubmit, handleChange } = useFormik({

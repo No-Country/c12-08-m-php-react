@@ -1,7 +1,6 @@
-import calendarIcon from '@/public/img/calendar.png';
+'use client';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import Image from 'next/image';
 
 const theme = createTheme({
   palette: {
@@ -32,16 +31,16 @@ const theme = createTheme({
           borderBottom: 'none',
 
           '&:before': {
-            borderBottom: 'solid 2px #000',
+            borderBottom: 'solid 1px #000',
           },
           '&:hover': {
             border: 'none',
           },
           '&:after': {
-            borderBottom: 'solid 2px #000',
+            borderBottom: 'solid 1px #000',
           },
           '&:hover:not(.Mui-disabled):before': {
-            borderBottom: 'solid 2px #000',
+            borderBottom: 'solid 1px #000',
           },
         },
         input: {
@@ -60,24 +59,42 @@ const theme = createTheme({
 });
 
 interface DatePickerCustomProps {
+  label: string;
+  name: string;
   value: Date | null;
   setValue: (name: string, value: Date | null) => void;
+  disableFuture?: boolean;
+  disablePast?: boolean;
+  disabled?: boolean;
 }
 
-const DatePickerCustom = ({ value, setValue }: DatePickerCustomProps) => {
+const DatePickerCustom = ({
+  label,
+  name,
+  value,
+  setValue,
+  disableFuture = false,
+  disablePast = false,
+  disabled = false,
+}: DatePickerCustomProps) => {
   return (
     <ThemeProvider theme={theme}>
       <div className='flex items-center justify-center gap-2'>
-        <label htmlFor='Date of birth' className=' cursor-pointer'>
+        {/* <label htmlFor={label} className=' cursor-pointer'>
           <Image src={calendarIcon} width={24} height={20} alt='Calendar label' />
-        </label>
+        </label> */}
         <DatePicker
           value={value}
-          onChange={date => setValue('birth', date)}
-          disableFuture
+          onChange={date => setValue(name, date)}
+          disablePast={disablePast}
+          disableFuture={disableFuture}
           openTo='year'
           format='dd/MM/yyyy'
-          label='Date of birth'
+          label={label}
+          slotProps={{ textField: { variant: 'standard' } }}
+          sx={{ width: '100%' }}
+          disabled={disabled}
+          disableOpenPicker={disabled}
         />
       </div>
     </ThemeProvider>

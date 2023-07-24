@@ -56,7 +56,13 @@ const FormRegister = () => {
           label='username'
           name='username'
         />
-        <DatePickerCustom setValue={setFieldValue} value={values.birth} />
+        <DatePickerCustom
+          label='Fecha de nacimiento'
+          name='birth'
+          disableFuture
+          setValue={setFieldValue}
+          value={values.birth}
+        />
         <Input
           handleChange={handleChange}
           // src={phone}
