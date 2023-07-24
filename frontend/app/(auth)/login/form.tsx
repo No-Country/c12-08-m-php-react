@@ -1,6 +1,5 @@
 import { Input } from '@/components';
-import email from '@/public/img/email.png';
-import password from '@/public/img/password.png';
+import InputPassword from '@/components/Inputs/InputPassword';
 import { login } from '@/services/auth/auth';
 import { useFormik } from 'formik';
 
@@ -29,17 +28,17 @@ const FormLogin = () => {
   return (
     <form onSubmit={handleSubmit} className='flex flex-col gap-8 md:gap-4'>
       <Input
-        src={email}
+        // src={email}
         label='email'
-        type='email'
+        // type='email'
         name='email'
         // pattern='^[a-z0-9._+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
         handleChange={handleChange}
       />
-      <Input
-        src={password}
+      <InputPassword
+        // src={password}
         label='password'
-        type='password'
+        // type='password'
         name='password'
         // pattern='^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
         handleChange={handleChange}

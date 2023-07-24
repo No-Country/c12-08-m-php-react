@@ -2,10 +2,7 @@
 
 import { Input } from '@/components';
 import DatePickerCustom from '@/components/Inputs/DatePicker';
-import email from '@/public/img/email.png';
-import password from '@/public/img/password.png';
-import phone from '@/public/svg/phone.svg';
-import userIcon from '@/public/svg/user.svg';
+import InputPassword from '@/components/Inputs/InputPassword';
 import { register } from '@/services/auth/auth';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -37,54 +34,54 @@ const FormRegister = () => {
         <div className='flex flex-col md:flex-row gap-8 justify-between'>
           <Input
             handleChange={handleChange}
-            src={userIcon}
-            type='text'
+            // src={userIcon}
+            // type='text'
             label='name'
             name='name'
-            size='sm'
+            // size='sm'
           />
           <Input
             handleChange={handleChange}
-            src={userIcon}
+            // src={userIcon}
             type='text'
             label='surname'
             name='surname'
-            size='sm'
+            // size='sm'
           />
         </div>
         <Input
           handleChange={handleChange}
-          src={userIcon}
-          type='text'
+          // src={userIcon}
+          // type='text'
           label='username'
           name='username'
         />
         <DatePickerCustom setValue={setFieldValue} value={values.birth} />
         <Input
           handleChange={handleChange}
-          src={phone}
+          // src={phone}
           type='tel'
           label='phone'
           name='phone'
         />
         <Input
           handleChange={handleChange}
-          src={email}
+          // src={email}
           type='email'
           label='email'
           name='email'
         />
-        <Input
+        <InputPassword
           handleChange={handleChange}
-          src={password}
-          type='password'
+          // src={password}
+          // type='password'
           label='password'
           name='password'
         />
-        <Input
+        <InputPassword
           handleChange={handleChange}
-          src={password}
-          type='password'
+          // src={password}
+          // type='password'
           label='confirm password'
           name='confirm_password'
         />
