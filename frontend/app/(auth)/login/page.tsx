@@ -1,4 +1,3 @@
-'use client';
 import { AuthFormHeader, ConectSocial, QuestionAlternative } from '@/components';
 
 import FormLogin from './form';
