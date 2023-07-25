@@ -83,10 +83,8 @@ class AuthController extends Controller
             return response()->json(['error' => 'Invalid data'], 400);
         }
 
-        // Crear la cookie con el token
-        $cookie = cookie('jwt_token', $token, 60);
-        
-        // Devolver la respuesta con la cookie configurada
+        $cookie = cookie('jwt_token', $token, 60, null, null, true, true);
+
         return $this->respondWithToken($token)->withCookie($cookie);
     }
 

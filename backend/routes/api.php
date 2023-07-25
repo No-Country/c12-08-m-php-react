@@ -34,7 +34,7 @@ Route::group(['middleware' => 'api'], function ($router) {
 
         //Ruta de items
         Route::post('/items/create', 'App\Http\Controllers\ItemController@store');
-        Route::get('/items//show/{id}', 'App\Http\Controllers\ItemController@show');
+        Route::get('/items//show', 'App\Http\Controllers\ItemController@show');
         Route::get('/items/showall', 'App\Http\Controllers\ItemController@showall');
         Route::put('/items/update/{id}', 'App\Http\Controllers\ItemController@update');
         Route::delete('/items/delete/{id}', 'App\Http\Controllers\ItemController@destroy');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -84,20 +85,19 @@ class ItemController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request, $id)
+    public function show(Request $request)
     {
+        $user_id = auth()->user()->id;
 
-        //Segun el id, se busca el item
-        $item = Item::find($id);
+        $items = Item::where('user_id', $user_id)->get();
 
-        //si consigue el item lo muestra, sino muestra un error
-        if ($item) {
+        if ($items) {
             return response()->json([
-                        'item' => $item,
+                        'items' => $items,
             ]);
         } else {
             return response()->json([
-                        'message' => 'Item not found',
+                        'message' => 'The user has no items registered',
             ]);
         }
     }
@@ -153,7 +153,7 @@ class ItemController extends Controller
             $item->frequency = $validatedData['frequency'];
             $item->category_id = $validatedData['category_id'];
             $item->user_id = $validatedData['user_id'];
-            
+
 
             //guarda el item actualizado
             $item->save();
