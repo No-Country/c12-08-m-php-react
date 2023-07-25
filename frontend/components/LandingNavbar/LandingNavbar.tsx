@@ -16,11 +16,11 @@ const LandingNavbar = () => {
             <div className='flex items-center space-x-4'>
               <div className='flex space-x-4'>
                 <Link href='/'>Inicio</Link>
-                <Link href='/howWorks'>Cómo funciona</Link>
+                <Link href='/about'>Nosotros</Link>
                 <Link href='/benefits'>Beneficios</Link>
                 <Link href='/contact'>Contacto</Link>
               </div>
-              <Link href='/login' className='btn-primary'>
+              <Link href='/login' className='btn-xl btn-primary'>
                 Log in
               </Link>
             </div>

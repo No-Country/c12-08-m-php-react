@@ -36,22 +36,21 @@ const LandingSlider = () => {
   //     // add plugins here
   //   ]
   // );
-
   return (
     <div className='w-10/12'>
-      {/* <div ref={sliderRef} className='keen-slider bg-red-800'> */}
-      {SLIDES_DATA.map(slide => (
-        <div className='keen-slider__slide flex justify-between'>
-          <div className='flex-1'>
-            <p>{slide.title}</p>
-            <p>{slide.desc}</p>
+      <div className='keen-slider bg-red-800'>
+        {SLIDES_DATA.map(slide => (
+          <div className='keen-slider__slide flex justify-between'>
+            <div className='flex-1'>
+              <p>{slide.title}</p>
+              <p>{slide.desc}</p>
+            </div>
+            <div className='h-20 flex-1'>
+              <Image width={100} height={100} src={slide.src} alt={slide.alt} />
+            </div>
           </div>
-          <div className='h-20 flex-1'>
-            <Image width={100} height={100} src={slide.src} alt={slide.alt} />
-          </div>
-        </div>
-      ))}
-      {/* </div> */}
+        ))}
+      </div>
     </div>
   );
 };
