@@ -1,14 +1,7 @@
-'use client';
-
-import { GenericContainer } from '@/components';
-import InputNote from '@/components/Inputs/InputNote';
+import NotesForm from '@/components/NotesForm/NotesForm';
 
 const page = ({ params }: { params: { noteId: string } }) => {
-  return (
-    <GenericContainer title='Editar Nota' color='yellow' colortitle='black'>
-      <InputNote id={params.noteId} />
-    </GenericContainer>
-  );
+  return <NotesForm id={params.noteId} />;
 };
 
 export default page;

@@ -2,11 +2,7 @@ import { GenericContainer } from '@/components';
 import Notes from '@/components/NotesModule/Notes';
 
 const page = () => {
-  return (
-    <GenericContainer title='Mis notas' color='yellow' colortitle='black'>
-      <Notes />
-    </GenericContainer>
-  );
+  return <Notes />;
 };
 
 export default page;
