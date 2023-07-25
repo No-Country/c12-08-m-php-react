@@ -8,7 +8,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   console.log(pathName);
   const setTitle = () => {
     switch (pathName) {
-      case '/home/notes/new':
+      case '/home/notes/create':
         return 'Crear Nota';
       case RegExp(/\/home\/notes\/edit\/\w+/).exec(pathName)?.input:
         return 'Editar Nota';
