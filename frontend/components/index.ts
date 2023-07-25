@@ -11,6 +11,7 @@ export { default as Input } from './Inputs/Input';
 export { default as NewInput } from './Inputs/NewInput';
 export { default as NewEmailInput } from './Inputs/NewEmailInput';
 export { default as NewPasswordInput } from './Inputs/NewPasswordInput';
+export { default as NewDatePicker } from './Inputs/NewDatePicker';
 export { default as DatePicker } from './Inputs/DatePicker';
 export { default as LandingNavbar } from './LandingNavbar/LandingNavbar';
 export { default as LandingShowcase } from './LandingShowcase/LandingShowcase';
