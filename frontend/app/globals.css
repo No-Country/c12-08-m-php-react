@@ -45,7 +45,7 @@ select:-webkit-autofill:focus {
     @apply btn text-white bg-black;
   }
   .btn-primary-outline {
-    @apply btn text-green bg-lightGreen border-2 border-green ;
+    @apply btn text-green bg-lightGreen border-2 border-green;
   }
   .btn-secondary-outline {
     @apply btn text-blue bg-lightBlue border-2 border-blue;
@@ -57,10 +57,22 @@ select:-webkit-autofill:focus {
     @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)];
   }
   .h3-landing {
-    @apply font-semibold text-green text-2xl
+    @apply font-semibold text-green text-2xl;
+  }
+
+  .textarea-note {
+    @apply overflow-hidden bg-white w-full h-full;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 36px,
+      gray 38px
+    );
+    background-attachment: local;
+    font-size: 26px;
+    line-height: 38px;
   }
 }
-
 
 /* width */
 ::-webkit-scrollbar {
