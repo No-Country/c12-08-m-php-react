@@ -13,6 +13,7 @@ interface Props {
   value: string;
   onBlur: any;
   error: string | undefined;
+  touched: boolean | undefined;
 }
 
 const NewPasswordInput = ({
@@ -23,6 +24,7 @@ const NewPasswordInput = ({
   handleChange,
   onBlur,
   error,
+  touched,
 }: Props) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
@@ -50,7 +52,7 @@ const NewPasswordInput = ({
           required
           autoComplete='off'
         />
-        {error ? (
+        {error && touched ? (
           <div className='absolute top-8 text-red-500 text-sm'>{error}</div>
         ) : null}
         <label

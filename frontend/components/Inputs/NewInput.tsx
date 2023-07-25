@@ -7,9 +7,12 @@ interface Props {
   label: string;
   name: string;
   type: string;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   value: string;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: any;
+  error: string | undefined;
   size?: 'sm' | 'md' | 'lg';
+  touched: boolean | undefined;
 }
 
 const sizes = {
@@ -25,7 +28,10 @@ const NewInput = ({
   type,
   value,
   handleChange,
+  onBlur,
+  error,
   size = 'lg',
+  touched,
 }: Props) => {
   return (
     <div className='flex justify-center items-center gap-2'>
@@ -42,10 +48,14 @@ const NewInput = ({
           id={label}
           value={value}
           placeholder=''
+          onBlur={onBlur}
           onChange={handleChange}
           required
           autoComplete='off'
         />
+        {error && touched ? (
+          <div className='absolute top-8 text-red-500 text-sm'>{error}</div>
+        ) : null}
         <label
           className={`cursor-texts absolute top-0 peer-focus:text-xs peer-focus:text-black peer-focus:-translate-y-3 transition-transform ease-out duration-300 ${
             value ? 'text-xs -translate-y-3' : ''

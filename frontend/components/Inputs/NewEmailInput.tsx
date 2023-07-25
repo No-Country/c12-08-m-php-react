@@ -10,9 +10,18 @@ interface Props {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur: any;
   error: string | undefined;
+  touched: boolean | undefined;
 }
 
-const NewEmailInput = ({ value, label, name, handleChange, onBlur, error }: Props) => {
+const NewEmailInput = ({
+  value,
+  label,
+  name,
+  handleChange,
+  onBlur,
+  error,
+  touched,
+}: Props) => {
   return (
     <div className='flex justify-center items-center gap-2 '>
       <label className={`cursor-pointer`} htmlFor={label}>
@@ -25,14 +34,13 @@ const NewEmailInput = ({ value, label, name, handleChange, onBlur, error }: Prop
           type='email'
           name={name}
           id={label}
-          placeholder=''
           value={value}
           onBlur={onBlur}
           onChange={handleChange}
           required
           autoComplete='off'
         />
-        {error ? (
+        {error && touched ? (
           <div className='absolute top-8 text-red-500 text-sm'>{error}</div>
         ) : null}
         <label
