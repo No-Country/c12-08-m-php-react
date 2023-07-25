@@ -10,7 +10,8 @@ interface Props {
 const NItem = ({ id, description, small }: Props) => {
   return (
     <div
-      className={` relative min-w-[150px] min-h-[200px] flex flex-col justify-center bg-yellow w-full text-center shadow-lg border border-slate-700 
+      className={`relative min-w-[150px] min-h-[200px] flex flex-col justify-center 
+                bg-yellow w-full text-center border border-slate-500 shadow-md 
                    text-sm ${
                      small
                        ? '  h-full text-sm p-2 py-4 overflow-hidden flex-nowrap text-ellipsis'
