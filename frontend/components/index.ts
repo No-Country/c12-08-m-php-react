@@ -1,5 +1,6 @@
 export { default as AboutUs } from './AboutUs/AboutUs';
 export { default as AuthFormHeader } from './AuthFormHeader/AuthFormHeader';
+export { default as AccountSettings } from './AccountSettings/AccountSettings';
 export { default as BottomNavbar } from './BottomNavbar/BottomNavbar';
 export { default as CalendarModule } from './CalendarModule/CalendarModule';
 export { default as CardItem } from './CardItem/CardItem';
@@ -19,6 +20,7 @@ export { default as LandingSlider } from './LandingSlider/LandingSlider';
 export { default as MedicineList } from './MedicineList/MedicineList';
 export { default as Plans } from './Plans/Plans';
 export { default as PlusButton } from './PlusButton/PlusButton';
+export { default as ProfileSettings } from './ProfileSettings/ProfileSettings';
 export { default as QuestionAlternative } from './QuestionAlternative/QuestionAlternative';
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Spinner } from './Spinner/Spinner';

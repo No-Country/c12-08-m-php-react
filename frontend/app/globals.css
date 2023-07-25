@@ -65,6 +65,9 @@ select:-webkit-autofill:focus {
   .shadow {
     @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)];
   }
+  .h3-landing {
+    @apply font-semibold text-green text-2xl
+  }
 }
 
 

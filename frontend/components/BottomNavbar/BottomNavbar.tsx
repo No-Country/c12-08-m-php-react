@@ -21,9 +21,9 @@ const items = [
     title: 'Notas',
   },
   {
-    to: '/home/plans',
+    to: '/home/meds',
     iconSrc: plansIcon,
-    title: 'Planes',
+    title: 'Medicinas',
   },
 ];
 
