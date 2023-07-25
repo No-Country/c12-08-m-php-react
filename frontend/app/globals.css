@@ -35,6 +35,9 @@ select:-webkit-autofill:focus {
   .btn-xl {
     @apply min-w-[9rem];
   }
+  .btn-full {
+    @apply min-w-full;
+  }
   .btn-primary {
     @apply btn text-white bg-green;
   }
@@ -52,6 +55,12 @@ select:-webkit-autofill:focus {
   }
   .btn-tertiary-outline {
     @apply btn text-black border-2 border-black;
+  }
+  .btn-disabled{
+    @apply flex justify-center items-center rounded-full text-center h-10 text-white bg-gray-700 cursor-default;
+  }
+  .btn-error{
+    @apply flex justify-center items-center rounded-full text-center h-10 text-white bg-red-500 cursor-default;
   }
   .shadow {
     @apply shadow-[0px_4px_4px_rgba(0,0,0,0.25)];
