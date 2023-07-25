@@ -15,7 +15,7 @@ module.exports = {
         lightGray: '#E6E9EF',
         white: '#FFFFFF',
         black: '#000000',
-        gray: '#CCD5D4',
+        customGray: '#CCD5D4',
       },
       fontFamily: {
         poppins: ['var(--font-poppins)'],
