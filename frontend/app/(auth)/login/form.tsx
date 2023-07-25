@@ -1,14 +1,13 @@
 'use client';
 
 import { NewEmailInput, NewPasswordInput, Spinner } from '@/components';
-import { login } from '@/services/auth/auth';
+import { login } from '@/services/auth/login';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
-import { setCookie } from 'react-use-cookie';
 import * as Yup from 'yup';
-
-interface FormData {
+import { setCookie } from 'react-use-cookie';
+export interface LoginFormData {
   email: string;
   password: string;
 }
@@ -17,19 +16,19 @@ const FormLogin = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const onSubmit = async (values: FormData) => {
+  const onSubmit = async (values: LoginFormData) => {
     setIsLoading(true);
     try {
       const { data } = await login(values);
-      setIsLoading(false);
-      // TODO: once the backend makes the necessary changes to send the token in cookies, this setCookie function should be removed
-      setCookie('token', data.access_token, { path: '/', days: 7 });
+      console.log(data);
+      setCookie('jwt_token', data.access_token, { path: '/', days: 7 });
       router.push('/home');
     } catch (error: any) {
       setIsLoading(false);
       if (error.response.status === 400) {
         setFieldValue('password', '');
         setStatus('Credenciales incorrectas');
+        return;
       }
       setStatus('Algo salió mal');
     }
@@ -56,6 +55,7 @@ const FormLogin = () => {
     validationSchema: Yup.object({
       email: Yup.string().email('Invalid mail address').required('Required'),
       password: Yup.string()
+        .min(8, 'Must have at least 8 characters')
         .max(20, 'Must be 20 characters or less')
         .required('Required'),
     }),
@@ -85,6 +85,7 @@ const FormLogin = () => {
         handleChange={customHandleChange}
         onBlur={customHandleBlur}
         error={errors.email}
+        touched={touched.email}
       />
       <NewPasswordInput
         label='contraseña'
@@ -94,10 +95,11 @@ const FormLogin = () => {
         handleChange={customHandleChange}
         onBlur={customHandleBlur}
         error={errors.password}
+        touched={touched.password}
       />
       {status ? <div className='text-red-500'>Credenciales incorrectas</div> : null}
       <button
-        disabled={isSubmitting || isError}
+        disabled={isSubmitting || isError || isLoading}
         className={`${!isError ? 'btn-secondary' : 'btn-error'} w-72 shadow ${
           isLoading ? 'hover:scale-100' : ''
         }`}>

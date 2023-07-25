@@ -13,7 +13,7 @@ async function validateToken(token: string | undefined): Promise<string> {
 
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
-  if (!request.cookies.has('token')) {
+  if (!request.cookies.has('jwt_token')) {
     return NextResponse.redirect(new URL('/login', request.url));
   }
 
