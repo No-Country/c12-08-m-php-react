@@ -1,7 +1,7 @@
 import slider1 from '@/public/img/slider1.jpg';
 import slider2 from '@/public/img/slider2.jpg';
 import slider3 from '@/public/img/slider3.jpg';
-import { useKeenSlider } from 'keen-slider/react';
+// import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
 
 const SLIDES_DATA = [
