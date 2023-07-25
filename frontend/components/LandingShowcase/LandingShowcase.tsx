@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const LandingShowcase = () => {
   return (
-    <section className='w-full min-h-screen items-center justify-center bg-gray relative'>
+    <section className='w-full min-h-screen items-center bg-gray relative'>
       <div className='flex items-center justify-end'>
         <div>
           <Image
@@ -26,13 +26,17 @@ const LandingShowcase = () => {
           </p>
           <Link
             href='/register'
-            className='btn-secondary text-center mt-3 p-2 w-[200px] z-20'>
+            className='btn-secondary text-center mt-3 p-2 w-48 h-16 z-20 font-semibold text-xl'>
             Comienza ahora
           </Link>
         </div>
         <div className='absolute bottom-0 left-0 w-full text-center z-20'>
-          <span>¿Ya tienes una cuenta? </span>
-          <span className='text-blue underline'>Ingresa aquí</span>
+          <span className='font-medium text-md'>¿Ya tienes una cuenta? </span>
+          <Link href='/login'>
+            <span className='text-blue underline font-semibold text-md'>
+              Ingresa aquí
+            </span>
+          </Link>
         </div>
         <div className='absolute bottom-0 left-0 w-full z-10'>
           <Image src={effectLanding} alt='LandingImage' layout='responsive' />
