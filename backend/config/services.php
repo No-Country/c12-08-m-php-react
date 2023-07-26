@@ -33,7 +33,7 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'https://c12-08-m-php-react-a5v3tztu2-c12-08-mphp-react.vercel.app/google-auth/callback',
+        'redirect' => 'https://c12-08-m-php-react-eta.vercel.app/google-auth/callback',
     ],
 
 ];
