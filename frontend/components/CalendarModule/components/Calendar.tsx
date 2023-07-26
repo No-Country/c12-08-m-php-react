@@ -3,15 +3,21 @@ import Image from 'next/image';
 import Cell from './Cell';
 import arrowLeft from '/public/svg/arrowL.svg';
 import arrowRight from '/public/svg/arrowR.svg';
+import esLocale from 'date-fns/locale/es';
 
 const week = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
 type Props = {
   value?: Date;
   selectDate: (date: Date) => void;
+  pickCurrentDate: () => void;
 };
 
-const Calendar: React.FC<Props> = ({ value = new Date(), selectDate }) => {
+const Calendar: React.FC<Props> = ({
+  value = new Date(),
+  selectDate,
+  pickCurrentDate,
+}) => {
   const currentWeekStartDate = startOfWeek(value, { weekStartsOn: 1 });
   const currentWeekEndDate = endOfWeek(value, { weekStartsOn: 1 });
 
@@ -23,14 +29,31 @@ const Calendar: React.FC<Props> = ({ value = new Date(), selectDate }) => {
     selectDate(date);
   };
 
+  const dateString = format(value, 'LLLL yyyy', { locale: esLocale });
+  const HEADER_TITLE = dateString.charAt(0).toUpperCase() + dateString.slice(1);
+
   return (
-    <div className='flex'>
-      <div className='flex mt-[80px] mr-1'>
-        <Image src={arrowLeft} alt='Logo' width={25} height={25} onClick={prevWeek} />
+    <div className='flex bg-green w-full'>
+      <div className='flex my-auto cursor-pointer'>
+        <Image
+          src={arrowLeft}
+          alt='left arrow'
+          width={30}
+          height={30}
+          onClick={prevWeek}
+        />
       </div>
-      <div className='w-[400px]'>
+      <div className='flex-grow'>
         <div className='grid grid-cols-7 items-center justify-center text-center'>
-          <Cell className='col-span-7'>{format(currentWeekStartDate, 'LLLL yyyy')}</Cell>
+          <Cell className='col-span-3'></Cell>
+          <Cell className='col-span-1'>{HEADER_TITLE}</Cell>
+          <Cell className='col-span-3'>
+            <button
+              onClick={pickCurrentDate}
+              className='ml-8 px-2 py-1 border border-black rounded-full'>
+              Hoy
+            </button>
+          </Cell>
           {week.map((week, index) => (
             <Cell key={index} className='text-xs font-bold uppercase'>
               {week}
@@ -50,8 +73,14 @@ const Calendar: React.FC<Props> = ({ value = new Date(), selectDate }) => {
           ))}
         </div>
       </div>
-      <div className='flex mt-[80px] ml-1'>
-        <Image src={arrowRight} alt='Logo' width={25} height={25} onClick={nextWeek} />
+      <div className='flex my-auto cursor-pointer'>
+        <Image
+          src={arrowRight}
+          alt='right arrow'
+          width={30}
+          height={30}
+          onClick={nextWeek}
+        />
       </div>
     </div>
   );

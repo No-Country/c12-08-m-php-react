@@ -1,33 +1,35 @@
 'use client';
 
-import { useState } from 'react';
-// import useDatePicker from '@/hooks/useDatePicker';
-import MedicineList from '../MedicineList/MedicineList';
-// import Calendar from './components/Calendar';
-// import DateDisplay from './components/DateDisplay';
+import { MedicineList } from '@/components';
 import NewCalendar from './components/NewCalendar';
+import useDatePicker from '@/hooks/useDatePicker';
+import Calendar from './components/Calendar';
+import { useWindowsSize } from '@/hooks/useWindowsSize';
+import breakpoints from '@/utils/breakpoints';
 
 const CalendarModule = () => {
-  // const { today, selectedDate, pickCurrentDate, selectDate } = useDate();
-  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
-
-  // TODO: integrate responsive calendar when 'md' breakpoint is reached
+  const { selectedDate, selectDate, pickCurrentDate } = useDatePicker();
+  const size = useWindowsSize();
 
   return (
-    <div className='flex flex-row h-full rounded-2xl bg-lightGreen'>
-      {/* <div className='bg-green md:flex-[2] md:rounded-2xl max-md:flex max-md:flex-col max-md:items-center max-md:gap-8'> */}
-      <div className='rounded-2xl flex-[2] bg-green'>
-        <NewCalendar
-          initValue={selectedDate}
-          onDateSelect={calendarSelectedDate => {
-            setSelectedDate(calendarSelectedDate);
-          }}
-        />
-        {/* <button onClick={pickCurrentDate}>
-          <DateDisplay date={today} />
-        </button> */}
+    <div className='flex h-full rounded-2xl max-md:flex-col md:flex-row md:bg-lightGreen'>
+      <div className='max-md:flex max-md:flex-col max-md:items-center max-md:gap-8 md:flex-[2] md:rounded-2xl md:bg-green'>
+        {size.width > breakpoints.md ? (
+          <NewCalendar
+            initValue={selectedDate}
+            onDateSelect={calendarSelectedDate => {
+              selectDate(calendarSelectedDate);
+            }}
+          />
+        ) : (
+          <Calendar
+            pickCurrentDate={pickCurrentDate}
+            selectDate={selectDate}
+            value={selectedDate}
+          />
+        )}
       </div>
-      <div className='md:flex md:flex-col md:flex-[3] md:pl-8 md:pr-4 md:pt-6 md:pb-3 max-h-full'>
+      <div className='flex flex-col max-md:flex-grow max-md:h-[500px] md:flex-[3] md:pl-8 md:pr-4 md:pt-6 pb-3 md:max-h-full'>
         <MedicineList />
       </div>
     </div>
