@@ -1,51 +1,70 @@
 'use client';
-import Image from 'next/image';
-import NItem from './components/NItem';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-const mock = [
-  {
-    id: 1,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 2,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 3,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 4,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 5,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 6,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 7,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-  {
-    id: 8,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-  },
-];
+import NItem from './components/NItem';
+import { getNotes } from '@/services/note/noteServices';
+import { NoteData } from '@/types/note';
+
+// const mock = [
+//   {
+//     id: 1,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+//   {
+//     id: 2,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+//   {
+//     id: 3,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+//   {
+//     id: 4,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+//   {
+//     id: 5,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+//   {
+//     id: 6,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+//   {
+//     id: 7,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+//   {
+//     id: 8,
+//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+//   },
+// ];
 
 interface Props {
   small?: boolean;
 }
 
 const Notes = ({ small }: Props) => {
+  const [notes, setNotes] = useState<NoteData[]>([]);
   const router = useRouter();
 
-  const lastNote = mock[mock.length - 1];
+  const getNoteList = async () => {
+    try {
+      const { data } = await getNotes();
+      setNotes(data.notes);
+      console.log(data);
+    } catch (error: any) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getNoteList();
+  }, []);
+
+  const lastNote = notes[notes.length - 1];
 
   const handlerCreateNote = () => {
     router.push('/home/notes/create');
@@ -57,20 +76,28 @@ const Notes = ({ small }: Props) => {
         small && ' flex flex-col bg-yellow'
       }`}>
       {small ? (
-        <div className=' w-full '>
-          <NItem
-            key={lastNote.id}
-            id={lastNote.id}
-            description={lastNote.description}
-            small
-          />
-        </div>
+        lastNote ? (
+          <div className=' w-full '>
+            <NItem
+              key={lastNote.id}
+              id={lastNote.id}
+              description={lastNote.description}
+              small
+            />
+          </div>
+        ) : (
+          <p>No hay notas</p>
+        )
       ) : (
         <div
           className={`grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-full py-5 pr-5 `}>
-          {mock.map(item => (
-            <NItem key={item.id} id={item.id} description={item.description} />
-          ))}
+          {notes.length ? (
+            notes.map(item => (
+              <NItem key={item.id} id={item.id} description={item.description} />
+            ))
+          ) : (
+            <p>No hay notas</p>
+          )}
         </div>
       )}
       <Image

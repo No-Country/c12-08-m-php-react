@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import { Formik } from 'formik';
 import InputNote from './components/InputNote';
+import { createNote, getNote } from '@/services/note/noteServices';
+import { userData } from '@/services/user/userService';
 
 interface Props {
   id?: string;
@@ -9,28 +11,58 @@ interface Props {
 
 const initialValues = {
   id: '',
-  note: '',
+  date: '',
+  title: '',
+  description: '',
 };
 
 const NotesForm = ({ id }: Props) => {
   const [note, setNote] = useState(initialValues);
+  // TODO:  BORRAR USER CUANDO SE CAMBIE EL BACK
+  const [user, setUser] = useState({} as any);
+
+  const getUserData = async () => {
+    const { data } = await userData();
+    setUser(data);
+    console.log(data);
+  };
+
+  useEffect(() => {
+    getUserData();
+  }, []);
+
+  const getCurrentNote = async () => {
+    try {
+      const { data } = await getNote(id);
+      setNote(data.note);
+      console.log(data.note);
+    } catch (error: any) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     if (id) {
+      getCurrentNote();
       console.log(`Traer nota: ${id}`);
-      setNote({
-        id: id,
-        note: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      });
       console.log(note, id);
     }
   }, [id]);
 
-  const handleSubmit = (values: any) => {
+  const handleSubmit = async (values: any) => {
     if (id) {
       console.log(`Editar nota: ${id}`, values);
     } else {
-      console.log(`Crear nota`);
+      try {
+        const response = await createNote({
+          title: 'Nota de prueba',
+          description: values.description,
+          user_id: user.id,
+          date: '2023-07-10',
+        });
+      } catch (error: any) {
+        console.log(error);
+      }
     }
   };
 
@@ -45,8 +77,8 @@ const NotesForm = ({ id }: Props) => {
         {({ values, handleChange, handleSubmit }) => (
           <form onSubmit={handleSubmit} className=' flex flex-col h-full'>
             <InputNote
-              name='note'
-              value={values.note}
+              name='description'
+              value={values.description}
               handleChange={handleChange}
               placeholder='Escriba su nota aquí'
             />

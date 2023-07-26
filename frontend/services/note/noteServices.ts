@@ -15,12 +15,12 @@ export const createNote = async (body: any) => {
   return response;
 };
 
-export const updateNote = async (id: string, body: any) => {
+export const updateNote = async (id: number, body: any) => {
   const response = await Put(`/notes/update/${id}`, body);
   return response;
 };
 
-export const deleteNote = async (id: string) => {
+export const deleteNote = async (id: number) => {
   const response = await Delete(`/notes/delete/${id}`);
   return response;
 };

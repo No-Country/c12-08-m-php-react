@@ -16,7 +16,7 @@ const Get = async (url: string) => {
   return response;
 };
 
-const Post = async (url: string, data: any) => {
+const Post = async (url: string, data?: any) => {
   const response = await instance.post(url, data, getHeaders());
   return response;
 };
