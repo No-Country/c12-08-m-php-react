@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { Formik } from 'formik';
 import InputNote from './components/InputNote';
 import { createNote, getNote } from '@/services/note/noteServices';
-import { userData } from '@/services/user/userService';
 
 interface Props {
   id?: string;
