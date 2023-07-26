@@ -33,7 +33,9 @@ const Calendar: React.FC<Props> = ({ value = new Date(), selectDate }) => {
           <Cell className='col-span-7'>{format(currentWeekStartDate, 'LLLL yyyy')}</Cell>
           {week.map((week, index) => (
             <Cell key={index} className='text-xs font-bold uppercase'>
-              {week}
+              <Cell key={index} className='text-xs font-bold uppercase'>
+                {week}
+              </Cell>
             </Cell>
           ))}
 

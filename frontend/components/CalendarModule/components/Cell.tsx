@@ -6,12 +6,7 @@ interface Props extends React.PropsWithChildren {
   onClick?: () => void;
 }
 
-const MobileCell: React.FC<Props> = ({
-  onClick,
-  children,
-  className,
-  isActive = false,
-}) => {
+const Cell: React.FC<Props> = ({ onClick, children, className, isActive = false }) => {
   return (
     <div
       onClick={!isActive ? onClick : undefined}
@@ -39,4 +34,4 @@ const MobileCell: React.FC<Props> = ({
   );
 };
 
-export default MobileCell;
+export default Cell;
