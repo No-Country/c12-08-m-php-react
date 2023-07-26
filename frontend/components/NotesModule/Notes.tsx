@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image';
 import NItem from './components/NItem';
+import { useRouter } from 'next/navigation';
 
 const mock = [
   {
@@ -41,10 +43,17 @@ interface Props {
 }
 
 const Notes = ({ small }: Props) => {
+  const router = useRouter();
+
   const lastNote = mock[mock.length - 1];
+
+  const handlerCreateNote = () => {
+    router.push('/home/notes/create');
+  };
+
   return (
     <div
-      className={`relative rounded-xl p-5 h-screen md:h-full object-none ${
+      className={`relative rounded-xl p-5 pr-0  h-full object-none ${
         small && ' flex flex-col bg-yellow'
       }`}>
       {small ? (
@@ -58,7 +67,7 @@ const Notes = ({ small }: Props) => {
         </div>
       ) : (
         <div
-          className={` grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-full py-5 `}>
+          className={`grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-full py-5 pr-5 `}>
           {mock.map(item => (
             <NItem key={item.id} id={item.id} description={item.description} />
           ))}
@@ -69,8 +78,11 @@ const Notes = ({ small }: Props) => {
         width={35}
         height={35}
         alt='Add Note'
-        className={` md:bottom-5 md:right-5 bottom-5 right-5 cursor-pointer ${
-          small ? 'static self-end py-2 mt-auto' : 'absolute  '
+        onClick={handlerCreateNote}
+        className={` ${
+          small
+            ? 'static self-end py-2 mt-auto'
+            : 'absolute bottom-5 right-5 cursor-pointer'
         }`}
       />
     </div>

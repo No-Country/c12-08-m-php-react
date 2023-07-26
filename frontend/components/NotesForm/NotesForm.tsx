@@ -50,7 +50,7 @@ const NotesForm = ({ id }: Props) => {
               handleChange={handleChange}
               placeholder='Escriba su nota aquí'
             />
-            <button type='submit' className='btn btn-secondary mt-auto   '>
+            <button type='submit' className='btn btn-secondary mt-auto'>
               Guardar
             </button>
           </form>

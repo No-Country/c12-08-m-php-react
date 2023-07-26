@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   id: number;
@@ -8,6 +8,16 @@ interface Props {
 }
 
 const NItem = ({ id, description, small }: Props) => {
+  const router = useRouter();
+
+  const handlerEditNote = () => {
+    router.push(`/home/notes/edit/${id}`);
+  };
+
+  const handlerDeleteNote = () => {
+    console.log(`Eliminar nota: ${id}`);
+  };
+
   return (
     <div
       className={`relative min-w-[150px] min-h-[200px] flex flex-col justify-center 
@@ -23,6 +33,7 @@ const NItem = ({ id, description, small }: Props) => {
         height={20}
         alt='note'
         className={` absolute bottom-4 right-4 cursor-pointer ${small && 'hidden'} `}
+        onClick={handlerEditNote}
       />
       <Image
         src='/svg/btn-delete.svg'
@@ -30,6 +41,7 @@ const NItem = ({ id, description, small }: Props) => {
         height={20}
         alt='note'
         className={`absolute top-4 right-4 cursor-pointer ${small && 'hidden'}`}
+        onClick={handlerDeleteNote}
       />
       <p>{description}</p>
     </div>
