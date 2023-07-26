@@ -37,15 +37,20 @@ const Notes = ({ small }: Props) => {
 
   return (
     <div
-      className={`relative rounded-xl p-5 pr-0  h-full object-none ${
-        small && ' flex flex-col bg-yellow'
+      className={`relative rounded-xl p-5 pr-0 h-full object-none ${
+        small && ' flex flex-col bg-yellow p-0'
       }`}>
       {small ? (
         lastNote ? (
-          <div className=' w-full '>
+          <div
+            className='wf-full h-full cursor-pointer'
+            onClick={() => {
+              router.push('/home/notes');
+            }}>
             <NItem
               key={lastNote.id}
               id={lastNote.id}
+              title={lastNote.title}
               description={lastNote.description}
               small
             />
@@ -76,11 +81,7 @@ const Notes = ({ small }: Props) => {
         height={35}
         alt='Add Note'
         onClick={handlerCreateNote}
-        className={` ${
-          small
-            ? 'static self-end py-2 mt-auto'
-            : 'absolute bottom-5 right-5 cursor-pointer'
-        }`}
+        className={` ${small ? 'hidden' : 'absolute bottom-5 right-5 cursor-pointer'}`}
       />
     </div>
   );

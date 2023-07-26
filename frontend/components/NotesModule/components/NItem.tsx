@@ -26,7 +26,7 @@ const NItem = ({ id, title, description, small }: Props) => {
                 bg-yellow w-full  border border-slate-500 shadow-md 
                   text-xs md:text-sm ${
                     small
-                      ? 'h-full text-sm p-2 py-4 overflow-hidden flex-nowrap text-ellipsis'
+                      ? 'h-full text-sm py-4 border-none m-0 p-2 rounded-2xl'
                       : 'p-5 pr-2 max-h-[150px]'
                   }`}>
       <p className='font-bold w-full mb-2 text-left'>{title}</p>
