@@ -27,10 +27,12 @@ const NItem = ({ id, title, description, small }: Props) => {
                   text-xs md:text-sm ${
                     small
                       ? 'h-full text-sm p-2 py-4 overflow-hidden flex-nowrap text-ellipsis'
-                      : 'p-5 max-h-[150px]'
+                      : 'p-5 pr-2 max-h-[150px]'
                   }`}>
       <p className='font-bold w-full mb-2 text-left'>{title}</p>
-      <p className='h-full mx-2'>{description}</p>
+      <p className='h-full mx-2 mb-5 overflow-hidden overflow-y-auto text-ellipsis'>
+        {description}
+      </p>
       <Image
         src='/svg/plan-edit.svg'
         width={20}
