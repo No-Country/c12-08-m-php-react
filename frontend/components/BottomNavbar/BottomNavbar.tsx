@@ -16,7 +16,7 @@ const items = [
     title: 'Subscripciones',
   },
   {
-    to: '/notes',
+    to: 'home/notes',
     iconSrc: notesIcon,
     title: 'Notas',
   },
