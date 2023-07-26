@@ -7,41 +7,6 @@ import NItem from './components/NItem';
 import { getNotes } from '@/services/note/noteServices';
 import { NoteData } from '@/types/note';
 
-// const mock = [
-//   {
-//     id: 1,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-//   {
-//     id: 2,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-//   {
-//     id: 3,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-//   {
-//     id: 4,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-//   {
-//     id: 5,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-//   {
-//     id: 6,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-//   {
-//     id: 7,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-//   {
-//     id: 8,
-//     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-//   },
-// ];
-
 interface Props {
   small?: boolean;
 }
@@ -93,7 +58,12 @@ const Notes = ({ small }: Props) => {
           className={`grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-full py-5 pr-5 `}>
           {notes.length ? (
             notes.map(item => (
-              <NItem key={item.id} id={item.id} description={item.description} />
+              <NItem
+                key={item.id}
+                id={item.id}
+                title={item.title}
+                description={item.description}
+              />
             ))
           ) : (
             <p>No hay notas</p>

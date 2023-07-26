@@ -6,7 +6,7 @@ export const getNote = async (id: string) => {
 };
 
 export const getNotes = async () => {
-  const response = await Get('/notes/showall');
+  const response = await Get('/notes');
   return response;
 };
 

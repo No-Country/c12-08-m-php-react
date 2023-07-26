@@ -55,11 +55,10 @@ const NotesForm = ({ id }: Props) => {
     } else {
       try {
         const response = await createNote({
-          title: 'Nota de prueba',
+          title: values.title,
           description: values.description,
-          user_id: user.id,
-          date: '2023-07-10',
         });
+        console.log(response);
       } catch (error: any) {
         console.log(error);
       }
@@ -77,10 +76,13 @@ const NotesForm = ({ id }: Props) => {
         {({ values, handleChange, handleSubmit }) => (
           <form onSubmit={handleSubmit} className=' flex flex-col h-full'>
             <InputNote
-              name='description'
-              value={values.description}
+              titleName='title'
+              titleValue={values.title}
+              titlePlaceholder='Título'
+              descName='description'
+              descValue={values.description}
+              descPlaceholder='Escriba su nota aquí'
               handleChange={handleChange}
-              placeholder='Escriba su nota aquí'
             />
             <button type='submit' className='btn btn-secondary mt-auto'>
               Guardar
