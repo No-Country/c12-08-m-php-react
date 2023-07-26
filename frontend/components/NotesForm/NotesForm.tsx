@@ -18,18 +18,6 @@ const initialValues = {
 
 const NotesForm = ({ id }: Props) => {
   const [note, setNote] = useState(initialValues);
-  // TODO:  BORRAR USER CUANDO SE CAMBIE EL BACK
-  const [user, setUser] = useState({} as any);
-
-  const getUserData = async () => {
-    const { data } = await userData();
-    setUser(data);
-    console.log(data);
-  };
-
-  useEffect(() => {
-    getUserData();
-  }, []);
 
   const getCurrentNote = async () => {
     try {
