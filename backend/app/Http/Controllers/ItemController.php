@@ -103,56 +103,60 @@ class ItemController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Item $item)
+    public function update(Request $request, $id)
     {
 
-        //valida los datos del request
-        try {
-            $validatedData = $request->validate([
-                'name' => 'required|string|max:255',
-                'indications' => 'required|string|max:255',
-                'quantity' => 'required|integer|min:1|max:1000',
-                'is_single_dose' => 'required|boolean',
-                'init_date' => 'required|date',
-                'due_date' => 'required_if:is_single_dose,true|date',
-                'time' => 'required|date_format:H:i:s',
-                'frequency' => 'required_if:is_single_dose,false|integer|min:1|max:168',
-                'category_id' => 'required|exists:categories,id|integer',
-            ]);
+        //busca el item segun el id
+        $item = Item::find($id);
 
-            //actualiza el item
-            $item->name = $validatedData['name'];
-            $item->indications = $validatedData['indications'];
-            $item->quantity = $validatedData['quantity'];
-            $item->is_single_dose = $validatedData['is_single_dose'];
-            $item->init_date = $validatedData['init_date'];
-            $item->due_date = $validatedData['due_date'];
-            $item->time = $validatedData['time'];
-            $item->frequency = $validatedData['frequency'];
-            $item->category_id = $validatedData['category_id'];
-            $item->user_id = auth()->user()->id;
-
-            //guarda el item actualizado
-            $item->save();
-
-        } catch (ValidationException $e) {
+        if(!$item){
             return response()->json([
-                'error' => 'Invalid data',
-                'message' => $e->getMessage(),
-                'errors' => $e->errors()
-            ], 400);
-        }
-
-        //retorna el item actualizado, sino error
-        if ($item) {
-            return response()->json([
-                        'message' => 'Item updated',
-                        'item' => $item
+                        'message' => 'Item not found',
             ]);
         } else {
-            return response()->json([
-                        'message' => 'Item not updated',
-            ]);
+            try {
+                //valida los datos del request
+                $validatedData = $request->validate([
+                    'name' => 'required|string|max:255',
+                    'indications' => 'required|string|max:255',
+                    'quantity' => 'required|integer|min:1|max:1000',
+                    'is_single_dose' => 'required|boolean',
+                    'init_date' => 'required|date',
+                    'due_date' => 'required_if:is_single_dose,true|date',
+                    'time' => 'required|date_format:H:i:s',
+                    'frequency' => 'required_if:is_single_dose,false|integer|min:1|max:168',
+                    'category_id' => 'required|exists:categories,id|integer',
+                ]);
+
+                //actualiza el item
+                $item->update([
+                    'name' => $validatedData['name'],
+                    'indications' => $validatedData['indications'],
+                    'quantity' => $validatedData['quantity'],
+                    'is_single_dose' => $validatedData['is_single_dose'],
+                    'init_date' => $validatedData['init_date'],
+                    'due_date' => $validatedData['due_date'],
+                    'time' => $validatedData['time'],
+                    'frequency' => $validatedData['frequency'],
+                    'category_id' => $validatedData['category_id'],
+                ]);
+            } catch (ValidationException $e) {
+                return response()->json([
+                    'error' => 'Invalid data',
+                    'message' => $e->getMessage(),
+                    'errors' => $e->errors()
+                ], 400);
+            }
+
+            //retorna el item actualizado, sino error
+            if ($item) {
+                return response()->json([
+                    'message' => 'Item updated',
+                    'item' => $item
+                ], 201) ?? response()->json([
+                    'message' => 'Item not updated',
+                ], 400);
+            }
         }
     }
 

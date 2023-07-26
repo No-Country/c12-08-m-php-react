@@ -86,6 +86,26 @@ class NoteController extends Controller
 
     }
 
+    public function showById(Request $request, $id)
+    {
+
+        $user_id = auth()->user()->id;
+
+        $note = Note::find($id)->where('user_id', $user_id)->first();
+
+        if (!$note) {
+            return response()->json([
+                'message' => 'Note not found',
+            ], 404);
+        } else {
+            return response()->json([
+                'message' => 'Note found',
+                'note' => $note
+            ], 200);
+        }
+
+    }
+
     /**
      * Update the specified resource in storage.
      */
@@ -109,13 +129,12 @@ class NoteController extends Controller
                     $validatedData = $request->validate([
                         'title' => 'required|string|max:255',
                         'description' => 'required|string|max:255',
-                        'user_id' => 'required|exists:users,id|integer'
                     ]);
 
                     //actualiza la nota
                     $note->title = $validatedData['title'];
                     $note->description = $validatedData['description'];
-                    $note->user_id = $validatedData['user_id'];
+                    $note->user_id = auth()->user()->id;
 
                     //guarda la nota actualizada
                     $note->save();
@@ -133,7 +152,7 @@ class NoteController extends Controller
                 return response()->json([
                     'message' => 'Note updated',
                     'note' => $note
-                ], 200) ?: response()->json([
+                ], 201) ?: response()->json([
                     'message' => 'Note not updated',
                 ], 400);
             }
