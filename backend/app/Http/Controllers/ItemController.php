@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
-use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -42,7 +41,6 @@ class ItemController extends Controller
                     'time' => 'required|date_format:H:i:s',
                     'frequency' => 'required_if:is_single_dose,false|integer|min:1|max:168',
                     'category_id' => 'required|exists:categories,id|integer',
-                    'user_id' => 'required|exists:users,id|integer'
                 ]);
 
 
@@ -57,7 +55,7 @@ class ItemController extends Controller
                     'time' => $validatedData['time'],
                     'frequency' => $validatedData['frequency'],
                     'category_id' => $validatedData['category_id'],
-                    'user_id' => $validatedData['user_id'],
+                    'user_id' => auth()->user()->id
                 ]);
 
             } catch (ValidationException $e) {
@@ -102,25 +100,6 @@ class ItemController extends Controller
         }
     }
 
-    //function showall
-    public function showall(Request $request)
-    {
-
-        //busca todos los items
-        $items = Item::all();
-
-        //si consigue los items los muestra, sino muestra un error
-        if ($items) {
-            return response()->json([
-                        'items' => $items,
-            ]);
-        } else {
-            return response()->json([
-                        'message' => 'Items not found',
-            ]);
-        }
-    }
-
     /**
      * Update the specified resource in storage.
      */
@@ -139,7 +118,6 @@ class ItemController extends Controller
                 'time' => 'required|date_format:H:i:s',
                 'frequency' => 'required_if:is_single_dose,false|integer|min:1|max:168',
                 'category_id' => 'required|exists:categories,id|integer',
-                'user_id' => 'required|exists:users,id|integer'
             ]);
 
             //actualiza el item
@@ -152,8 +130,7 @@ class ItemController extends Controller
             $item->time = $validatedData['time'];
             $item->frequency = $validatedData['frequency'];
             $item->category_id = $validatedData['category_id'];
-            $item->user_id = $validatedData['user_id'];
-
+            $item->user_id = auth()->user()->id;
 
             //guarda el item actualizado
             $item->save();

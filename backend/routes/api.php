@@ -20,32 +20,23 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'api'], function ($router) {
 
-    Route::post('login', 'App\Http\Controllers\AuthController@login');
-    Route::post('logout', 'App\Http\Controllers\AuthController@logout');
-    Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
-    Route::post('me', 'App\Http\Controllers\AuthController@me');
+        //Rutas de autenticación
+        Route::post('login', 'App\Http\Controllers\AuthController@login');
+        Route::post('logout', 'App\Http\Controllers\AuthController@logout');
+        Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
+        Route::post('me', 'App\Http\Controllers\AuthController@me');
 
-//Rutas de notas
+        //Rutas de notas
         Route::post('/notes/create', 'App\Http\Controllers\NoteController@store');
-        Route::get('/notes/show/{id}', 'App\Http\Controllers\NoteController@show');
-        Route::get('/notes/showall', 'App\Http\Controllers\NoteController@showall');
+        Route::get('/notes', 'App\Http\Controllers\NoteController@show');
         Route::put('/notes/update/{id}', 'App\Http\Controllers\NoteController@update');
         Route::delete('/notes/delete/{id}', 'App\Http\Controllers\NoteController@destroy');
 
         //Ruta de items
         Route::post('/items/create', 'App\Http\Controllers\ItemController@store');
-        Route::get('/items//show', 'App\Http\Controllers\ItemController@show');
-        Route::get('/items/showall', 'App\Http\Controllers\ItemController@showall');
+        Route::get('/items', 'App\Http\Controllers\ItemController@show');
         Route::put('/items/update/{id}', 'App\Http\Controllers\ItemController@update');
         Route::delete('/items/delete/{id}', 'App\Http\Controllers\ItemController@destroy');
-
-        //Ruta de planes de tratamiento
-        Route::post('/plans/create', 'App\Http\Controllers\TreatmentPlanController@store');
-        Route::get('/plans/show/{id}', 'App\Http\Controllers\TreatmentPlanController@show');
-        Route::get('/plans/showall', 'App\Http\Controllers\TreatmentPlanController@showall');
-        Route::get('/plans/showItems/{id}', 'App\Http\Controllers\TreatmentPlanController@showItems');
-        Route::put('/plans/update/{id}', 'App\Http\Controllers\TreatmentPlanController@update');
-        Route::delete('/plans/delete/{id}', 'App\Http\Controllers\TreatmentPlanController@destroy');
 
 });
 

@@ -34,16 +34,13 @@ class NoteController extends Controller
             $validatedData = $request->validate([
                 'title' => 'required|string|max:255',
                 'description' => 'required|string|max:255',
-                'date' => 'required|date',
-                'user_id' => 'required|exists:users,id|integer'
             ]);
 
             //crea la nota
             $note = Note::create([
                 'title' => $validatedData['title'],
                 'description' => $validatedData['description'],
-                'date' => $validatedData['date'],
-                'user_id' => $validatedData['user_id'],
+                'user_id' => auth()->user()->id
             ]);
 
 
@@ -69,38 +66,12 @@ class NoteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request, $id)
+    public function show(Request $request)
     {
 
-        //muestra la nota con el id especificado
+        $user_id = auth()->user()->id;
 
-        $note = Note::find($id);
-
-        //si no existe la nota, error, sino retorna la nota
-
-        if (!$note) {
-            return response()->json([
-                'message' => 'Note not found',
-            ], 404);
-        } else {
-            return response()->json([
-                'message' => 'Note found',
-                'note' => $note
-            ], 200);
-        }
-
-    }
-
-    //showall
-
-    public function showall(Request $request)
-    {
-
-        //muestra todas las notas
-
-        $notes = Note::all();
-
-        //si no hay notas, error, sino retorna las notas
+        $notes = Note::where('user_id', $user_id)->get();
 
         if (!$notes) {
             return response()->json([
@@ -138,14 +109,12 @@ class NoteController extends Controller
                     $validatedData = $request->validate([
                         'title' => 'required|string|max:255',
                         'description' => 'required|string|max:255',
-                        'date' => 'required|date',
                         'user_id' => 'required|exists:users,id|integer'
                     ]);
 
                     //actualiza la nota
                     $note->title = $validatedData['title'];
                     $note->description = $validatedData['description'];
-                    $note->date = $validatedData['date'];
                     $note->user_id = $validatedData['user_id'];
 
                     //guarda la nota actualizada

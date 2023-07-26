@@ -13,9 +13,8 @@ class Note extends Model
         'id',
         'title',
         'description',
-        'date',
         'user_id',
-        
+
     ];
 
 
