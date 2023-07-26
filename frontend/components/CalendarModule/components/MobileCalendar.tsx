@@ -1,6 +1,6 @@
 import { add, endOfWeek, format, startOfWeek, sub } from 'date-fns';
 import Image from 'next/image';
-import Cell from './Cell';
+import MobileCell from './MobileCell';
 import arrowLeft from '/public/svg/arrowL.svg';
 import arrowRight from '/public/svg/arrowR.svg';
 import esLocale from 'date-fns/locale/es';
@@ -13,7 +13,7 @@ type Props = {
   pickCurrentDate: () => void;
 };
 
-const Calendar: React.FC<Props> = ({
+const MobileCalendar: React.FC<Props> = ({
   value = new Date(),
   selectDate,
   pickCurrentDate,
@@ -45,23 +45,23 @@ const Calendar: React.FC<Props> = ({
       </div>
       <div className='flex-grow'>
         <div className='grid grid-cols-7 items-center justify-center text-center'>
-          <Cell className='col-span-3'></Cell>
-          <Cell className='col-span-1'>{HEADER_TITLE}</Cell>
-          <Cell className='col-span-3'>
+          <MobileCell className='col-span-3'></MobileCell>
+          <MobileCell className='col-span-1'>{HEADER_TITLE}</MobileCell>
+          <MobileCell className='col-span-3'>
             <button
               onClick={pickCurrentDate}
               className='ml-8 px-2 py-1 border border-black rounded-full'>
               Hoy
             </button>
-          </Cell>
+          </MobileCell>
           {week.map((week, index) => (
-            <Cell key={index} className='text-xs font-bold uppercase'>
+            <MobileCell key={index} className='text-xs font-bold uppercase'>
               {week}
-            </Cell>
+            </MobileCell>
           ))}
 
           {Array.from({ length: 7 }).map((_, index) => (
-            <Cell
+            <MobileCell
               key={index}
               isActive={
                 format(add(currentWeekStartDate, { days: index }), 'yyyy-MM-dd') ===
@@ -69,7 +69,7 @@ const Calendar: React.FC<Props> = ({
               }
               onClick={() => handleClickDate(index)}>
               {format(add(currentWeekStartDate, { days: index }), 'dd')}
-            </Cell>
+            </MobileCell>
           ))}
         </div>
       </div>
@@ -86,4 +86,4 @@ const Calendar: React.FC<Props> = ({
   );
 };
 
-export default Calendar;
+export default MobileCalendar;

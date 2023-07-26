@@ -1,9 +1,9 @@
 'use client';
 
 import { MedicineList } from '@/components';
-import NewCalendar from './components/NewCalendar';
+import DesktopCalendar from './components/DesktopCalendar';
 import useDatePicker from '@/hooks/useDatePicker';
-import Calendar from './components/Calendar';
+import MobileCalendar from './components/MobileCalendar';
 import { useWindowsSize } from '@/hooks/useWindowsSize';
 import breakpoints from '@/utils/breakpoints';
 
@@ -15,14 +15,14 @@ const CalendarModule = () => {
     <div className='flex h-full rounded-2xl max-md:flex-col md:flex-row md:bg-lightGreen'>
       <div className='max-md:flex max-md:flex-col max-md:items-center max-md:gap-8 md:flex-[2] md:rounded-2xl md:bg-green'>
         {size.width > breakpoints.md ? (
-          <NewCalendar
+          <DesktopCalendar
             initValue={selectedDate}
             onDateSelect={calendarSelectedDate => {
               selectDate(calendarSelectedDate);
             }}
           />
         ) : (
-          <Calendar
+          <MobileCalendar
             pickCurrentDate={pickCurrentDate}
             selectDate={selectDate}
             value={selectedDate}

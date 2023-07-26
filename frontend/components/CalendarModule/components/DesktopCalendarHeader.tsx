@@ -27,7 +27,7 @@ const months = [
   'Diciembre',
 ];
 
-const NewCalendarHeader = ({
+const DesktopCalendarHeader = ({
   selectedDate,
   selectedMonth,
   selectedYear,
@@ -71,4 +71,4 @@ const NewCalendarHeader = ({
   );
 };
 
-export default NewCalendarHeader;
+export default DesktopCalendarHeader;
