@@ -12,21 +12,28 @@ use App\Models\Item;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 
-class NotificationItem extends Mailable
+class RecordatorioPillCare extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $item;
+    public $name;
 
-    public function __construct(Item $item)
+    public function __construct()
     {
-        $this->item = $item;
+
     }
 
     public function build()
     {
-        //$user = User::pluck('email');
-        //Mail::to($user)->send(new NotificationItem());
         return $this->view('notification');
+    }
+
+    public function enviar($id)
+    {
+        $user = User::find($id);
+        $name = $user->name;
+        $correo = new RecordatorioPillCare($name);
+        Mail::to($user->email)->send($correo);
+        return 'MENSAJE ENVIADO';
     }
 }

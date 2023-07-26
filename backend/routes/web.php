@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Mail\RecordatorioPillCare;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,4 +38,11 @@ Route::get('/google-auth/callback', function () {
 
     Auth::login($user);
     return redirect('/dashboard');
+});
+
+Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
+
+Route::get('mailview', function (){
+    $user = User::find(3);
+    return view('notification', compact('user'));
 });
