@@ -1,3 +1,4 @@
+import { deleteNote } from '@/services/note/noteServices'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { title } from 'process';
@@ -16,8 +17,14 @@ const NItem = ({ id, title, description, small }: Props) => {
     router.push(`/home/notes/edit/${id}`);
   };
 
-  const handlerDeleteNote = () => {
+  const handlerDeleteNote = async () => {
     console.log(`Eliminar nota: ${id}`);
+    try {
+      const response = await deleteNote(id)
+      console.log(response)
+    } catch (error: any) {
+      console.log(error)
+    }
   };
 
   return (

@@ -3,14 +3,14 @@ import { useEffect, useState } from 'react';
 import { Formik } from 'formik';
 import InputNote from './components/InputNote';
 import { createNote, getNote } from '@/services/note/noteServices';
+import { NoteData } from '@/types/note';
 
 interface Props {
   id?: string;
 }
 
-const initialValues = {
-  id: '',
-  date: '',
+const initialValues: NoteData = {
+  id: 0,
   title: '',
   description: '',
 };
@@ -19,25 +19,25 @@ const NotesForm = ({ id }: Props) => {
   const [note, setNote] = useState(initialValues);
 
   const getCurrentNote = async () => {
-    try {
-      const { data } = await getNote(id);
-      setNote(data.note);
-      console.log(data.note);
-    } catch (error: any) {
-      console.log(error);
+    if (id) {
+      try {
+        const { data } = await getNote(id);
+        setNote(data.note);
+        console.log(data.note);
+      } catch (error: any) {
+        console.log(error);
+      }
     }
   };
 
   useEffect(() => {
-    if (id) {
-      getCurrentNote();
-      console.log(`Traer nota: ${id}`);
-      console.log(note, id);
-    }
+    getCurrentNote();
   }, [id]);
 
   const handleSubmit = async (values: any) => {
+    // TODO: Alertas? Redirecciones
     if (id) {
+      // TODO: Hacer cuando tenga getbyid
       console.log(`Editar nota: ${id}`, values);
     } else {
       try {
