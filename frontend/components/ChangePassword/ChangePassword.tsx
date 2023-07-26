@@ -1,7 +1,7 @@
 const ChangePassword = () => {
   return (
     <div className='flex justify-center'>
-      <form className='mt-8 max-w-md w-full px-4'>
+      <form className='mt-16 max-w-md w-full px-4'>
         <div className='mb-4'>
           <label htmlFor='actualPassword' className='block text-black font-medium mb-1'>
             Contraseña actual
