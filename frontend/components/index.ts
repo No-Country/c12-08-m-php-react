@@ -4,10 +4,8 @@ export { default as AuthFormHeader } from './AuthFormHeader/AuthFormHeader';
 export { default as BottomNavbar } from './BottomNavbar/BottomNavbar';
 export { default as CalendarModule } from './CalendarModule/CalendarModule';
 export { default as CardItem } from './CardItem/CardItem';
-export {
-  default as ChangeEmail,
-  default as ChangePassword,
-} from './ChangePassword/ChangePassword';
+export { default as ChangeEmail } from './ChangeEmail/ChangeEmail';
+export { default as ChangePassword } from './ChangePassword/ChangePassword';
 export { default as ConectSocial } from './ConectSocial/ConectSocial';
 export { default as Dashboard } from './Dashboard/Dashboard';
 export { default as Deactivation } from './Deactivation/Deactivation';
