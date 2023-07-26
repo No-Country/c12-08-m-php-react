@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { Formik } from 'formik';
-import InputNote from '../Inputs/InputNote';
+import InputNote from './components/InputNote';
 
 interface Props {
   id?: string;
