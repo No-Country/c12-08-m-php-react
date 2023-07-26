@@ -16,24 +16,23 @@ const MobileCell: React.FC<Props> = ({
     <div
       onClick={!isActive ? onClick : undefined}
       className={clsx(
-        'h-10 flex items-center justify-center select-none transition-colors rounded-full',
-        className,
+        'h-10 flex items-center justify-center select-none transition-colors',
         {
-          'cursor-pointer h-[40px] w-[40px] hover:bg-lightBlue active:bg-gray-200':
-            !isActive && onClick,
+          'cursor-pointer hover:bg-gray-100 active:bg-gray-200': !isActive && onClick,
           'active-cell': isActive, // Nueva clase CSS para celda activa
-        }
+        },
+        className
       )}
       style={{
         backgroundColor: isActive ? '#0568FD' : undefined,
         color: isActive ? 'white' : undefined,
         borderRadius: isActive ? '50px' : undefined,
-        width: isActive ? '40px' : undefined,
-        height: isActive ? '40px' : undefined,
+        width: isActive ? '55px' : undefined,
+        height: isActive ? '55px' : undefined,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        margin: 'auto',
+        margin: 0,
       }}>
       {children}
     </div>
