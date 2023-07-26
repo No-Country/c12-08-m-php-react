@@ -1,3 +1,5 @@
+'use client';
+
 import calendarIcon from '@/public/img/calendar.png';
 import { ThemeProvider, createTheme } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
