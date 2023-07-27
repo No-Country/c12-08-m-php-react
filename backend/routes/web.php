@@ -37,7 +37,7 @@ Route::get('/google-auth/callback', function () {
     ]);
 
     Auth::login($user);
-    return redirect('/dashboard');
+    return redirect('/home');
 });
 
 Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
