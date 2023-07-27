@@ -6,7 +6,7 @@ interface Props {
   handleClick?: (n: number) => void;
 }
 
-const DesktopCell = ({
+const NewCell = ({
   children,
   isActive = false,
   handleClick = () => undefined,
@@ -31,4 +31,4 @@ const DesktopCell = ({
   );
 };
 
-export default DesktopCell;
+export default NewCell;

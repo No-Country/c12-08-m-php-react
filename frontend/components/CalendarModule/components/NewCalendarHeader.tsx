@@ -27,7 +27,7 @@ const months = [
   'Diciembre',
 ];
 
-const DesktopCalendarHeader = ({
+const NewCalendarHeader = ({
   selectedDate,
   selectedMonth,
   selectedYear,
@@ -38,8 +38,8 @@ const DesktopCalendarHeader = ({
 }: Props) => {
   return (
     <header className='flex flex-col items-stretch content-start mb-3'>
-      <div className='flex justify-between border-b border-slate-400'>
-        <p className='md:text-xl lg:text-2xl'>
+      <div className='flex justify-between border-b border-slate-400 text-2xl'>
+        <p>
           {format(selectedDate, 'iii', { locale: esLocale })}, {format(selectedDate, 'd')}{' '}
           {format(selectedDate, 'LLL', { locale: esLocale })}.
         </p>
@@ -71,4 +71,4 @@ const DesktopCalendarHeader = ({
   );
 };
 
-export default DesktopCalendarHeader;
+export default NewCalendarHeader;
