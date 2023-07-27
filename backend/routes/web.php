@@ -55,7 +55,7 @@ Route::get('/google-auth/callback', function () {
     // Adjuntar el token como cookie en la respuesta
     $cookie = cookie('jwt_token', $token, 60, null, null, true, true);
 
-    return redirect('https://c12-08-m-php-react-eta.vercel.app/home')->withCookie($cookie);
+    return redirect('https://c12-08-m-php-react-eta.vercel.app/home')->withCookies([$cookie]);
 });
 
 Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
