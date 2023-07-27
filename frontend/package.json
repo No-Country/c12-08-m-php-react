@@ -28,19 +28,21 @@
     "date-fns": "^2.30.0",
     "formik": "^2.4.2",
     "keen-slider": "^6.8.6",
+    "lottie-web": "^5.12.2",
     "next": "13.4.7",
     "postcss": "^8.4.24",
     "react": "18.2.0",
     "react-datepicker": "^4.16.0",
     "react-dom": "18.2.0",
     "react-use-cookie": "^1.4.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "eslint-config-prettier": "8.8.0",
     "prettier": "^2.8.8",
-    "typescript": "5.0.4"
+    "typescript": "^5.1.6"
   }
 }

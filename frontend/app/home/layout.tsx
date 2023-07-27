@@ -1,5 +1,7 @@
 import { BottomNavbar, Sidebar, Userbar } from '@/components';
 import Grid from './grid';
+// import { Suspense } from 'react';
+// import Loading from './loading';
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,7 +12,11 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
           <header className='max-md:hidden md:h-1/6'>
             <Userbar name='María López' age='25' nationality='Argentina' />
           </header>
-          <section className='max-h-full flex-grow h-4/5'>{children}</section>
+
+          <section className='max-h-full flex-grow h-4/5'>
+            {/* <Suspense fallback={<Loading />}></Suspense> */}
+            {children}
+          </section>
         </main>
         <BottomNavbar />
       </Grid>

@@ -1,7 +1,7 @@
 import slider1 from '@/public/img/slider1.jpg';
 import slider2 from '@/public/img/slider2.jpg';
 import slider3 from '@/public/img/slider3.jpg';
-import { useKeenSlider } from 'keen-slider/react';
+// import { useKeenSlider } from 'keen-slider/react';
 import Image from 'next/image';
 
 const SLIDES_DATA = [
@@ -26,19 +26,19 @@ const SLIDES_DATA = [
 ];
 
 const LandingSlider = () => {
-  const [sliderRef, instanceRef] = useKeenSlider(
-    {
-      slideChanged() {
-        console.log('slide changed');
-      },
-    },
-    [
-      // add plugins here
-    ]
-  );
+  // const [sliderRef, instanceRef] = useKeenSlider(
+  //   {
+  //     slideChanged() {
+  //       console.log('slide changed');
+  //     },
+  //   },
+  //   [
+  //     // add plugins here
+  //   ]
+  // );
   return (
     <div className='w-10/12'>
-      <div ref={sliderRef} className='keen-slider bg-red-800'>
+      <div className='keen-slider bg-red-800'>
         {SLIDES_DATA.map(slide => (
           <div className='keen-slider__slide flex justify-between'>
             <div className='flex-1'>

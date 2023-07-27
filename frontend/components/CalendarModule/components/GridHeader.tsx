@@ -1,4 +1,4 @@
-import NewCell from './NewCell';
+import DesktopCell from './DesktopCell';
 
 const week = ['D', 'L', 'M', 'M', 'J', 'V', 'S'];
 
@@ -6,7 +6,7 @@ const GridHeader = () => {
   return (
     <>
       {week.map((day, index) => (
-        <NewCell key={index}>{day}</NewCell>
+        <DesktopCell key={index}>{day}</DesktopCell>
       ))}
     </>
   );

@@ -19,7 +19,7 @@ const SideBarNav = () => {
       <div className=' border-y-2 border-black w-full min-h-[150px] h-1/5'>
         <NavbarItem
           handleClick={() => {
-            router.push('/dashboard/community');
+            router.push('/home/community');
           }}
           image='/svg/sb-community.svg'
           title='Comunidad'
@@ -33,14 +33,14 @@ const SideBarNav = () => {
           title='Acerca de'
         />
         <NavbarItem
-          handleClick={() => router.push('/dashboard/settings')}
+          handleClick={() => router.push('/home/account')}
           image='/svg/sb-setting.svg'
-          title='Configuracion'
+          title='Configuración'
         />
         <NavbarItem
           handleClick={handleLogout}
           image='/svg/sb-logout.svg'
-          title='Cerrar sesion'
+          title='Cerrar sesión'
         />
       </div>
     </div>
