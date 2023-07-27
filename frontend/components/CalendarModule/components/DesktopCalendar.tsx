@@ -1,9 +1,10 @@
+'use client';
 import useCalendar, { type Month } from '@/hooks/useCalendar';
+import { getMonth, getYear } from 'date-fns';
 import { ChangeEvent } from 'react';
-import GridHeader from './GridHeader';
 import DesktopCalendarHeader from './DesktopCalendarHeader';
 import DesktopCell from './DesktopCell';
-import { getMonth, getYear } from 'date-fns';
+import GridHeader from './GridHeader';
 
 interface Props {
   initValue?: Date;
