@@ -1,23 +1,29 @@
+'use client';
+
 import Image from 'next/image';
-import user from '/public/img/user.jpg';
 import bell from '/public/svg/bell.svg';
+import { useContext } from 'react';
+import { UserContext } from '@/contexts/UserProvider';
 
-interface Props {
-  name: string;
-  age: string;
-  nationality: string;
-}
+const Userbar = () => {
+  const { user, age } = useContext(UserContext);
 
-const Userbar = ({ name, age, nationality }: Props) => {
   return (
     <div className='border rounded-2xl relative shadow-md h-24 flex items-center'>
       <div className='m-2 flex flex-grow'>
-        <Image src={user} alt='userImageSrc' width={80} height={80} />
+        <Image
+          src={user.photo_url || '/svg/sb-profilePhoto.svg'}
+          alt='userImageSrc'
+          width={80}
+          height={80}
+        />
         <div className='ml-2 flex flex-col font-poppins'>
-          <span className='text-blue font-semibold'>{name}</span>
+          <span className='text-blue font-semibold'>
+            {user.name} {user.surname}
+          </span>
           <div className='flex flex-col items-center font-medium'>
             <p>{age}</p>
-            <p>{nationality}</p>
+            <p>@{user.username}</p>
           </div>
         </div>
       </div>
