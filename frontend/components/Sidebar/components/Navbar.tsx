@@ -1,4 +1,6 @@
+import { googleLogout } from '@react-oauth/google';
 import { useRouter } from 'next/navigation';
+import { setCookie } from 'react-use-cookie';
 import NavbarItem from './NavbarItem';
 import SearchInput from './SearchInput';
 
@@ -7,6 +9,13 @@ const SideBarNav = () => {
 
   const handleLogout = () => {
     // TODO: Add logout functionality
+    console.log('cerrar sesion');
+    googleLogout();
+    setCookie('google_token', '', {
+      path: '/',
+      days: 0,
+    });
+    router.push('/');
   };
 
   return (
