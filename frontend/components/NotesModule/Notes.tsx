@@ -17,9 +17,8 @@ const Notes = ({ small }: Props) => {
 
   const getNoteList = async () => {
     try {
-      const { data } = await getNotes();
-      setNotes(data.notes);
-      console.log(data);
+      const { notes } = await getNotes();
+      setNotes(notes);
     } catch (error: any) {
       console.log(error);
     }
@@ -29,7 +28,7 @@ const Notes = ({ small }: Props) => {
     getNoteList();
   }, []);
 
-  const lastNote = notes[notes.length - 1];
+  const lastNote: NoteData = notes[notes.length - 1];
 
   const handlerCreateNote = () => {
     router.push('/home/notes/create');
@@ -37,16 +36,17 @@ const Notes = ({ small }: Props) => {
 
   return (
     <div
-      className={`relative rounded-xl p-5 pr-0 h-full object-none ${
-        small && ' flex flex-col bg-yellow p-0'
+      className={`relative rounded-xl p-3 h-full object-none ${
+        small && ' flex flex-col bg-yellow p-0 m-0 static '
       }`}>
       {small ? (
-        lastNote ? (
-          <div
-            className='wf-full h-full cursor-pointer'
-            onClick={() => {
-              router.push('/home/notes');
-            }}>
+        <div
+          className='w-full h-full cursor-pointer flex flex-col justify-center items-center'
+          onClick={() => {
+            router.push('/home/notes');
+          }}>
+          <h2 className=' text-center font-bold'>Notas</h2>
+          {lastNote ? (
             <NItem
               key={lastNote.id}
               id={lastNote.id}
@@ -54,13 +54,13 @@ const Notes = ({ small }: Props) => {
               description={lastNote.description}
               small
             />
-          </div>
-        ) : (
-          <p>No hay notas</p>
-        )
+          ) : (
+            <p>No hay notas</p>
+          )}
+        </div>
       ) : (
         <div
-          className={`grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-full py-5 pr-5 `}>
+          className={`grid content-start grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto h-full py-5 pr-5 `}>
           {notes.length ? (
             notes.map(item => (
               <NItem

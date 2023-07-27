@@ -5,7 +5,6 @@ import React from 'react';
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   const pathName = usePathname();
-  console.log(pathName);
   const setTitle = () => {
     switch (pathName) {
       case '/home/notes/create':

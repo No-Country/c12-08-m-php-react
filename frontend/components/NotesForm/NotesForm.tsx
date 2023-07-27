@@ -2,8 +2,9 @@
 import { useEffect, useState } from 'react';
 import { Formik } from 'formik';
 import InputNote from './components/InputNote';
-import { createNote, getNote } from '@/services/note/noteServices';
+import { createNote, getNote, updateNote } from '@/services/note/noteServices';
 import { NoteData } from '@/types/note';
+import { useRouter } from 'next/navigation';
 
 interface Props {
   id?: string;
@@ -16,14 +17,13 @@ const initialValues: NoteData = {
 };
 
 const NotesForm = ({ id }: Props) => {
-  const [note, setNote] = useState(initialValues);
-
+  const [note, setNote] = useState<NoteData>(initialValues);
+  const router = useRouter();
   const getCurrentNote = async () => {
     if (id) {
       try {
         const { data } = await getNote(id);
         setNote(data.note);
-        console.log(data.note);
       } catch (error: any) {
         console.log(error);
       }
@@ -34,26 +34,22 @@ const NotesForm = ({ id }: Props) => {
     getCurrentNote();
   }, [id]);
 
-  const handleSubmit = async (values: any) => {
-    // TODO: Alertas? Redirecciones
-    if (id) {
-      // TODO: Hacer cuando tenga getbyid
-      console.log(`Editar nota: ${id}`, values);
-    } else {
-      try {
-        const response = await createNote({
-          title: values.title,
-          description: values.description,
-        });
-        console.log(response);
-      } catch (error: any) {
-        console.log(error);
+  const handleSubmit = async (values: NoteData) => {
+    // TODO: Alertas?
+    try {
+      const response = id
+        ? await updateNote(values.id, values)
+        : await createNote(values);
+      if (response.status === 201) {
+        router.push('/home/notes');
       }
+    } catch (error: any) {
+      console.log(error);
     }
   };
 
   return (
-    <div className='p-5 h-full'>
+    <div className='p-5 h-full overflow-x-hidden'>
       <Formik
         initialValues={note}
         onSubmit={values => {
@@ -71,7 +67,9 @@ const NotesForm = ({ id }: Props) => {
               descPlaceholder='Escriba su nota aquí'
               handleChange={handleChange}
             />
-            <button type='submit' className='btn btn-secondary mt-auto'>
+            <button
+              type='submit'
+              className='btn btn-secondary mt-auto w-fit p-5 self-center md:self-end '>
               Guardar
             </button>
           </form>

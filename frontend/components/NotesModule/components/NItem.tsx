@@ -1,7 +1,6 @@
-import { deleteNote } from '@/services/note/noteServices'
+import { deleteNote } from '@/services/note/noteServices';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { title } from 'process';
 
 interface Props {
   id: number;
@@ -18,28 +17,27 @@ const NItem = ({ id, title, description, small }: Props) => {
   };
 
   const handlerDeleteNote = async () => {
+    // TODO: Alertas?
     console.log(`Eliminar nota: ${id}`);
     try {
-      const response = await deleteNote(id)
-      console.log(response)
+      const response = await deleteNote(id);
+      console.log(response);
     } catch (error: any) {
-      console.log(error)
+      console.log(error);
     }
   };
 
   return (
     <div
-      className={`relative min-w-[150px] min-h-[200px] flex flex-col justify-center items-center
-                bg-yellow w-full  border border-slate-500 shadow-md 
+      className={`relative flex flex-col justify-center items-center
+                bg-yellow w-full shadow-md shadow-gray-600 
                   text-xs md:text-sm ${
                     small
-                      ? 'h-full text-sm py-4 border-none m-0 p-2 rounded-2xl'
-                      : 'p-5 pr-2 max-h-[150px]'
+                      ? 'h-4/5 w-full text-sm border-none m-0 p-0 rounded-2xl'
+                      : 'p-5 pr-2 min-w-[150px] min-h-[200px] max-h-[150px]  '
                   }`}>
-      <p className='font-bold w-full mb-2 text-left'>{title}</p>
-      <p className='h-full mx-2 mb-5 overflow-hidden overflow-y-auto text-ellipsis'>
-        {description}
-      </p>
+      <p className={`font-bold w-full mb-2 text-left ${small && 'hidden'}`}>{title}</p>
+      <p className={small ? '' : ' h-full mx-2 mb-5 overflow-y-auto'}>{description}</p>
       <Image
         src='/svg/plan-edit.svg'
         width={20}

@@ -35,7 +35,7 @@ const InputNote = ({
           value={descValue}
           placeholder={descPlaceholder}
           onChange={handleChange}
-          className='textarea-note'></textarea>
+          className='textarea-note focus:outline-none'></textarea>
       </div>
     </div>
   );

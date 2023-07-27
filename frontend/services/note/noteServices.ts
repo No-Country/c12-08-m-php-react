@@ -1,26 +1,27 @@
+import { NoteData } from '@/types/note';
 import { Delete, Get, Post, Put } from '../privateServices';
 
 export const getNote = async (id: number | string) => {
-  const response = await Get(`/notes/show/${id}`);
+  const response = await Get(`/notes/${id}`);
   return response;
 };
 
 export const getNotes = async () => {
   const response = await Get('/notes');
-  return response;
+  return response.data;
 };
 
-export const createNote = async (body: any) => {
+export const createNote = async (body: NoteData) => {
   const response = await Post('/notes/create', body);
-  return response;
+  return response.data;
 };
 
-export const updateNote = async (id: number | string, body: any) => {
+export const updateNote = async (id: number | string, body: NoteData) => {
   const response = await Put(`/notes/update/${id}`, body);
-  return response;
+  return response.data;
 };
 
 export const deleteNote = async (id: number | string) => {
   const response = await Delete(`/notes/delete/${id}`);
-  return response;
+  return response.data;
 };
