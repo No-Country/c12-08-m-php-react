@@ -22,6 +22,8 @@ export { default as LandingNavbar } from './LandingNavbar/LandingNavbar';
 export { default as LandingShowcase } from './LandingShowcase/LandingShowcase';
 export { default as LandingSlider } from './LandingSlider/LandingSlider';
 export { default as MedicineList } from './MedicineList/MedicineList';
+export { default as Notes } from './NotesModule/Notes';
+export { default as NotesForm } from './NotesForm/NotesForm';
 export { default as Plans } from './Plans/Plans';
 export { default as PlusButton } from './PlusButton/PlusButton';
 export { default as ProfileSettings } from './ProfileSettings/ProfileSettings';
