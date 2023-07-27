@@ -97,8 +97,14 @@ class AuthController extends Controller
     {
         $user = auth()->user();
 
+        if (!$user) {
+            return response()->json([
+                'message' => 'Unauthorized'
+            ], 401);
+        }
+
         return response()->json([
-            'message' => 'User data',
+            'message' => 'User found',
             'user' => $user
         ], 200);
     }
