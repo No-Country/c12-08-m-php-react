@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import Navbar from './Navbar';
 import ProfileInfo from './ProfileInfo';
 
@@ -21,13 +22,15 @@ const Panel = ({ open, closeSidebar }: Props) => {
                   ${open ? '' : '-translate-x-full'}`}>
       <div className='flex flex-col h-full my-4 '>
         <div className=' flex w-full md:justify-center'>
-          <Image
-            className='mx-5 mr-auto md:mx-auto md:h-20 md:w-20 '
-            src='/svg/Logo.svg'
-            alt='Logo'
-            width={50}
-            height={50}
-          />
+          <Link href='/home'>
+            <Image
+              className='mx-5 mr-auto md:mx-auto md:h-20 md:w-20 '
+              src='/svg/Logo.svg'
+              alt='Logo'
+              width={50}
+              height={50}
+            />
+          </Link>
           <Image
             src='/svg/sb-back.svg'
             className='ml-auto h-6 w-6 m-2 mx-5 md:hidden'

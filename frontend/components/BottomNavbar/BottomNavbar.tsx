@@ -15,7 +15,7 @@ const items = [
     title: 'Mis medicinas',
   },
   {
-    to: '/notes',
+    to: 'home/notes',
     iconSrc: notesIcon,
     title: 'Notas',
   },
