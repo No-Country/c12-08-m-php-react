@@ -29,3 +29,4 @@ export { default as QuestionAlternative } from './QuestionAlternative/QuestionAl
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Userbar } from './Userbar/Userbar';
+export { default as SelectInput } from './Inputs/SelectInput';
