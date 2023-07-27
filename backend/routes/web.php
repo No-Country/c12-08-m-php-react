@@ -35,6 +35,10 @@ Route::get('/google-auth/callback', function () {
     ], [
         'name' => $google_user->name,
         'email' => $google_user->email,
+        'gender' => $google_user->gender,
+        'birth' => $google_user->birthday,
+        'phone' => $google_user->phone,
+        'photo_url' => $google_user->avatar
     ]);
 
     Auth::login($user);
