@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import editPencil from '/public/svg/editPencil.svg';
-import trashCan from '/public/svg/trashCan.svg';
 
 // interface Props {
 //   time: string;
