@@ -10,9 +10,6 @@ const mockupData = [
     iconSrc: eye,
     treatment: 'Plan 1',
     time: '15:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
   },
   {
     name: 'Yectafer',
@@ -20,9 +17,6 @@ const mockupData = [
     iconSrc: eye,
     treatment: 'Plan 1',
     time: '17:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
   },
   {
     name: 'Paracetamol',
@@ -30,109 +24,6 @@ const mockupData = [
     iconSrc: eye,
     treatment: 'Plan 2',
     time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
-  },
-  {
-    name: 'Paracetamol',
-    description: 'Tomar 1 pastilla(s)',
-    iconSrc: eye,
-    treatment: 'Plan 2',
-    time: '19:00',
-    day: '05/08',
-    endDay: '06/09',
-    startDate: '04/07',
   },
 ];
 
@@ -143,16 +34,14 @@ const MedicineList = () => {
 
   return (
     <>
-      <ul className='flex flex-col md:h-3/4 overflow-y-scroll max-md:w-full md:flex-1 md:gap-8'>
+      <ul className='flex flex-col overflow-y-scroll h-3/4 gap-10'>
         {mockupData.map((item, index) => (
           <MedicineItem
             key={index}
-            day={item.day}
-            imageSrc={item.iconSrc}
-            indication={item.description}
-            startDate={item.startDate}
-            endDate={item.endDay}
+            description={item.description}
+            iconSrc={item.iconSrc}
             medicineName={item.name}
+            planName={item.treatment}
             time={item.time}
           />
         ))}

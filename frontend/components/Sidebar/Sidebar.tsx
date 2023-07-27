@@ -1,17 +1,26 @@
 'use client';
 
 import { useWindowsSize } from '@/hooks/useWindowsSize';
+import tailwindConfig from '@/tailwind.config.js';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import resolveConfig from 'tailwindcss/resolveConfig';
 import Panel from './components/Panel';
-import breakpoints from '@/utils/breakpoints';
+
+const getEndpointInt = (endpoint: string) => {
+  const endpointInt = endpoint.replace('px', '');
+  return parseInt(endpointInt);
+};
 
 const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
   const size = useWindowsSize();
 
+  // @ts-ignore: Unreachable code error
+  const breakpoints = resolveConfig(tailwindConfig).theme.screens;
+
   useEffect(() => {
-    if (size.width > breakpoints.md) {
+    if (size.width > getEndpointInt(breakpoints.md)) {
       setSidebarOpen(true);
     } else {
       setSidebarOpen(false);

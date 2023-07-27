@@ -49,7 +49,8 @@ const FormRegister = () => {
     setIsLoading(true);
     try {
       const { confirm_password, ...registerValues } = values;
-      await register(registerValues);
+      const data = await register(registerValues);
+      console.log(data);
       // TODO: once the backend makes the necessary changes to send the token in cookies, this setCookie function should be removed
       router.push('/home');
     } catch (error: any) {
