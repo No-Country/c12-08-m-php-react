@@ -17,6 +17,7 @@ export { default as GenericContainer } from './GenericContainer/GenericContainer
 export { default as DatePicker } from './Inputs/DatePicker';
 export { default as Input } from './Inputs/Input';
 export { default as NewDatePicker } from './Inputs/NewDatePicker';
+export { default as CheckBox } from './Inputs/CheckBox';
 export { default as NewEmailInput } from './Inputs/NewEmailInput';
 export { default as NewInput } from './Inputs/NewInput';
 export { default as NewPasswordInput } from './Inputs/NewPasswordInput';
