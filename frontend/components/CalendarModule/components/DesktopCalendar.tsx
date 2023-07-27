@@ -1,8 +1,8 @@
 import useCalendar, { type Month } from '@/hooks/useCalendar';
 import { ChangeEvent } from 'react';
 import GridHeader from './GridHeader';
-import NewCalendarHeader from './NewCalendarHeader';
-import NewCell from './NewCell';
+import DesktopCalendarHeader from './DesktopCalendarHeader';
+import DesktopCell from './DesktopCell';
 import { getMonth, getYear } from 'date-fns';
 
 interface Props {
@@ -44,7 +44,7 @@ const NewCalendar = ({ onDateSelect = () => undefined, initValue }: Props) => {
 
   return (
     <div className='h-full flex flex-col p-4'>
-      <NewCalendarHeader
+      <DesktopCalendarHeader
         selectedDate={selectedDate}
         selectedMonth={selectedMonth}
         selectedYear={selectedYear}
@@ -56,10 +56,10 @@ const NewCalendar = ({ onDateSelect = () => undefined, initValue }: Props) => {
       <div className='grid grid-cols-7 grid-rows-[7] flex-1 text-sm font-light'>
         <GridHeader />
         {Array.from({ length: daysOffset }).map((_, index) => (
-          <NewCell key={index} />
+          <DesktopCell key={index} />
         ))}
         {Array.from({ length: daysInSelectedMonth }).map((_, index) => (
-          <NewCell
+          <DesktopCell
             key={index}
             handleClick={handleClick}
             isActive={
@@ -68,7 +68,7 @@ const NewCalendar = ({ onDateSelect = () => undefined, initValue }: Props) => {
               getYear(selectedDate) === selectedYear
             }>
             {index + 1}
-          </NewCell>
+          </DesktopCell>
         ))}
       </div>
     </div>

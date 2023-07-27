@@ -35,12 +35,12 @@ const SideBarNav = () => {
         <NavbarItem
           handleClick={() => router.push('/home/account')}
           image='/svg/sb-setting.svg'
-          title='Configuracion'
+          title='Configuración'
         />
         <NavbarItem
           handleClick={handleLogout}
           image='/svg/sb-logout.svg'
-          title='Cerrar sesion'
+          title='Cerrar sesión'
         />
       </div>
     </div>
