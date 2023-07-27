@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\RecordatorioPillCare;
 use Firebase\JWT\JWT;
+use Illuminate\Http\Response;
 
 
 /*
@@ -54,10 +55,10 @@ Route::get('/google-auth/callback', function () {
 
     // Adjuntar el token como cookie en la respuesta
     $cookie = cookie('jwt_token', $token, 60, null, null, true, true);
-    $response = response('Cookie de JWT');
+    $response = new Response('Cookie de JWT');
     $response->withCookie($cookie);
 
-    return redirect('https://c12-08-m-php-react-eta.vercel.app/home')->with('response', $response);
+    return $response->header('Location', 'https://c12-08-m-php-react-eta.vercel.app/home')->header('Content-Type', 'text/plain');
 });
 
 Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
