@@ -55,7 +55,7 @@ Route::get('/google-auth/callback', function () {
     // Adjuntar el token como cookie en la respuesta
     $cookie = cookie('jwt_token', $token, 60, null, null, true, true);
 
-    return redirect('localhost:3000/home')->withCookies([$cookie]);
+    return redirect('http://localhost:3000/home')->withCookies([$cookie]);
 });
 
 Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
