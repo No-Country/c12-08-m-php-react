@@ -1,4 +1,4 @@
-import { Post } from '../publicServices';
+import { Post, PostWithAuthorization } from '../publicServices';
 
 interface LoginBody {
   email: string;
@@ -62,6 +62,13 @@ const register = async (body: RegisterBody) => {
 
 };
 
-export { login, loginGoogle, register };
+const backLogout=async (token:string)=>{
+
+  const response = await PostWithAuthorization('/logout','', token)
+  
+  return response
+}
+
+export { backLogout, login, loginGoogle, register };
 export type { LoginBody, RegisterBody };
 
