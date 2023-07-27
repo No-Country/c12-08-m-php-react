@@ -19,7 +19,7 @@ const SideBarNav = () => {
       <div className=' border-y-2 border-black w-full min-h-[150px] h-1/5'>
         <NavbarItem
           handleClick={() => {
-            router.push('/dashboard/community');
+            router.push('/home/community');
           }}
           image='/svg/sb-community.svg'
           title='Comunidad'
