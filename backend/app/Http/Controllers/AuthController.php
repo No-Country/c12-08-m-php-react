@@ -95,7 +95,12 @@ class AuthController extends Controller
      */
     public function me()
     {
-        return response()->json(auth()->user());
+        $user = auth()->user();
+
+        return response()->json([
+            'message' => 'User data',
+            'user' => $user
+        ], 200);
     }
 
     /**
@@ -121,6 +126,22 @@ class AuthController extends Controller
     public function refresh()
     {
         return $this->respondWithToken(auth()->refresh());
+    }
+
+    //Funcion para verificar si el token del usuario es valido
+    public function verifyToken(Request $request)
+    {
+        $token = $request->cookie('jwt_token');
+
+        if ($token) {
+            return response()->json([
+                'message' => 'Token is valid'
+            ], 200);
+        } else {
+            return response()->json([
+                'message' => 'Token is invalid'
+            ], 400);
+        }
     }
 
     /**

@@ -23,7 +23,8 @@ Route::group(['middleware' => 'api'], function ($router) {
         Route::post('login', 'App\Http\Controllers\AuthController@login');
         Route::post('logout', 'App\Http\Controllers\AuthController@logout');
         Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
-        Route::post('me', 'App\Http\Controllers\AuthController@me');
+        Route::get('me', 'App\Http\Controllers\AuthController@me');
+        Route::get('verifyToken', 'App\Http\Controllers\AuthController@verifyToken');
 
         //Rutas de notas
         Route::post('/notes/create', 'App\Http\Controllers\NoteController@store');
