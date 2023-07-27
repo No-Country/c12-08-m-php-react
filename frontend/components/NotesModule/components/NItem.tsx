@@ -1,5 +1,6 @@
 import { deleteNote } from '@/services/note/noteServices';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 interface Props {
@@ -22,6 +23,10 @@ const NItem = ({ id, title, description, small }: Props) => {
     try {
       const response = await deleteNote(id);
       console.log(response);
+      if (response.message === 'Note deleted') {
+        console.log('refrescar notas');
+        router.push('/home/notes');
+      }
     } catch (error: any) {
       console.log(error);
     }
@@ -46,14 +51,15 @@ const NItem = ({ id, title, description, small }: Props) => {
         className={` absolute bottom-4 right-4 cursor-pointer ${small && 'hidden'} `}
         onClick={handlerEditNote}
       />
-      <Image
-        src='/svg/btn-delete.svg'
-        width={20}
-        height={20}
-        alt='note'
-        className={`absolute top-4 right-4 cursor-pointer ${small && 'hidden'}`}
-        onClick={handlerDeleteNote}
-      />
+      <Link href={`/home/notes`} replace onClick={handlerDeleteNote}>
+        <Image
+          src='/svg/btn-delete.svg'
+          width={20}
+          height={20}
+          alt='note'
+          className={`absolute top-4 right-4 cursor-pointer ${small && 'hidden'}`}
+        />
+      </Link>
     </div>
   );
 };

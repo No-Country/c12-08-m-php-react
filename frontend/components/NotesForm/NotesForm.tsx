@@ -40,7 +40,7 @@ const NotesForm = ({ id }: Props) => {
       const response = id
         ? await updateNote(values.id, values)
         : await createNote(values);
-      if (response.status === 201) {
+      if (response.message === 'Note created' || response.message === 'Note updated') {
         router.push('/home/notes');
       }
     } catch (error: any) {
