@@ -11,7 +11,7 @@ interface Props {
   small?: boolean;
 }
 
-const Notes = ({ small }: Props) => {
+const NotesModule = ({ small }: Props) => {
   const [notes, setNotes] = useState<NoteData[]>([]);
   const router = useRouter();
 
@@ -87,4 +87,4 @@ const Notes = ({ small }: Props) => {
   );
 };
 
-export default Notes;
+export default NotesModule;
