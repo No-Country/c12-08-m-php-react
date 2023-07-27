@@ -1,19 +1,14 @@
-import { CalendarModule } from '@/components';
+import { CalendarModule, MedicineModule } from '@/components';
 import Notes from '../NotesModule/Notes';
-
-// Every module displayed within the Dashboard must be wrapped by DashboardModule component
 
 const Dashboard = () => {
   return (
     <div className='grid grid-cols-8 grid-rows-5 h-full gap-8'>
-      <section className='col-span-8 row-span-3 max-md:row-span-5'>
+      <section className='col-span-8 row-span-3 '>
         <CalendarModule />
       </section>
-      <section className='border border-black col-span-3 row-span-2 max-md:hidden'>
-        PLANES
-      </section>
-      <section className='border border-black col-span-3 row-span-2 max-md:hidden'>
-        SUSCRIPCIONES
+      <section className='border shadow-lg rounded-xl bg-green col-span-6 row-span-2 max-md:hidden'>
+        <MedicineModule />
       </section>
       <section className='col-span-2 row-span-2 h-full max-md:hidden'>
         <Notes small />
