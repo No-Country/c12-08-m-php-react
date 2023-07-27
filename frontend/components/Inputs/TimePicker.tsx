@@ -26,7 +26,7 @@ const TimePickerInput = ({ label, name, value, setValue }: TimePickerInputProps)
         <TimePicker
           label={label}
           value={value}
-          onChange={e => setValue(name, e?.toLocaleTimeString())}
+          onChange={e => setValue(name, e)}
           slotProps={{ textField: { variant: 'standard' } }}
         />
       </LocalizationProvider>
