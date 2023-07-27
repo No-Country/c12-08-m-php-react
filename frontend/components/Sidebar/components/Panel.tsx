@@ -8,13 +8,6 @@ type Props = {
   closeSidebar: () => void;
 };
 
-const customUser = {
-  name: 'Cosme Fulanito',
-  nationality: 'Argentina',
-  edad: 25,
-  image: '',
-};
-
 const Panel = ({ open, closeSidebar }: Props) => {
   return (
     <div
@@ -40,7 +33,7 @@ const Panel = ({ open, closeSidebar }: Props) => {
             alt='Back-icon'
           />
         </div>
-        <ProfileInfo user={customUser} />
+        <ProfileInfo />
         <Navbar />
       </div>
     </div>

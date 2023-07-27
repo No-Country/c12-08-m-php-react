@@ -27,7 +27,7 @@ export { default as LottieAnimation } from './LottieAnimation/LottieAnimation';
 export { default as MedicineList } from './MedicineList/MedicineList';
 export { default as MedicineModule } from './MedicineModule/MedicineModule';
 export { default as NotesForm } from './NotesForm/NotesForm';
-export { default as Notes } from './NotesModule/Notes';
+export { default as NotesModule } from './NotesModule/NotesModule';
 export { default as Plans } from './Plans/Plans';
 export { default as ProfileSettings } from './ProfileSettings/ProfileSettings';
 export { default as UploadButton } from './ProfileSettings/components/UploadButton';
@@ -35,4 +35,4 @@ export { default as QuestionAlternative } from './QuestionAlternative/QuestionAl
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as Spinner } from './Spinner/Spinner';
 export { default as Userbar } from './Userbar/Userbar';
-
+export { default as SelectInput } from './Inputs/SelectInput';

@@ -1,5 +1,4 @@
-import { CalendarModule, MedicineModule } from '@/components';
-import Notes from '../NotesModule/Notes';
+import { CalendarModule, MedicineModule, NotesModule } from '@/components';
 
 const Dashboard = () => {
   return (
@@ -11,7 +10,7 @@ const Dashboard = () => {
         <MedicineModule />
       </section>
       <section className='col-span-2 row-span-2 h-full max-md:hidden'>
-        <Notes small />
+        <NotesModule small />
       </section>
     </div>
   );

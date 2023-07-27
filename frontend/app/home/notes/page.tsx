@@ -1,7 +1,7 @@
-import Notes from '@/components/NotesModule/Notes';
+import { NotesModule } from '@/components';
 
 const page = () => {
-  return <Notes />;
+  return <NotesModule />;
 };
 
 export default page;

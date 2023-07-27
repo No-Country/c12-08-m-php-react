@@ -1,4 +1,5 @@
 'use client';
+
 import {
   FormControl,
   InputLabel,
@@ -7,7 +8,7 @@ import {
   ThemeProvider,
   createTheme,
 } from '@mui/material';
-
+        
 const theme = createTheme({
   palette: {
     primary: {
@@ -34,6 +35,7 @@ const SelectInput = ({
   const handleSelect = (e: any) => {
     handleChange(e);
   };
+    
   return (
     <ThemeProvider theme={theme}>
       <FormControl variant='standard' fullWidth>
