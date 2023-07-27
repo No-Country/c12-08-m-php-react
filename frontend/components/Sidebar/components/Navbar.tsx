@@ -1,4 +1,7 @@
+import { backLogout } from '@/services/auth/auth';
+import { googleLogout } from '@react-oauth/google';
 import { useRouter } from 'next/navigation';
+import { getCookie, setCookie } from 'react-use-cookie';
 import NavbarItem from './NavbarItem';
 import SearchInput from './SearchInput';
 
@@ -7,6 +10,20 @@ const SideBarNav = () => {
 
   const handleLogout = () => {
     // TODO: Add logout functionality
+    console.log('cerrar sesion');
+    googleLogout();
+    if (getCookie('jwt_token')) {
+      backLogout(getCookie('jwt_token') as string);
+    }
+    setCookie('google_token', '', {
+      path: '/',
+      days: 0,
+    });
+    setCookie('jwt_token', '', {
+      path: '/',
+      days: 0,
+    });
+    router.push('/');
   };
 
   return (
