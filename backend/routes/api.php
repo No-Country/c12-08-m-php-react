@@ -19,12 +19,14 @@ Route::post('/register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'api'], function ($router) {
 
-        //Rutas de autenticación
+        //Rutas de autenticación y usuario
         Route::post('login', 'App\Http\Controllers\AuthController@login');
         Route::post('logout', 'App\Http\Controllers\AuthController@logout');
         Route::post('refresh', 'App\Http\Controllers\AuthController@refresh');
         Route::get('me', 'App\Http\Controllers\AuthController@me');
         Route::get('verifyToken', 'App\Http\Controllers\AuthController@verifyToken');
+        Route::post('update', 'App\Http\Controllers\AuthController@update');
+        Route::post('delete', 'App\Http\Controllers\AuthController@delete');
 
         //Rutas de notas
         Route::post('/notes/create', 'App\Http\Controllers\NoteController@store');

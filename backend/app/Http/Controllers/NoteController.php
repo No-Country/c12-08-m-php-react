@@ -91,7 +91,7 @@ class NoteController extends Controller
 
         $user_id = auth()->user()->id;
 
-        $note = Note::find($id)->where('user_id', $user_id)->first();
+        $note = Note::find($id)->where('user_id', $user_id)->get();
 
         if (!$note) {
             return response()->json([
