@@ -57,8 +57,7 @@ Route::get('/google-auth/callback', function () {
     $response = response('Cookie de JWT');
     $response->withCookie($cookie);
 
-    return $response->header('Location', 'https://c12-08-m-php-react-eta.vercel.app/home')->header('Content-Type', 'text/plain');
-
+    return redirect('https://c12-08-m-php-react-eta.vercel.app/home')->with('response', $response);
 });
 
 Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
