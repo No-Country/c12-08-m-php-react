@@ -24,6 +24,8 @@ export { default as LandingSlider } from './LandingSlider/LandingSlider';
 export { default as LottieAnimation } from './LottieAnimation/LottieAnimation';
 export { default as MedicineList } from './MedicineList/MedicineList';
 export { default as MedicineModule } from './MedicineModule/MedicineModule';
+export { default as Notes } from './NotesModule/Notes';
+export { default as NotesForm } from './NotesForm/NotesForm';
 export { default as Plans } from './Plans/Plans';
 export { default as PlusButton } from './PlusButton/PlusButton';
 export { default as ProfileSettings } from './ProfileSettings/ProfileSettings';
