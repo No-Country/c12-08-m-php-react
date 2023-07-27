@@ -37,7 +37,7 @@ Route::get('/google-auth/callback', function () {
     ]);
 
     Auth::login($user);
-    return redirect('/home');
+    return redirect('https://c12-08-m-php-react-eta.vercel.app/home');
 });
 
 Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
