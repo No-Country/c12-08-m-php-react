@@ -17,6 +17,7 @@ import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
 import * as Yup from 'yup';
+import { SelectInput } from '@/components';
 
 export interface RegisterFormData {
   name: string;
@@ -196,6 +197,12 @@ const FormRegister = () => {
           handleChange={customHandleChange}
           label='confirme contraseña'
           name='confirm_password'
+        />
+        <SelectInput
+          handleChange={customHandleChange}
+          label='genero'
+          name='gender'
+          values={['Femenino', 'Masculino', 'Prefiero no decirlo']}
         />
         {status ? <div className='text-red-500'>{status}</div> : null}
         <button
