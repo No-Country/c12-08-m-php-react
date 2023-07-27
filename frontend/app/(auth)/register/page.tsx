@@ -1,4 +1,4 @@
-import { AuthFormHeader, ConectSocial, QuestionAlternative } from '@/components';
+import { AuthFormHeader, QuestionAlternative } from '@/components';
 
 import FormRegister from './form';
 
@@ -15,7 +15,6 @@ const Register = () => {
         callAction='Inicia sesión ahora'
         link='/login'
       />
-      <ConectSocial />
     </>
   );
 };

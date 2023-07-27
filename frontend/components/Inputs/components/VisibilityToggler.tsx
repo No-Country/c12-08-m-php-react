@@ -1,3 +1,4 @@
+'use client';
 import eye from '@/public/svg/eye.svg';
 import eyeOff from '@/public/svg/eye_off.svg';
 import Image, { StaticImageData } from 'next/image';

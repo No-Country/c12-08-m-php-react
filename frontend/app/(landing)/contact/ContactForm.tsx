@@ -1,7 +1,6 @@
 'use client';
 
-import { Input } from '@/components';
-import CheckBox from '@/components/Inputs/CheckBox';
+import { Input, CheckBox } from '@/components';
 import { sendEmail } from '@/services/email/email';
 import { useFormik } from 'formik';
 import Textarea from './Textarea';
