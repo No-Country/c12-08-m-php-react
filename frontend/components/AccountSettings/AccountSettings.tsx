@@ -9,7 +9,7 @@ import Link from 'next/link';
 const AccountSettings = () => {
   return (
     <div className='font-poppins mx-1 sm:mx-10 mt-20'>
-      <Link href='' className='cursor-pointer'>
+      <Link href='account/change-password' className='cursor-pointer'>
         <div className='flex items-center mb-10'>
           <Image src={configKey} alt='Logo' width={35} height={35} />
           <div className='flex flex-col ml-4'>
@@ -21,7 +21,7 @@ const AccountSettings = () => {
           <Image src={arrowR} alt='arrowR' className='ml-auto h-8 w-8' />
         </div>
       </Link>
-      <Link href='' className='cursor-pointer'>
+      <Link href='account/change-email' className='cursor-pointer'>
         <div className='flex items-center mb-10'>
           <Image src={configLetter} alt='Logo' width={35} height={35} />
           <div className='flex flex-col ml-4'>
@@ -33,7 +33,7 @@ const AccountSettings = () => {
           <Image src={arrowR} alt='arrowR' className='ml-auto h-8 w-8' />
         </div>
       </Link>
-      <Link href='' className='cursor-pointer'>
+      <Link href='account/download-data' className='cursor-pointer'>
         <div className='flex items-center mb-10'>
           <Image src={configDownload} alt='Logo' width={35} height={35} />
           <div className='flex flex-col ml-4'>
@@ -45,7 +45,7 @@ const AccountSettings = () => {
           <Image src={arrowR} alt='arrowR' className='ml-auto h-8 w-8' />
         </div>
       </Link>
-      <Link href='' className='cursor-pointer'>
+      <Link href='account/deactivation' className='cursor-pointer'>
         <div className='flex items-center mb-10'>
           <Image src={configHeart} alt='Logo' width={35} height={35} />
           <div className='flex flex-col ml-4'>

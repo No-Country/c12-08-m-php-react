@@ -20,7 +20,6 @@ const FormLogin = () => {
     setIsLoading(true);
     try {
       const { data } = await login(values);
-      console.log(data);
       setCookie('jwt_token', data.access_token, { path: '/', days: 7 });
       router.push('/home');
     } catch (error: any) {

@@ -6,7 +6,7 @@ import Notes from '../NotesModule/Notes';
 const Dashboard = () => {
   return (
     <div className='grid grid-cols-8 grid-rows-5 h-full gap-8'>
-      <section className='col-span-8 row-span-3 '>
+      <section className='col-span-8 row-span-3 max-md:row-span-5'>
         <CalendarModule />
       </section>
       <section className='border border-black col-span-3 row-span-2 max-md:hidden'>
