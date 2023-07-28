@@ -1,4 +1,4 @@
-import { NoteData } from '@/types/note';
+import { NoteData } from '@/types/types';
 import { Delete, Get, Post, Put } from '../privateServices';
 
 export const getNote = async (id: number | string) => {

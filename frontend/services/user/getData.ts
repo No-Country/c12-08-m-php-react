@@ -1,4 +1,4 @@
-import { User } from '@/types/note';
+import { User } from '@/types/types';
 
 const getUserData = async (token: string) => {
   try {
