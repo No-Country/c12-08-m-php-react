@@ -1,3 +1,4 @@
+import { alert } from '@/components/Alert/Alert';
 import { deleteNote } from '@/services/note/noteServices';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,8 +25,11 @@ const NItem = ({ id, title, description, small }: Props) => {
       const response = await deleteNote(id);
       console.log(response);
       if (response.message === 'Note deleted') {
+        alert('Nota eliminada', 'Nota eliminada exitosamente', 'success');
         console.log('refrescar notas');
-        router.push('/home/notes');
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000);
       }
     } catch (error: any) {
       console.log(error);

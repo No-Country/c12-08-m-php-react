@@ -5,6 +5,7 @@ import InputNote from './components/InputNote';
 import { createNote, getNote, updateNote } from '@/services/note/noteServices';
 import { NoteData } from '@/types/note';
 import { useRouter } from 'next/navigation';
+import { alert } from '@/components/Alert/Alert';
 
 interface Props {
   id?: string;
@@ -41,10 +42,12 @@ const NotesForm = ({ id }: Props) => {
         ? await updateNote(values.id, values)
         : await createNote(values);
       if (response.message === 'Note created' || response.message === 'Note updated') {
+        alert('Nota guardada', 'Nota guardada exitosamente', 'success');
         router.push('/home/notes');
       }
     } catch (error: any) {
       console.log(error);
+      alert('Error', 'Algo salió mal', 'error');
     }
   };
 

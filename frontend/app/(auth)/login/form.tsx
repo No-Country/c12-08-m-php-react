@@ -1,11 +1,12 @@
 'use client';
 
 import { NewEmailInput, NewPasswordInput, Spinner } from '@/components';
+import { alert } from '@/components/Alert/Alert';
 import { login } from '@/services/auth/login';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
-import { setCookie } from 'react-use-cookie';
+import { getCookie, setCookie } from 'react-use-cookie';
 import * as Yup from 'yup';
 export interface LoginFormData {
   email: string;
@@ -21,7 +22,10 @@ const FormLogin = () => {
     try {
       const { data } = await login(values);
       setCookie('jwt_token', data.access_token, { path: '/', days: 7 });
-      router.push('/home');
+      if (data.access_token) {
+        alert('Bienvenido', 'Inicio de sesión exitoso', 'success');
+        router.push('/home');
+      }
     } catch (error: any) {
       setIsLoading(false);
       if (error.response.status === 400) {
