@@ -73,7 +73,6 @@ const NewMedsForm = () => {
               />
             </InputContainer>
           </InputsPairContainer>
-
           <InputsPairContainer>
             <InputContainer>
               <InputNumber
@@ -94,7 +93,6 @@ const NewMedsForm = () => {
               />
             </InputContainer>
           </InputsPairContainer>
-
           <InputsPairContainer>
             <InputContainer>
               <DatePicker
@@ -116,7 +114,6 @@ const NewMedsForm = () => {
               />
             </InputContainer>
           </InputsPairContainer>
-
           <InputsPairContainer>
             <InputContainer>
               <InputNumber
@@ -129,7 +126,6 @@ const NewMedsForm = () => {
                 max={7}
               />
             </InputContainer>
-
             <InputContainer>
               <SelectInput
                 values={frequency}
@@ -140,7 +136,6 @@ const NewMedsForm = () => {
               />
             </InputContainer>
           </InputsPairContainer>
-
           <CheckBox
             text='Medicamento de única dosis'
             label='is_single_dose'
