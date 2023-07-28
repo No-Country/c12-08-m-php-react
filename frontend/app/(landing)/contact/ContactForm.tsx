@@ -6,7 +6,8 @@ import { useFormik } from 'formik';
 import Textarea from './Textarea';
 
 const ContactForm = () => {
-  const { handleChange, handleSubmit } = useFormik({
+
+  const { handleChange, handleSubmit, handleReset } = useFormik({
     initialValues: {
       email: '',
       name: '',
@@ -16,16 +17,20 @@ const ContactForm = () => {
     onSubmit: values => {
       const { terms, ...data } = values;
       const dataClean = { ...data, terms: !!terms.length, place: 'landing' };
-      console.log(dataClean, values);
-
+      alert('Mensaje enviado')
       sendEmail(dataClean);
     },
+
   });
+
+
 
   return (
     <form
+    id='contact-form'
       className='mx-auto flex flex-col gap-4 bg-green p-8 rounded-md w-[30rem] '
-      onSubmit={handleSubmit}>
+      onSubmit={handleSubmit} onReset={handleReset}>
+      
       <h1 className='font-semibold text-2xl text-center'>¡Contactanos Aqui!</h1>
       <Input
         type='text'
