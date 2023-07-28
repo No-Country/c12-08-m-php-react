@@ -6,7 +6,7 @@ import { login } from '@/services/auth/login';
 import { useFormik } from 'formik';
 import { useRouter } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
-import { getCookie, setCookie } from 'react-use-cookie';
+import { setCookie } from 'react-use-cookie';
 import * as Yup from 'yup';
 export interface LoginFormData {
   email: string;
