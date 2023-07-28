@@ -1,5 +1,5 @@
 const InputsPairContainer = ({ children }: { children: React.ReactNode }) => {
-  return <div className='flex justify-around items-end w-4/5'>{children}</div>;
+  return <div className='flex flex-col justify-around items-center'>{children}</div>;
 };
 
 export default InputsPairContainer;
