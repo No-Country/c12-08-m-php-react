@@ -1,3 +1,4 @@
+'use client';
 import useCalendar, { type Month } from '@/hooks/useCalendar';
 import { ChangeEvent } from 'react';
 import GridHeader from './GridHeader';
