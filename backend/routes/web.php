@@ -5,6 +5,8 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use App\Mail\RecordatorioPillCare;
+use Firebase\JWT\JWT;
+use Illuminate\Http\Response;
 
 
 /*
@@ -34,10 +36,29 @@ Route::get('/google-auth/callback', function () {
     ], [
         'name' => $google_user->name,
         'email' => $google_user->email,
+        'gender' => $google_user->gender,
+        'birth' => $google_user->birthday,
+        'phone' => $google_user->phone,
+        'photo_url' => $google_user->avatar
     ]);
 
     Auth::login($user);
-    return redirect('https://c12-08-m-php-react-eta.vercel.app/home');
+
+    // Crear el token JWT
+    $tokenData = [
+        'google_id' => $google_user->google_id,
+        'name' => $google_user->name,
+        'email' => $google_user->email,
+    ];
+
+    $token = JWT::encode($tokenData, 'mi_clave_secreta', 'HS256');
+
+    // Adjuntar el token como cookie en la respuesta
+    $cookie = cookie('jwt_token', $token, 60, null, null, true, true);
+    $response = new Response('Cookie de JWT');
+    $response->withCookie($cookie);
+
+    return $response->header('Location', 'https://c12-08-m-php-react-eta.vercel.app/home')->header('Content-Type', 'text/plain');
 });
 
 Route::get('/mail/{id}', [RecordatorioPillCare::class, 'enviar']);
