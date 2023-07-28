@@ -23,6 +23,7 @@ interface Item {
   quantity: number;
   is_single_dose: boolean;
   init_date: Date;
-  time: number;
-  category_id: number;
+  due_date?: Date;
+  time: string;
+  category_id: 1 | 2 | 3;
 }
