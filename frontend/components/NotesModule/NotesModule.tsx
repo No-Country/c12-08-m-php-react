@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import NItem from './components/NItem';
 import { getNotes } from '@/services/note/noteServices';
-import { NoteData } from '@/types/note';
+import { NoteData } from '@/types/types';
 
 interface Props {
   small?: boolean;

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Formik } from 'formik';
 import InputNote from './components/InputNote';
 import { createNote, getNote, updateNote } from '@/services/note/noteServices';
-import { NoteData } from '@/types/note';
+import { NoteData } from '@/types/types';
 import { useRouter } from 'next/navigation';
 
 interface Props {

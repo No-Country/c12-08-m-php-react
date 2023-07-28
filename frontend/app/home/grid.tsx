@@ -1,5 +1,5 @@
 import UserProvider from '@/contexts/UserProvider';
-import type { User } from '@/types/note';
+import type { User } from '@/types/types';
 import { type ReactNode } from 'react';
 
 interface Props {

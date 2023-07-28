@@ -1,6 +1,6 @@
 'use client';
 
-import { User } from '@/types/note';
+import { User } from '@/types/types';
 import { differenceInYears } from 'date-fns';
 import { createContext, useState, type ReactNode } from 'react';
 
