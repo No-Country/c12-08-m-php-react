@@ -275,4 +275,16 @@ Nuestra aplicación, PillCare, te brinda el control completo sobre la cantidad d
 
 -----
 
+## Mockups
+
+![mock1_1-transformed](https://github.com/No-Country/c12-08-m-php-react/assets/76113738/56a7e76c-b0c4-4b73-9e29-984814415190)
+
+![mock2_1-transformed](https://github.com/No-Country/c12-08-m-php-react/assets/76113738/9a8aacfb-e9a8-46df-9380-28c4c60dc78d)
+
+![mock cel 1](https://github.com/No-Country/c12-08-m-php-react/assets/76113738/d3a7c1e5-07e6-4481-b6d9-4cdc1b18dfe9)
+
+![iPhone 13](https://github.com/No-Country/c12-08-m-php-react/assets/76113738/b1de2031-e3cb-4710-ab8b-5fabd3d25b4a)
+
+![iPhone 12 Pro](https://github.com/No-Country/c12-08-m-php-react/assets/76113738/7428d40f-5691-4bb3-980a-80f92127431a)
+
 
