@@ -56,100 +56,102 @@ const NewMedsForm = () => {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
-      <form
-        className='h-full flex flex-col gap-y-8 justify-center items-center gap-x-4 p-4'
-        onSubmit={handleSubmit}>
-        <InputsPairContainer>
-          <InputContainer>
-            <Input label='nombre medicamento' name='name' handleChange={handleChange} />
-          </InputContainer>
-          <InputContainer>
-            <SelectInput
-              values={medType}
-              label='tipo de medicamento'
-              name='indications'
-              handleChange={handleChange}
-            />
-          </InputContainer>
-        </InputsPairContainer>
+      <div className='w-full flex flex-col font-bold font-poppins'>
+        <form
+          className='h-full flex flex-col gap-y-8 justify-center items-center gap-x-4 p-4'
+          onSubmit={handleSubmit}>
+          <InputsPairContainer>
+            <InputContainer>
+              <Input label='Nombre medicamento' name='name' handleChange={handleChange} />
+            </InputContainer>
+            <InputContainer>
+              <SelectInput
+                values={medType}
+                label='Tipo de medicina'
+                name='indications'
+                handleChange={handleChange}
+              />
+            </InputContainer>
+          </InputsPairContainer>
 
-        <InputsPairContainer>
-          <InputContainer>
-            <InputNumber
-              label='cantidad'
-              type='number'
-              name='quantity'
-              handleChange={handleChange}
-              min={0}
-              max={20}
-            />
-          </InputContainer>
-          <InputContainer>
-            <TimePickerInput
-              label='hora'
-              name='time'
-              value={values.time}
-              setValue={setFieldValue}
-            />
-          </InputContainer>
-        </InputsPairContainer>
+          <InputsPairContainer>
+            <InputContainer>
+              <InputNumber
+                label='Cantidad'
+                type='number'
+                name='quantity'
+                handleChange={handleChange}
+                min={0}
+                max={20}
+              />
+            </InputContainer>
+            <InputContainer>
+              <TimePickerInput
+                label='Hora'
+                name='time'
+                value={values.time}
+                setValue={setFieldValue}
+              />
+            </InputContainer>
+          </InputsPairContainer>
 
-        <InputsPairContainer>
-          <InputContainer>
-            <DatePicker
-              label='fecha de inicio'
-              name='init_date'
-              disablePast
-              value={values.init_date}
-              setValue={setFieldValue}
-            />
-          </InputContainer>
-          <InputContainer>
-            <DatePicker
-              label='fecha de fin'
-              name='due_date'
-              disablePast
-              disabled={singleDose}
-              value={values.due_date}
-              setValue={setFieldValue}
-            />
-          </InputContainer>
-        </InputsPairContainer>
+          <InputsPairContainer>
+            <InputContainer>
+              <DatePicker
+                label='Inicio'
+                name='init_date'
+                disablePast
+                value={values.init_date}
+                setValue={setFieldValue}
+              />
+            </InputContainer>
+            <InputContainer>
+              <DatePicker
+                label='Fin'
+                name='due_date'
+                disablePast
+                disabled={singleDose}
+                value={values.due_date}
+                setValue={setFieldValue}
+              />
+            </InputContainer>
+          </InputsPairContainer>
 
-        <InputsPairContainer>
-          <InputContainer>
-            <InputNumber
-              label='frecuencia'
-              type='number'
-              name='frequency'
-              disabled={singleDose}
-              handleChange={handleChange}
-              min={0}
-              max={7}
-            />
-          </InputContainer>
+          <InputsPairContainer>
+            <InputContainer>
+              <InputNumber
+                label='Frecuencia'
+                type='number'
+                name='frequency'
+                disabled={singleDose}
+                handleChange={handleChange}
+                min={0}
+                max={7}
+              />
+            </InputContainer>
 
-          <InputContainer>
-            <SelectInput
-              values={frequency}
-              label='frecuencia'
-              disabled={singleDose}
-              name='frequencySelect'
-              handleChange={handleChange}
-            />
-          </InputContainer>
-        </InputsPairContainer>
+            <InputContainer>
+              <SelectInput
+                values={frequency}
+                label='dias/hs'
+                disabled={singleDose}
+                name='frequencySelect'
+                handleChange={handleChange}
+              />
+            </InputContainer>
+          </InputsPairContainer>
 
-        <CheckBox
-          text='Medicamento de unica dosis'
-          label='is_single_dose'
-          name='is_single_dose'
-          handleChange={handleCheck}
-        />
-        <button type='submit' className='btn btn-secondary px-6'>
-          Guardar
-        </button>
-      </form>
+          <CheckBox
+            text='Medicamento de única dosis'
+            label='is_single_dose'
+            name='is_single_dose'
+            handleChange={handleCheck}
+          />
+          <button type='submit' className='btn btn-secondary px-6'>
+            Guardar
+          </button>
+        </form>
+      </div>
     </LocalizationProvider>
   );
 };
