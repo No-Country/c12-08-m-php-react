@@ -22,21 +22,18 @@ const GetWithAuthorization = async (url: string, token: string) => {
   return response;
 };
 
-const PostWithAuthorization = async (url: string, data:any='', token: string) => {
-
-  if(data !== ''){
+const PostWithAuthorization = async (url: string, data: any = '', token: string) => {
+  if (data !== '') {
     const response = await instance.post(url, data, {
       headers: { Authorization: `Bearer ${token}` },
     });
     return response;
-  }else{
+  } else {
     const response = await instance.post(url, {
       headers: { Authorization: `Bearer ${token}` },
-    })
+    });
     return response;
   }
-
 };
 
 export { GetWithAuthorization, Post, PostWithAuthorization };
-

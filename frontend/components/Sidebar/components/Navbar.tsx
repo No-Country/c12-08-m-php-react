@@ -9,8 +9,6 @@ const SideBarNav = () => {
   const router = useRouter();
 
   const handleLogout = () => {
-    // TODO: Add logout functionality
-    console.log('cerrar sesion');
     googleLogout();
     if (getCookie('jwt_token')) {
       backLogout(getCookie('jwt_token') as string);

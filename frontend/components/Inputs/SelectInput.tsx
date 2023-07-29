@@ -8,7 +8,7 @@ import {
   ThemeProvider,
   createTheme,
 } from '@mui/material';
-        
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -35,7 +35,7 @@ const SelectInput = ({
   const handleSelect = (e: any) => {
     handleChange(e);
   };
-    
+
   return (
     <ThemeProvider theme={theme}>
       <FormControl variant='standard' fullWidth>
@@ -53,8 +53,10 @@ const SelectInput = ({
           <MenuItem value=''>
             <em>None</em>
           </MenuItem>
-          {values.map(value => (
-            <MenuItem value={value}>{value}</MenuItem>
+          {values.map((value, index) => (
+            <MenuItem key={index} value={value}>
+              {value}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

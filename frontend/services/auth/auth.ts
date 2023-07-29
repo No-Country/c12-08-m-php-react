@@ -8,25 +8,24 @@ interface LoginBody {
 const login = async (body: LoginBody) => {
   const response = await Post('/login', body);
 
-  return response
+  return response;
 };
 
 const loginGoogle = async (token: string) => {
-
   const userInfoUrl = 'https://www.googleapis.com/oauth2/v3/userinfo';
 
   try {
     const response = await fetch(userInfoUrl, {
       headers: {
-        'Authorization': `Bearer ${token}`
-      }    
+        Authorization: `Bearer ${token}`,
+      },
     });
 
     if (response.ok) {
       const userInfo = await response.json();
-      console.log(userInfo)
+      console.log(userInfo);
 
-      const {name, email, picture} = userInfo
+      const { name, email, picture } = userInfo;
 
       return { name, email, picture };
     } else {
@@ -36,9 +35,8 @@ const loginGoogle = async (token: string) => {
   } catch (error) {
     console.error('Error en la solicitud:', error);
     return null;
-  } 
-}
-
+  }
+};
 
 interface RegisterBody {
   name: string;
@@ -50,25 +48,23 @@ interface RegisterBody {
   password: string;
   confirm_password: string;
 }
-  
 
 const register = async (body: RegisterBody) => {
+  const { confirm_password, ...data } = body;
 
-  const {confirm_password, ...data} = body
-  
-  const response = await Post('/register', data)
-  
+  const response = await Post('/register', data);
+
   return response;
-
 };
 
-const backLogout=async (token:string)=>{
+const backLogout = async (token: string) => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL_API}/logout`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}` },
+  });
 
-  const response = await PostWithAuthorization('/logout','', token)
-  
-  return response
-}
+  return res;
+};
 
 export { backLogout, login, loginGoogle, register };
 export type { LoginBody, RegisterBody };
-
