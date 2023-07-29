@@ -22,7 +22,7 @@ const Userbar = () => {
             {user.name} {user.surname}
           </span>
           <div className='flex flex-col items-center font-medium'>
-            <p>{age}</p>
+            <p>{age} años</p>
             <p>@{user.username}</p>
           </div>
         </div>
