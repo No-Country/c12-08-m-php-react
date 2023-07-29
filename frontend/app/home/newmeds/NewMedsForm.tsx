@@ -1,5 +1,5 @@
 'use client';
-import { CheckBox, DatePicker, Input, SelectInput } from '@/components';
+import { CheckBox, DatePicker, Input, SelectInput, Spinner } from '@/components';
 import InputNumber from '@/components/Inputs/InputNumber';
 import TimePickerInput from '@/components/Inputs/TimePicker';
 import { createMeds } from '@/services/meds/meds';
@@ -11,20 +11,14 @@ import { useState } from 'react';
 import { getCookie } from 'react-use-cookie';
 import InputContainer from './InputContainer';
 import InputsPairContainer from './InputsPairContainer';
-
-const medType = [
-  'pastillas',
-  'inyectables',
-  'gotas',
-  'supositorios',
-  'inhalador',
-  'efervecente',
-];
+import { medCateogries } from '@/utils/mockItems';
 
 const frequency = ['dias', 'horas'];
 
 const NewMedsForm = () => {
-  const [singleDose, setSingleDose] = useState(false);
+  const [singleDose, setSingleDose] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const medTypes = medCateogries.map(category => category.name);
 
   const { handleSubmit, handleChange, setFieldValue, values } = useFormik({
     initialValues: {
@@ -38,14 +32,22 @@ const NewMedsForm = () => {
       frequencySelect: '',
       is_single_dose: false,
     },
-    onSubmit: values => {
+    onSubmit: async values => {
+      setIsLoading(true);
       if (!values.is_single_dose) {
-        if (values.frequencySelect === 'dias') {
-          values.frequency *= 24;
+        if (values.frequencySelect === frequency[0]) {
+          setFieldValue('frequency', values.frequency * 24);
         }
       }
 
-      createMeds(values, getCookie('token')).then(console.log).catch(console.error);
+      try {
+        const res = await createMeds(values, getCookie('token'));
+        console.log(res);
+        setIsLoading(false);
+      } catch (error) {
+        console.log(error);
+        setIsLoading(false);
+      }
     },
   });
 
@@ -66,7 +68,7 @@ const NewMedsForm = () => {
             </InputContainer>
             <InputContainer>
               <SelectInput
-                values={medType}
+                values={medTypes}
                 label='Tipo de medicina'
                 name='indications'
                 handleChange={handleChange}
@@ -114,7 +116,22 @@ const NewMedsForm = () => {
               />
             </InputContainer>
           </InputsPairContainer>
+          <CheckBox
+            text='Medicamento de única dosis'
+            label='is_single_dose'
+            name='is_single_dose'
+            handleChange={handleCheck}
+          />
           <InputsPairContainer>
+            <InputContainer>
+              <SelectInput
+                values={frequency}
+                label='dias/hs'
+                disabled={singleDose}
+                name='frequencySelect'
+                handleChange={handleChange}
+              />
+            </InputContainer>
             <InputContainer>
               <InputNumber
                 label='Frecuencia'
@@ -126,24 +143,9 @@ const NewMedsForm = () => {
                 max={7}
               />
             </InputContainer>
-            <InputContainer>
-              <SelectInput
-                values={frequency}
-                label='dias/hs'
-                disabled={singleDose}
-                name='frequencySelect'
-                handleChange={handleChange}
-              />
-            </InputContainer>
           </InputsPairContainer>
-          <CheckBox
-            text='Medicamento de única dosis'
-            label='is_single_dose'
-            name='is_single_dose'
-            handleChange={handleCheck}
-          />
-          <button type='submit' className='btn btn-secondary px-6'>
-            Guardar
+          <button className='btn btn-secondary px-6'>
+            {isLoading ? <Spinner /> : 'Guardar'}
           </button>
         </form>
       </div>

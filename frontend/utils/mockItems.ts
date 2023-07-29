@@ -3,20 +3,43 @@ import pills from '@/public/svg/capsule.svg';
 import tablets from '@/public/svg/tablets.svg';
 import { Item } from '@/types/types';
 
-export const categorieImgs = {
-  1: {
+export const medCateogries: { id: number; img: string; name: string }[] = [
+  {
+    id: 1,
     img: inyectables,
     name: 'inyectables',
   },
-  2: {
+  {
+    id: 2,
     img: pills,
     name: 'pildoras',
   },
-  3: {
+  {
+    id: 3,
     img: tablets,
     name: 'comprimidos',
   },
-};
+  {
+    id: 4,
+    img: 'aaa',
+    name: 'gotas',
+  },
+  {
+    id: 5,
+    img: 'aaa',
+    name: 'inhalador',
+  },
+  {
+    id: 6,
+    img: 'aaa',
+    name: 'efervecente',
+  },
+  {
+    id: 7,
+    img: 'aaa',
+    name: 'supositorios',
+  },
+];
 
 export const mockupData: Item[] = [
   {
@@ -143,6 +166,27 @@ export const mockupData: Item[] = [
     time: '20:45',
     init_date: new Date('2023-08-08'),
     is_single_dose: true,
+    quantity: 1,
+  },
+  {
+    name: 'Ibuprofeno',
+    indications: 'Tomar 1 pastilla(s)',
+    category_id: 3,
+    time: '20:45',
+    init_date: new Date('2023-07-28'),
+    due_date: new Date('2023-08-04'),
+    is_single_dose: false,
+    quantity: 1,
+  },
+  {
+    name: 'Alprazolam',
+    indications: 'Tomar 1 pastilla(s)',
+    category_id: 2,
+    time: '20:45',
+    init_date: new Date('2023-07-28'),
+    due_date: new Date('2023-08-04'),
+    frequency: 8,
+    is_single_dose: false,
     quantity: 1,
   },
 ];

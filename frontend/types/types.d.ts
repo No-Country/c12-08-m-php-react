@@ -24,6 +24,7 @@ interface Item {
   is_single_dose: boolean;
   init_date: Date;
   due_date?: Date;
+  frequency?: number;
   time: string;
   category_id: 1 | 2 | 3;
 }
