@@ -18,6 +18,7 @@ import { useRouter } from 'next/navigation';
 import { ChangeEvent, useState } from 'react';
 import * as Yup from 'yup';
 import { SelectInput } from '@/components';
+import { alert } from '@/components/Alert/Alert';
 
 export interface RegisterFormData {
   name: string;
@@ -50,8 +51,9 @@ const FormRegister = () => {
     try {
       const { confirm_password, ...registerValues } = values;
       await register(registerValues);
-      // TODO: once the backend makes the necessary changes to send the token in cookies, this setCookie function should be removed
-      router.push('/home');
+      alert('Ya puedes iniciar sesión', 'Registro exitoso', 'success');
+
+      router.push('/login');
     } catch (error: any) {
       console.log(error);
       setIsLoading(false);
