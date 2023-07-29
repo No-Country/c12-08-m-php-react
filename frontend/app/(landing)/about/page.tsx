@@ -31,9 +31,9 @@ const About = () => {
         </h3>
       </AboutItemsContainer>
       <Image
-        className='object-cover'
+        className='object-cover hidden md:inline rounded-3xl'
         src={aboutImage}
-        width={500}
+        width={400}
         height={950}
         alt='about image'
       />
