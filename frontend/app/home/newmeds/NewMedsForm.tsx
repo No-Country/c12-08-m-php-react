@@ -45,7 +45,7 @@ const NewMedsForm = () => {
         }
       }
 
-      createMeds(values, getCookie('token')).then(console.log).catch(console.error);
+      createMeds(values, getCookie('jwt_token')).then(console.log).catch(console.error);
     },
   });
 
