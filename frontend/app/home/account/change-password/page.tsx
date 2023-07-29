@@ -2,7 +2,11 @@ import { ChangePassword, GenericContainer } from '@/components';
 
 const Account = () => {
   return (
-    <GenericContainer title='Cambiar contraseña' color='lightGreen' colortitle='black'>
+    <GenericContainer
+      title='Cambiar contraseña'
+      color='lightGreen'
+      colortitle='black'
+      href='/home/account'>
       <ChangePassword />
     </GenericContainer>
   );
