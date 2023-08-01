@@ -41,7 +41,7 @@ const NewMedsForm = () => {
       }
 
       try {
-        const res = await createMeds(values, getCookie('token'));
+        const res = await createMeds(values, getCookie('jwt_token'));
         console.log(res);
         setIsLoading(false);
       } catch (error) {

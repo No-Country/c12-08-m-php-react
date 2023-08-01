@@ -21,7 +21,8 @@ const FormLogin = () => {
     setIsLoading(true);
     try {
       const { data } = await login(values);
-      setCookie('jwt_token', data.access_token, { path: '/', days: 7 });
+      // TODO: find another way to set the cookie inside the browser
+      setCookie('jwt_token', data.access_token, { path: '/', days: 1 });
       if (data.access_token) {
         alert('Bienvenido', 'Inicio de sesión exitoso', 'success');
         router.push('/home');
