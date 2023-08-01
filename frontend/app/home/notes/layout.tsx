@@ -16,7 +16,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
     }
   };
   return (
-    <GenericContainer title={setTitle()} color='yellow' colortitle='black'>
+    <GenericContainer title={setTitle()} color='yellow' colortitle='black' href='/home'>
       {children}
     </GenericContainer>
   );
